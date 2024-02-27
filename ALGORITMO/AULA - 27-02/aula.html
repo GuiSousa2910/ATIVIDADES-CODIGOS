@@ -18,11 +18,11 @@
 
 function analisar() {
     var numero = Number(input_numero.value);
-    
+
     if (numero >= 50) {
         divMensagem.innerHTML = `${numero} é maior que 50`
     }
-    else{
+    if (numero < 50){
         divMensagem.innerHTML = `${numero} é menor que 50` 
     }
 }
