@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        Número: <input type="number" id="input_numero">
+        <button onclick="analisar()">Analisar Número</button>
+        <div id="divMensagem"></div>
+
+    </body>
+</html>
+
+<script>
+
+function analisar() {
+    var numero = Number(input_numero.value);
+    
+    if (numero >= 50) {
+        divMensagem.innerHTML = `${numero} é maior que 50`
+    }
+    else{
+        divMensagem.innerHTML = `${numero} é menor que 50` 
+    }
+}
+
+</script>
