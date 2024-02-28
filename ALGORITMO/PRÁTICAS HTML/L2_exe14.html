@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon Ball</title>
+</head>
+<body>
+    
+    Insira a sua quantidade de ki: <input type="number" id="input_ki"><br>
+    Transformar em... <br>
+    <button onclick="ss()">SSJ</button>
+    <button onclick="ss2()"> SSJ2 </button>
+    <button onclick="ss3()"> SSJ3</button>
+
+    <div id="divMensagem"></div>
+
+</body>
+</html>
+<script>
+
+    function ss() {
+        ki = Number(input_ki.value)
+        ki = ki * 50
+
+        divMensagem.innerHTML += `<br>Após se transformar em SSJ, o ki desse Sayajin passa a ser de ${ki}`
+    }  
+
+    function ss2() {
+        ki = Number(input_ki.value)
+        ki = ki * 100
+
+        divMensagem.innerHTML += `<br>Após se transformar em SSJ2, o ki desse Sayajin passa a ser de ${ki}`
+    }    
+
+    function ss3() {
+        ki = Number(input_ki.value)
+        ki = ki * 200
+
+        divMensagem.innerHTML += `<br>Após se transformar em SSJ3, o ki desse Sayajin passa a ser de ${ki}`
+    }    
+</script>
