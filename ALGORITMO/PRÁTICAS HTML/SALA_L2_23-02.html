@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Interpolação</title>
+    </head>
+    <body>
+
+        Nome: <input type="text" id="input_nome"><br>
+        Idade:  <input type="text" id="input_idade"><br>
+        <button onclick="ver()">Ver nome</button>
+
+        <div id="divMensagem"></div>
+    </body>
+</html>
+
+<script>
+
+    function ver() {
+        var nome = input_nome.value;
+        var idade = input_idade.value;
+
+//deve se usar crase para u sar o ${}
+         //alert(`Meu nome é ${nome}, minha idade é ${idade}`)
+
+        divMensagem.innerHTML += `<br>Meu nome é ${nome}, minha idade é ${idade}`
+            
+    }
+</script>

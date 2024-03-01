@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"   content="width=device-width,  initial-scale=1.0">
+        <title>Luz</title>
+    </head>
+    <body>
+
+        Insira a quantidade de KWh/mês: <input type="number" id="input_luz">
+        <button onclick="calculo()">Calcular conta de luz</button>
+
+    </body>
+</html>
+<script>
+
+    function calculo() {
+        var kwhMes = Number(input_luz.value)
+        var precoMes = kwhMes * 0.85
+        
+        if (kwhMes < 100) {
+            precoMes = precoMes * 0.90
+            alert('Valor da conta: ' + precoMes) 
+        }
+        if (kwhMes >= 100) {
+            alert('Valor da conta: ' + precoMes) 
+        }
+    }
+
+</script>
