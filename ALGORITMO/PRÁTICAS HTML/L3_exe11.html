@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Filhos</title>
+    </head>
+    <body>
+        Insira a quantidade de filhos: <input type="number" id="input_filho"><br>
+        <button onclick="calculo()">Analisar familia</button>
+
+        <div id="divMensagem"></div>
+    </body>
+</html>
+<script>
+
+    function calculo() {
+        var filho = Number(input_filho.value)
+        if(filho == 1){
+            divMensagem.innerHTML = `Não tem TV<br>`
+        }
+        if (filho == 2) {
+            divMensagem.innerHTML = `Não tem TV<br>Não tem internet<br>`
+        }
+        if (filho == 3) {
+            divMensagem.innerHTML = `Não tem TV<br>Não tem internet<br>Não tem video game<br>`
+        }
+        if (filho >= 4) {
+            divMensagem.innerHTML = `Não tem TV<br>Não tem internet<br>Não tem video game<br>Não tem Netflix`
+        }
+    }
+</script>
