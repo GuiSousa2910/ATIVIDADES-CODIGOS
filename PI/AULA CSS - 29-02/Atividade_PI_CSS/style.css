@@ -1,0 +1,29 @@
+.tela{
+    background-color: #FFD700; 
+    height: 500px; 
+    width: 500px;
+}
+
+.telaVerde{
+    background-color: #98FB98; 
+    height: 50%; 
+    width: 50%;
+}
+
+.texto{
+    color: white; 
+    background-color: red; 
+    font-size: 25px; 
+    font-weight: bold; 
+    font-family: monospace;
+}
+
+.telaAzul{
+    width: 50%; 
+    height: 50%; 
+    background-color: rgb(173, 216, 230);
+}
+
+.quadradoVermelho{
+    width: 75%; height: 50%; background-color: rgb(255, 0, 0);
+}
