@@ -5,16 +5,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    Insira o nome do passageiro: <input type="text" id="input_nome"><br>
-    Distancia (em KM) do seu local até o destino: <input type="number" id="input_distancia"><br>
-    Bandeira da Corrida: <input type="number" id="input_bandeira"><br>
-    Horário da corrida: <input type="number" id="input_horario"><br>
-    <button onclick="calculo()">Calcular corrida</button>
+    <div class="corpo">
 
-    <div id="divMensagem"></div>
+        <h3 class="titulo">Bem vindo</h3>
+        <div class="item">
+            <div class="texto">Insira o nome do passageiro: 
+
+            <br><input type="text" id="input_nome" class="inserir">
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="texto">
+        Distancia (em KM) do seu local até o destino: <input type="number" id="input_distancia" class="inserir">
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="texto">
+        Bandeira da Corrida: <br><input type="number" id="input_bandeira" class="inserir">
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="texto">
+        Horário da corrida: <br><input type="number" id="input_horario" class="inserir">
+            </div>
+        </div>
+
+        <div class="texto">
+        <button onclick="calculo()" class="botao">Calcular corrida</button>
+        </div>
+
+    <div id="divMensagem" class="texto"></div>
 </body>
 
 </html>
@@ -85,6 +112,6 @@
                 }
             }  
         } 
-        divMensagem.innerHTML = `Olá ${nomePassageiro} Sua corrida, será na bandeira ${bandeira}, percorrerá ${distancia} km e o total da corrida será de ${distanciaKm} `;    
+        divMensagem.innerHTML = `<b>Olá ${nomePassageiro}, sua corrida, será na bandeira ${bandeira}, percorrerá ${distancia} km e o total da corrida será de ${distanciaKm} </b>`;    
         }
 </script>

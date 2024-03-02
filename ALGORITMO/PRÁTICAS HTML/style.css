@@ -1,0 +1,58 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+.corpo{
+    background: linear-gradient(160deg, rgba(0,61,181,1) 0%, rgba(0,0,252,1) 35%, rgba(0,212,255,1) 100%);
+     margin-left: 35%; margin-right: 35%;
+      height: 700px; 
+      border-radius: 5%; 
+      border: solid 5px black;
+}
+
+.item{
+    display: flex; 
+    flex-direction:column;
+}
+
+.texto{
+    text-align: center;
+    font-size: 22px;
+    font-weight: bolder;
+    margin-top: 40px;
+    color: white;
+}
+
+.titulo{
+    text-align: center;
+    font-size: 50px;
+    font-weight: bolder;
+    margin-top: 30px;
+    color: white;
+    border-bottom: 5px dashed;
+    padding-bottom: 15px;
+}
+
+.inserir{
+    border-radius: 10px; 
+    border: solid 3px;
+    background-color:lightblue;
+    height: 22px;
+    text-align: center;
+}
+
+.botao{
+    height: 40px;
+    width: 110px;
+    border: solid 3px;
+    border-radius: 10px;background-color: lightblue;
+    cursor: pointer;
+}
+input{
+    font-weight: bold;
+}
+
+button{
+    font-weight: bold;
+}
