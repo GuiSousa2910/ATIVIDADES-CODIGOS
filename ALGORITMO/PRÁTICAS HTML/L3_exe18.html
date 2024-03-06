@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        Insira a sua frequência em aula: <input type="number" id="input_freq"><br>
+        <button onclick="calculo()">Analisar Frequência</button>
+        <div id="divMensagem"></div>
+
+    </body>
+</html>
+<script>
+
+    function calculo() {
+        var freq = Number(input_freq.value)
+
+        if (freq >= 50) {
+            divMensagem.innerHTML = `<img src="imagens/376.jpg">`
+        }else{
+            divMensagem.innerHTML = ` <img src="imagens/conceito-de-turismo-viagens-e-ferias-feliz-turista-vai-sair-de-ferias-segurando-a-mochila-e-mostrando-o-sinal-de-tudo-bem-sorrindo-satisfeito-em-pe-contra-um-fundo-amarelo.jpg">`
+        }
+    }
+    
+</script>
