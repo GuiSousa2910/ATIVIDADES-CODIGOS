@@ -1,5 +1,4 @@
 use sprint1;
-
 -- Guilherme de Sousa Agostinho / João Kevin Formiga / Samuel Paz
 
 create table condominio(
