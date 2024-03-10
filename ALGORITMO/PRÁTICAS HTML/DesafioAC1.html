@@ -61,7 +61,7 @@
         divMensagem.innerHTML += `<br> A viagem foi iniciada às ${horaInicioViagem} horas e tinha estimativa de ${estimativaTempo} minutos e durou ${duracaoViagem} minutos, percorrendo ${distanciaPercorrida} KM, com ${quantidadePassageiro} passageiros, totalizando R$${custoTotal} do preço da corrida. Com essa distância, foram consumidos ${quantidadeGasolina} litros de gasolina, totalizando R$${valorGasolina} de consumo.<br>` 
     }
 
-    var duracaoViagem = 0
+    totalHora = 0
 
     function encerramento() {
         // variaveis bases
@@ -101,8 +101,9 @@
 
         alert(duracaoViagem)
 
-        var totalHora = (duracaoViagem + duracaoViagem) / 60        
-        divMensagem.innerHTML=`<br> tem de dar 3: ${totalHora}` 
+        totalHora += duracaoViagem
+        
+        divMensagem.innerHTML=`<br> tem de dar 3: ${totalHora}`
     }
 
 </script>
