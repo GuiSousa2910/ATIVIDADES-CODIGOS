@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Numero: <input type="text" id="input_n"><br><br>
+
+    <button onclick="multiplicar()">Multiplicar</button>
+    <button onclick="dividir()">Dividir</button>
+    <button onclick="subtrair()">Subtrair</button>
+    <button onclick="somar()">Somar</button>
+    <button onclick="decrementar()">-1</button>
+    <button onclick="acrescentar()">+1</button><br><br>
+
+    <div id="divMensagem">1</div>
+</body>
+</html>
+<script>
+
+    var numero_atual = 1;
+    
+    function multiplicar() {
+        var num = Number(input_n.value);
+        numero_atual *=  num
+        divMensagem.innerHTML = numero_atual
+    }
+    function dividir() {
+        var num = Number(input_n.value);
+        numero_atual /=  num
+        divMensagem.innerHTML = numero_atual
+    }
+    function subtrair() {
+        var num = Number(input_n.value);
+        numero_atual -= num
+        divMensagem.innerHTML = numero_atual
+    }
+    function somar() {
+        var num = Number(input_n.value);
+        numero_atual += num
+        divMensagem.innerHTML = numero_atual
+    }
+    function decrementar() {
+        numero_atual--
+        divMensagem.innerHTML = numero_atual
+    }
+    function acrescentar() {
+        numero_atual++
+        divMensagem.innerHTML = numero_atual
+    }
+    
+</script>
