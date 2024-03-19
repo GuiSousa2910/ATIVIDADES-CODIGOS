@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Peso elevador</title>
+    </head>
+    <body>
+        
+        Insira o peso no elevador: <input type="number" id="input_peso">    <br>
+        <button onclick="calculo()">Ligar elevador...</button>    
+
+        <div id="divMensagem"></div>
+    </body>
+</html>
+<script>
+
+    function calculo() {
+        peso = Number(input_peso.value)
+        if (peso < 500) {
+            divMensagem.innerHTML = `Elevador vai se mover`
+        }else{
+            divMensagem.innerHTML = `Alguém precisa descer do elevador`
+        }
+    }
+
+</script>

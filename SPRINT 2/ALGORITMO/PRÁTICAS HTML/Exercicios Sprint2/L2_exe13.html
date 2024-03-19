@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Passagem</title>
+    </head>
+    <body>
+
+        Insira o valor da passagem na sua região:<input type="text" id="input_valor"><br>
+        Insira quantas viagens você faz no mês:<input type="text" id="input_viagens"><br>
+        Qual a distâcia do seu trabalho até a sua casa:<input type="text" id="input_distancia"><br>
+
+        <button onclick="calcular()">Calcular VT</button>
+        <div id="divMensagem"></div>
+    </body>
+</html>
+<script>
+
+    function calcular() {
+
+        totalViagens = Number(input_viagens.value)
+        viagemOnibus = totalViagens * 0.9
+        viagemCarro = totalViagens * 0.1
+        
+        precoOnibus = viagemOnibus * Number(input_valor.value)
+        
+        precoKmCarro = Number(input_distancia.value) * 0.75
+        precoCarro = viagemCarro * precoKmCarro
+        precoTotal = precoCarro + precoOnibus 
+        
+        divMensagem.innerHTML = `Você vai gastar R$${precoTotal} por mês com transporte.`}
+
+</script>

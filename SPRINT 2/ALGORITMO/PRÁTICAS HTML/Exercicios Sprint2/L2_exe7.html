@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Receber e Pagar</title>
+    </head>
+    <body>
+        
+        Seu saldo: <input type="number" readonly id="input_saldo" value="0"><br><br>
+        <button onclick="receber()"> Receber 100 </button>
+        <button onclick="pagar()"> Pagar 50</button>
+        
+    </body>
+</html>
+<script>
+    
+    function receber() {
+        var saldo = Number(input_saldo.value);
+        var saldo = saldo + 100;
+        alert("Transferência de R$100 recebida! Saldo atual: R$" + saldo);                
+        input_saldo.value = saldo
+    }
+
+    function pagar() {
+        saldo = Number(input_saldo.value)
+        saldo = saldo - 50
+        alert("Pagamento de R$50 efetuado! Saldo atual: R$" + saldo);
+        input_saldo.value = saldo
+    }
+
+</script>
