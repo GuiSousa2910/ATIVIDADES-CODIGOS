@@ -2,32 +2,25 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport"   content="width=device-width,  initial-scale=1.0">
-        <title>Pizza</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dragon Ball</title>
     </head>
     <body>
 
-        Quantidade de amigos: <input type="number" id="input_amigos"><br>
-        Valor da pizza: <input type="number" id="input_valor"><br>
+        Insira seu nome, guerreiro: <input type="text" id="input_nome" placeholder="Qual seu nome, guerreiro?"><br>
+        Insira a quantidade de seu ki: <input type="number" id="input_ki" placeholder="Quantidade de ki"><br><br>
 
-        <button onclick="calculo()">Rola uma Pizza?</button>
-        <div id="divMensagem"></div>
-
+        <button onclick="formas()" > Ver ki em cada forma </button>
     </body>
 </html>
+
 <script>
 
-    function calculo() {
-        var amigos = Number(input_amigos.value)
-        var valor = Number(input_valor.value)
-
-        var valorCada = valor / amigos
-
-        divMensagem.innerHTML = `Cada amigo vai pagar R$${valorCada} pela pizza` 
-    
-        if (valorCada > 20) {
-    
-            divMensagem.innerHTML =`Cada amigo vai pagar R$${valorCada} pela pizza <br> Deu ruim! Pizza muito cara!`
-        }
+    function formas() {
+        ss1 = Number(input_ki.value) * 50
+        ss2 = Number(input_ki.value) * 100
+        alert('Olá '+ input_nome.value +', a quantidade do ki será de '+ ss1 + ' caso você vire um Super Sayajin, mas se você virar um Super Sayajin 2 seu ki será de ' + ss2)
     }
+    
+
 </script>

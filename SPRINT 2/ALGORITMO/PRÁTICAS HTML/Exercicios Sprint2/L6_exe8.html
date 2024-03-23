@@ -6,26 +6,24 @@
     <title>Document</title>
 </head>
 <body>
-    Insira o nome da empresa: <input type="text" id="input_nomeE"><br>
-    Insira o valor da bolsa da empresa: <input type="number" id="input_bolsa"><br>
-    Insira o valor do VR: <input type="number" id="input_vr"><br>
-    Insira o tempo de deslocamento da empresa até a SPTech: <input type="number" id="input_dist"><br>
-    <button onclick="calculo()">É preferida?</button>
-    <div id="divMensagem"></div>
+    Insira seu login: <input type="text" id="input_login"><br>
+    Insira sua senha: <input type="text" id="input_senha"><br>
+    Insira seu código de segurança: <input type="text" id="input_cod"><br>
+    <button onclick="analise()">Entrar</button>
+
 </body>
 </html>
 <script>
-    function calculo() {
-        var nome = input_nomeE.value;
-        var bolsa = Number(input_bolsa.value);
-        var vr = Number(input_vr.value);
-        var dist = Number(input_dist.value);
+    function analise() {
+        var login = input_login.value;
+        var senha = input_senha.value;
+        var codigo = Number(input_cod.value);
 
-        if (bolsa >=1800 || vr >= 20 || dist <= 30) {
-            divMensagem.innerHTML = `A empresa ${nome} é uma de suas preferências`
+        if (login == 'SPTech' && senha == 'digital' && codigo == 123) {
+            alert('Usuário autenticado com sucesso')
         }
         else{
-            divMensagem.innerHTML = `A empresa ${nome} está fora da sua lista`
+            alert('Falha na autenticação')
         }
     }
 </script>

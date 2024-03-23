@@ -2,28 +2,38 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,  initial-scale=1.0">
-        <title>SITCOM</title>
+        <meta name="viewport" content="width='device-width', initial-scale=1.0">
+        <title>Horas Dormidas</title>
     </head>
     <body>
-
-        Informe o último SITCOM que você assistiu: <input type="text" id="input_sitcom"><br>
-        Total te episodios que você assistiu: <input type="number" id="input_ep"><br>
-        <button onclick="calculo()">Verificar nível</button>
-
-        <div id="divMensagem"></div>
+        Horas dormidas: <input type="text" id="input_horasDormidas"><br>
+        <button onclick="calculo()"> Calcular sono </button>
+        <div id="idMensagem"></div>
     </body>
 </html>
 <script>
 
+    var calculoSono1 = 0
+    var calculoSono2 = 0
+    var calculoSono3 = 0
+    var calculoSono4 = 0
+
     function calculo() {
-        var serie = input_sitcom.value;
-        var totalEp = Number(input_ep.value) * 22;
-        divMensagem.innerHTML = `Vejo que você gosta da série ${serie}`
 
-        if (totalEp > 1800) {
-            divMensagem.innerHTML = `Vejo que você gosta da série ${serie}<br>Uau, você realmente gosta dessa série!` 
-        }
+    calculoSono1 = input_horasDormidas.value * 0.05
+    calculoSono2 = input_horasDormidas.value * 0.45
+    calculoSono3 = input_horasDormidas.value * 0.30
+    calculoSono4 = input_horasDormidas.value * 0.20 
+
+        idMensagem.innerHTML = `
+        <br>Ao dormir ${input_horasDormidas.value} horas, você dormiu:<br>  
+
+${calculoSono1} horas na fase 1  <br>
+
+${calculoSono2} horas na fase 2  <br>
+
+${calculoSono3} horas na fase 3  <br>
+
+${calculoSono4} horas na fase REM <br> `
     }
-
 </script>

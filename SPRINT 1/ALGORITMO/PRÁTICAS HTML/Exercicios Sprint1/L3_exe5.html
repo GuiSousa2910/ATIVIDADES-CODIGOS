@@ -2,29 +2,30 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport"   content="width=device-width,  initial-scale=1.0">
-        <title>Luz</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Notas</title>
     </head>
     <body>
 
-        Insira a quantidade de KWh/mês: <input type="number" id="input_luz">
-        <button onclick="calculo()">Calcular conta de luz</button>
+        Insira seu nome: <input type="text" id="input_nome" placeholder="Qual seu nome?"><br>
+
+        Insira sua nota da prova continuada: <input type="number" id="input_continuada" placeholder="Como você foi na continuada?"><br>
+
+        Insira sua nota da prova semestral: <input type="number" id="input_semestral" placeholder="Como você foi na semestral?"><br><br>
+
+        <button onclick="media()" > Veja a média total desse aluno </button>
 
     </body>
 </html>
+
 <script>
 
-    function calculo() {
-        var kwhMes = Number(input_luz.value)
-        var precoMes = kwhMes * 0.85
-        
-        if (kwhMes < 100) {
-            precoMes = precoMes * 0.90
-            alert('Valor da conta: ' + precoMes) 
-        }
-        if (kwhMes >= 100) {
-            alert('Valor da conta: ' + precoMes) 
-        }
+    function media() {
+        var mediaCon = Number(input_continuada.value) * 0.4
+        var mediaSem = Number(input_semestral.value) * 0.6
+        mediaTotal = mediaCon + mediaSem
+
+        alert('A média de ' + input_nome.value + ' será de ' + mediaTotal)
     }
 
 </script>

@@ -2,25 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    Insira sua nota do ENEM: <input type="number" id="input_enem"><br>
-    Insira a nota do vestibular interno: <input type="number" id="input_vest"><br>
-    <button onclick="calculo()">Avaliação</button>
+    Insira sua renda: <input type="text" id="input_renda"><br><br>
+    Insira renda total da sua familia: <input type="number" id="input_rendaTotal"><br><br>
+    <button onclick="calculo()">Verificar ajuda</button>
+    <div id="divMensagem"></div>
 </body>
 </html>
 <script>
     function calculo() {
-        var enem = Number(input_enem.value);
-        var vest = Number(input_vest.value);
+        var renda = Number(input_renda.value);
+        var rendaFamilia = Number(input_rendaTotal.value);
 
-        if (enem >= 800 || vest >= 700) {
-            alert('Parabéns! Aprovado')
+        if (renda <= 1050 && rendaFamilia <= 2100) {
+            divMensagem.innerHTML = `Você terá direito!`
         }
         else{
-            alert('Tente semestre que vem')
+            divMensagem.innerHTML = `Você NÃO terá direito`
         }
     }
 </script>

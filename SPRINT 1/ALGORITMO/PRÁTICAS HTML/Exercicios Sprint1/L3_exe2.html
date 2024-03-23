@@ -2,30 +2,21 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport"   content="width=device-width,  initial-scale=1.0">
-        <title>Refrigerante</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pizza</title>
     </head>
     <body>
-
-        Insira quantas latinhas você bebe por dia: <input type="number" id="input_refri"><br>
-
-        <button onclick="calculo()">Quantos refris?</button>
-        <div id="divMensagem"></div>
-
+        <input type="number" id="input_preco" placeholder="Insira o valor da pizza">
+        <input type="number" id="input_amigos" placeholder="Quantos amigos vão comer hoje?"><br><br>
+        <button onclick="preco()">#LovePizza</button>
     </body>
 </html>
+
 <script>
 
-    var bebidaAno = 0
-    function calculo(){
-        bebidaAno = input_refri.value * 365
-
-        if (bebidaAno >= 500){
-            divMensagem.innerHTML = `Quanitadade de refri que você bebe no ano: ${bebidaAno}<br>Cuidado com a diabetes!`
-        }
-        if (bebidaAno < 500) {
-            divMensagem.innerHTML = `Quanitadade de refri que você bebe no ano: ${bebidaAno}`
-        }
+    function preco(x){
+        divisao = Number(input_preco.value) / Number(input_amigos.value)
+        alert("Cada um dos " + input_amigos.value + " amigos vai pagar R$" + divisao);
     }
 
 </script>

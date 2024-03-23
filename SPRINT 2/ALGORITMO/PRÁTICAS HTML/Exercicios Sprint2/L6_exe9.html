@@ -1,42 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
 <body>
-    Insira a marca da TV (Samsung, LG, Mondial ou Britânia): <input type="text" id="input_marca"><br>
-    Insira o preço da TV: <input type="number" id="input_preco"><br>
-    <button onclick="calculo()">Analisar compra</Button>
+    Insira a altura minima para os pilotos do processo seletivo: <input type="number" id="input_inicial"><br>
+
+    Insira a altura maxima para os pilotos do processo seletivo: <input type="number" id="input_final"><br>
+
+    Insira o nome do piloto: <input type="text" id="input_nome"><br>
+
+    Insira a altura do piloto: <input type="number" id="input_altura"><br>
+
+    <button onclick="calculo()">Verificar candidato</button>
     <div id="divMensagem"></div>
 </body>
-
 </html>
 <script>
     function calculo() {
-        var marca = input_marca.value;
-        var preco = Number(input_preco.value);
+        var alturaInicial = Number(input_inicial.value);
+        var alturaFinal = Number(input_final.value);
+        var nome = input_nome.value;
+        var altura = Number(input_altura.value);
 
-        if (preco < 800 || preco > 2000) {
-            divMensagem.innerHTML += `TV fora da faixa de preço`;
-            if (preco < 800) {
-                divMensagem.innerHTML += `<br>Preço baixo demais!`;
-            }
-            else{
-                divMensagem.innerHTML += `<br>TV cara demais, infelizmente`
+        if (alturaInicial >= 1 && alturaFinal > alturaInicial){
+            divMensagem.innerHTML += `O candidato ${nome}, com altura de ${altura} metros, participará do processo de seleção de piloto`
+
+            if (altura < alturaInicial && altura > alturaFinal){
+                divMensagem.innerHTML += `Infelizmente, o candidato ${nome}, com altura de ${altura} metros, não atende os requisitos da seleção`
             }
         }
-        if (preco >= 800 && preco <= 2000) {
-            if (marca == 'Mondial' || marca == 'Britânia') {
-                divMensagem.innerHTML = `Na faixa de preço, porém marca não confiável`;
-            }
-            else{
-                divMensagem.innerHTML = `Essa TV pode entrar na sua lista!`
-            }
+        else{
+            divMensagem.innerHTML += `Intervalo da altura de seleção é inválida! A altura inicial deve ser maior que 1 e a altura final deve ser maior que a altura inicial.<br>`
         }
-
     }
 </script>

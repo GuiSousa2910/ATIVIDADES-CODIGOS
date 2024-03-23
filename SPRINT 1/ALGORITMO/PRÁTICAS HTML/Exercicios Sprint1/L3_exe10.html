@@ -3,29 +3,48 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Saldo</title>
+        <title>Eleição</title>
     </head>
     <body>
 
-        Insira o saldo da sua conta do banco: <input type="number" id="input_saldo"><br>
-        <button onclick="calculo()">Verificar Finanças</button>
+        Votos candidato A:<input type="text" id="votoA"><br>
+        Votos candidato B:<input type="text" id="votoB"><br>
+        Votos em branco:<input type="text" id="votoBranco"><br>
+        Votos nulo:<input type="text" id="votoNulo"><br>
+
+        <button onclick="resultadoEleicao()">Resultado da eleição</button>
 
         <div id="divMensagem"></div>
     </body>
 </html>
 <script>
 
-    function calculo() {
-        var conta = Number(input_saldo.value)
-        if (conta > 0) {
-            divMensagem.innerHTML = `<p style="color: blue">Saldo positivo! </p>`
-        }
-        if (conta == 0) {
-            divMensagem.innerHTML = `Conta zerada`
-        }
-        if (conta < 0) {
-            divMensagemVerm.innerHTML = `<p style="color: red">Está devendo! </p>`
-        }
-    }
+    var votoCanA = 0;
+    var votoCanB = 0;
+    var votoBrancos = 0;
+    var votoNulos = 0;
 
+    function resultadoEleicao() {
+        
+        
+        votoCanA = Number(votoA.value)
+        votoCanB = Number(votoB.value)
+        votoBrancos = Number(votoBranco.value)
+        votoNulos = Number(votoNulo.value)
+        votoInvalidos = votoBrancos + votoNulos
+        totalVotos = votoCanA + votoCanB + votoInvalidos
+
+        votoPorA = (votoCanA * 100) / totalVotos
+        votoPorB = (votoCanB * 100) / totalVotos
+        votoPorInv = (votoInvalidos * 100) / totalVotos
+
+        divMensagem.innerHTML = `<br>Total de votos: ${totalVotos}<br>
+
+Candidato A: ${votoPorA}% (${votoCanA} votos)<br>  
+
+Candidato B: ${votoPorB}% (${votoCanB} votos)<br>  
+
+Inválidos: ${votoPorInv}% (${votoInvalidos} votos)  `
+
+    }
 </script>

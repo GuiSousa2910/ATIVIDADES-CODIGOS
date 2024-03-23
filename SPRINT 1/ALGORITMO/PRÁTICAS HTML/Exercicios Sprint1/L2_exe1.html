@@ -1,28 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Aposentadoria</title>
-    </head>
-    <body>
-        <input type="number" placeholder="Insira aqui a sua idade!" id="input_idade"> <br><br>
-        
-        <button onclick="homem()" >Aposentadoria Homem</button>
-        <button onclick="mulher()" >Aposentadoria Mulher</button>       
-
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cidade</title>
+</head>
+<body>
+    <input placeholder="Cidade Natal:" id="CidadeNatal" type="text">
+    <input placeholder="Ano de nascimento:" id="AnoNascimento" type="number">
+    <button onclick="cadastrar()">
+        Cadastrar
+    </button>
+</body>
 </html>
 
 <script>
-
-    function homem(x) {
-        restanteH = 70 - Number(input_idade.value); 
-        alert('O tempo que resta para você se aposentar é de ' + restanteH +' anos');
-    }
-
-    function mulher(x) {
-        restanteM = 60 - Number(input_idade.value);
-        alert('O tempo que resta para você se aposentar é de ' + restanteM +' anos');
+    function cadastrar(){
+        alert('Você nasceu na cidade de '+ CidadeNatal.value + ' em ' +  AnoNascimento.value);
     }
 </script>

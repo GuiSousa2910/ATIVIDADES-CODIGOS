@@ -3,32 +3,42 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Renda Familiar</title>
+        <title>Operação Aritmética</title>
     </head>
     <body>
+        
+        Insira um número: <input type="number" placeholder="Qual seu primeiro número?"id="input_n1"><br>
 
-        Insira a sua renda familiar: <input type="number" id="input_renda"><br>
-        Insira o valor da prestação: <input type="number" id="input_prestacao"><br>
-        <button onclick="calculo()">Verificar financiamento</button>
+        Insira um número: <input type="number" placeholder="Qual seu segundo número?" id="input_n2">
 
-        <div id="divMensagem"></div>
-        <div id="divMensagemVerm" style="color: red;"></div>
+        <button onclick="somas()" >Verifique a soma desses números</button>
+        <button onclick="subs()" >Verifique a subtração desses números</button>
+        <button onclick="mul()">Verifique a multiplicação desses números</button>
+        <button onclick="divi()">Verifique a divisão desses números</button>
 
     </body>
 </html>
+
 <script>
 
-    function calculo() {
-        var renda = Number(input_renda.value)
-        var prestacao = Number(input_prestacao.value)
-        var conta = (prestacao / renda) * 100
+function somas() {
+    soma = Number(input_n1.value) + Number(input_n2.value)
+    alert('A soma entre ' + input_n1.value + ' + ' + ' e '+ input_n2.value + ' é' + soma)
+}
+    
+function subs() {
+    sub = Number(input_n1.value) - Number(input_n2.value)
+    alert('A diferença entre '+ input_n1.value + ' e ' + input_n2.value + ' é ' + sub)
+}
 
-        divMensagem.innerHTML = `<br>A prestação corresponde a ${conta}% da renda familiar.<br>`
-
-        if (conta > 30) {
-            divMensagemVerm.innerHTML = `<b>Será necessário complementar a renda familiar</b>`
-        }
-        
-    }
+function mul() {
+    mult = input_n1.value * input_n2.value
+    alert('O produto entre '+ input_n1.value + ' e ' + input_n2.value + ' é ' + mult)
+}
+ 
+function divi() {
+    div = input_n1.value / input_n2.value
+    alert('A razão entre '+ input_n1.value + ' e ' + input_n2.value + ' é ' + divi)
+}
 
 </script>

@@ -2,30 +2,33 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,  initial-scale=1.0">
-        <title>Document</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Passagem</title>
     </head>
     <body>
 
-        Insira a primeira nota: <input type="number" id="input_n1"><br>
-        Insira a segunda nota: <input type="number" id="input_n2"><br>
-        <button onclick="calculo()">Verificar situação</button>
+        Insira o valor da passagem na sua região:<input type="text" id="input_valor"><br>
+        Insira quantas viagens você faz no mês:<input type="text" id="input_viagens"><br>
+        Qual a distâcia do seu trabalho até a sua casa:<input type="text" id="input_distancia"><br>
 
+        <button onclick="calcular()">Calcular VT</button>
         <div id="divMensagem"></div>
     </body>
 </html>
 <script>
 
-    function calculo() {
-        
-        var n1 = Number(input_n1.value);
-        var n2 = Number(input_n2.value);
-        var media = (n1 + n2) / 2
+    function calcular() {
 
-        if (media >= 6) {
-            divMensagem.innerHTML = `Parabéns, aprovado!`
-        }else{
-            divMensagem.innerHTML = `Tente outra vez...`
-        }
-    }    
+        totalViagens = Number(input_viagens.value)
+        viagemOnibus = totalViagens * 0.9
+        viagemCarro = totalViagens * 0.1
+        
+        precoOnibus = viagemOnibus * Number(input_valor.value)
+        
+        precoKmCarro = Number(input_distancia.value) * 0.75
+        precoCarro = viagemCarro * precoKmCarro
+        precoTotal = precoCarro + precoOnibus 
+        
+        divMensagem.innerHTML = `Você vai gastar R$${precoTotal} por mês com transporte.`}
+
 </script>

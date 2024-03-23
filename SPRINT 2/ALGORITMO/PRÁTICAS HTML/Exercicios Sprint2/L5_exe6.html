@@ -1,26 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    .corin {
+        background-color: black;
+        color: white;
+    }
+
+    .pal {
+        background-color: green;
+        color: white;
+    }
+
+    .sp {
+        background-color: black;
+        color: red;
+    }
+</style>
+
 <body>
-    Insira a nota do aluno: <input type="number" id="input_nota"><br>
-    Insira a frequencia do aluno: <input type="number" id="input_freq"><br>
-    <button onclick="calculo()">Avaliar aluno</button>
+    Insira que time paulista você torce: <input type="text" id="input_time"><br>
+    <button onclick="calculo()">Fala sobre esse time</button>
+    <div id="divMensagem"></div>
 </body>
+
 </html>
 <script>
     function calculo() {
-        var nota = Number(input_nota.value);
-        var freq = Number(input_freq.value);
+        var time = input_time.value;
 
-        if (nota >= 6 && freq >= 75) {
-            alert('Parabéns! Aprovado!')
-        }
-        else{
-            alert('Infelizmente, não foi desta vez')
+        if (time == 'Corinthians') {
+            divMensagem.innerHTML = `<p class ="corin">Salve o Corinthians</p>`;
+        } else if (time == 'Palmeiras') {
+            divMensagem.innerHTML = `<p class ="pal">Salve o alviverde imponente</p>`;
+        } else if (time == 'Santos') {
+            divMensagem.innerHTML = `Agora quem dá a bola é o Santos`;
+        } else if (time == 'São Paulo') {
+            divMensagem.innerHTML = `<p class ="sp">Salve o Tricolor Paulista</p>`;
         }
     }
 </script>

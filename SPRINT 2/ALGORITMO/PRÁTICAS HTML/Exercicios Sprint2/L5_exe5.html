@@ -6,23 +6,22 @@
     <title>Document</title>
 </head>
 <body>
-    Insira a nota do aluno: <input type="number" id="input_nota"><br>
-    <button onclick="calculo()">Avaliar aluno</button>
-    <div id="divMensagem"></div>
+    Insira sua nota: <input type="number" id="input_nota"><br>
+    <button onclick="calculo()">Classificar Aluno</button>
 </body>
 </html>
 <script>
     function calculo() {
         var nota = Number(input_nota.value);
-
-        if (nota < 6) {
-            divMensagem.innerHTML = `Aluno reprovado`
-        }
-        else if (nota >= 6 && nota < 8.5) {
-            divMensagem.innerHTML = `Aluno comum e aprovado`
-        }
-        else{
-            divMensagem.innerHTML = `Aluno Exemplar!`
+        
+        if (nota < 5) {
+            alert('Aluno precisa de muita ajuda')
+        }else if(nota <= 7){
+            alert('Aluno na média')
+        }else if(nota <= 9.5){
+            alert('Aluno na acima da média')
+        }else if(nota > 9.5){
+            alert('Aluno fora da curva')
         }
     }
 </script>

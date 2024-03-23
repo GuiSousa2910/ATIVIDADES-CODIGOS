@@ -3,32 +3,30 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Retirada</title>
+        <title>Receber e Pagar</title>
     </head>
     <body>
-
-        Insira o saldo da sua conta: <input type="number" id="input_saldo"><br>
-        Insira o valor a tirar da conta: <input type="number" id="input_tirar"><br>
-        <button onclick="calculo()">Analisar conta</button><br>
-
-        <div id="divMensagem"></div>
-        <div id="divMensagemVerm" style="color: red;"></div>
-
+        
+        Seu saldo: <input type="number" readonly id="input_saldo" value="0"><br><br>
+        <button onclick="receber()"> Receber 100 </button>
+        <button onclick="pagar()"> Pagar 50</button>
+        
     </body>
 </html>
-
 <script>
-
-function calculo(){
-    var saldo = Number(input_saldo.value);
-    var valorRetirado = Number(input_tirar.value);
-    var conta = saldo - valorRetirado;
-
-    if (conta < 0) {
-        divMensagemVerm.innerHTML = `<b>O saldo atual da conta corrente é ${conta}</b>`
+    
+    function receber() {
+        var saldo = Number(input_saldo.value);
+        var saldo = saldo + 100;
+        alert("Transferência de R$100 recebida! Saldo atual: R$" + saldo);                
+        input_saldo.value = saldo
     }
-    if (conta >= 0 ){
-        divMensagem.innerHTML = `<b>O saldo atual da conta corrente é  ${conta}</b>`
+
+    function pagar() {
+        saldo = Number(input_saldo.value)
+        saldo = saldo - 50
+        alert("Pagamento de R$50 efetuado! Saldo atual: R$" + saldo);
+        input_saldo.value = saldo
     }
-}
+
 </script>

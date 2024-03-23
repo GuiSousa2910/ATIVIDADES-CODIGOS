@@ -6,19 +6,25 @@
     <title>Document</title>
 </head>
 <body>
-    Insira sua nota: <input type="number" id="input_nota"><br>
-    <button onclick="analisar()">Avaliar aluno...</button>
+    Temperatura: <input type="number" id="input_temp"><br>
+    <button onclick="calculo()"</button>
+        <div id="divMensagem"></div>
 </body>
 </html>
 <script>
-    function analisar(){
-        var nota = Number(input_nota.value);
+    function calculo() {
+        var temp = Number(input_temp.value);
 
-        if (nota >= 0 && nota <= 10) {
-            alert('Nota válida')
-        }
-        else{
-            alert('Onde já se viu nota menor que 0 e maior que 10?!')
+        if (temp < 14){
+            divMensagem.innerHTML = `Congelante`
+        }else if(temp <= 21){
+            divMensagem.innerHTML = `Com frio`
+        }else if(temp <= 24){
+            divMensagem.innerHTML = `Confortavel`
+        }else if(temp <= 31){
+            divMensagem.innerHTML = `Com calor`
+        }else{
+            divMensagem.innerHTML = `Calor escaldante`
         }
     }
 </script>

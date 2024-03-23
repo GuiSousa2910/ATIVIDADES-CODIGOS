@@ -1,117 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Dragon Ball</title>
 </head>
-
 <body>
-    <div class="corpo">
+    
+    Insira a sua quantidade de ki: <input type="number" id="input_ki"><br>
+    Transformar em... <br>
+    <button onclick="ss()">SSJ</button>
+    <button onclick="ss2()"> SSJ2 </button>
+    <button onclick="ss3()"> SSJ3</button>
 
-        <h3 class="titulo">Bem vindo</h3>
-        <div class="item">
-            <div class="texto">Insira o nome do passageiro: 
+    <div id="divMensagem"></div>
 
-            <br><input type="text" id="input_nome" class="inserir">
-            </div>
-        </div>
-
-        <div class="item">
-            <div class="texto">
-        Distancia (em KM) do seu local até o destino: <input type="number" id="input_distancia" class="inserir">
-            </div>
-        </div>
-
-        <div class="item">
-            <div class="texto">
-        Bandeira da Corrida: <br><input type="number" id="input_bandeira" class="inserir">
-            </div>
-        </div>
-
-        <div class="item">
-            <div class="texto">
-        Horário da corrida: <br><input type="number" id="input_horario" class="inserir">
-            </div>
-        </div>
-
-        <div class="texto">
-        <button onclick="calculo()" class="botao">Calcular corrida</button>
-        </div>
-
-    <div id="divMensagem" class="texto"></div>
 </body>
-
 </html>
 <script>
 
-    function calculo() {
-        var nomePassageiro = input_nome.value;
-        var distancia = Number(input_distancia.value);
-        var distanciaKm = distancia * 1.25;
-        var bandeira = Number(input_bandeira.value);
-        var horario = Number(input_horario.value);
+    function ss() {
+        ki = Number(input_ki.value)
+        ki = ki * 50
 
-        if (bandeira >= 1) {
-            if (bandeira <= 3) {
+        divMensagem.innerHTML += `<br>Após se transformar em SSJ, o ki desse Sayajin passa a ser de ${ki}`
+    }  
 
-                if (bandeira == 1) {
-                    if (horario >= 0) {
-                        if (horario <= 6) {
-                            distanciaKm += distanciaKm * 0.05;
-                        }
-                    }
-                    if (horario >= 7) {
-                        if (horario <= 12) {
-                            distanciaKm += distanciaKm * 0.10;
-                        }
-                    }
-                    if (horario >= 13) {
-                        if (horario <= 24) {
-                            distanciaKm += distanciaKm * 0.15;
-                        }
-                    }
-                }
+    function ss2() {
+        ki = Number(input_ki.value)
+        ki = ki * 100
 
-                if (bandeira == 2) {
-                    if (horario >= 0) {
-                        if (horario <= 6) {
-                            distanciaKm += distanciaKm * 0.10;
-                        }
-                    }
-                    if (horario >= 7) {
-                        if (horario <= 12) {
-                            distanciaKm += distanciaKm * 0.20;
-                        }
-                    }
-                    if (horario >= 13) {
-                        if (horario <= 24) {
-                            distanciaKm += distanciaKm * 0.30;
-                        }
-                    }
-                }
+        divMensagem.innerHTML += `<br>Após se transformar em SSJ2, o ki desse Sayajin passa a ser de ${ki}`
+    }    
 
-                if (bandeira == 3) {
-                    if (horario >= 0) {
-                        if (horario <= 6) {
-                            distanciaKm += distanciaKm * 0.15;
-                        }
-                    }
-                    if (horario >= 7) {
-                        if (horario <= 12) {
-                            distanciaKm += distanciaKm * 0.30;
-                        }
-                    }
-                    if (horario >= 13) {
-                        if (horario <= 24) {
-                            distanciaKm += distanciaKm * 0.45;
-                        }
-                    }
-                }
-            }  
-        } 
-        divMensagem.innerHTML = `<b>Olá ${nomePassageiro}, sua corrida, será na bandeira ${bandeira}, percorrerá ${distancia} km e o total da corrida será de ${distanciaKm} </b>`;    
-        }
+    function ss3() {
+        ki = Number(input_ki.value)
+        ki = ki * 200
+
+        divMensagem.innerHTML += `<br>Após se transformar em SSJ3, o ki desse Sayajin passa a ser de ${ki}`
+    }    
 </script>

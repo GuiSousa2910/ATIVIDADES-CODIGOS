@@ -6,22 +6,23 @@
     <title>Document</title>
 </head>
 <body>
-    Insira a temperatura atual: <input type="number" id="input_temp"><br>
-    <button onclick="calculo()">Analisar Clima</button><br>
+    Insira a nota do aluno: <input type="number" id="input_nota"><br>
+    <button onclick="calculo()">Avaliar aluno</button>
+    <div id="divMensagem"></div>
 </body>
 </html>
 <script>
     function calculo() {
-        var temp = Number(input_temp.value);
+        var nota = Number(input_nota.value);
 
-        if (temp < 21 || temp > 24) {
-            alert('Alerta de desconforto!')
-            if (temp < 21) {
-                alert('As pessoas vão ter hipotermia')
-            }
-            if (temp > 24) {
-                alert('As pessoas vão derreter')
-            }
+        if (nota < 6) {
+            divMensagem.innerHTML = `Aluno reprovado`
+        }
+        else if (nota >= 6 && nota < 8.5) {
+            divMensagem.innerHTML = `Aluno comum e aprovado`
+        }
+        else{
+            divMensagem.innerHTML = `Aluno Exemplar!`
         }
     }
 </script>

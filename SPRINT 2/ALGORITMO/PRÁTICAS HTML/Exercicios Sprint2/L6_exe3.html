@@ -6,22 +6,19 @@
     <title>Document</title>
 </head>
 <body>
-    Insira sua renda individual: <input type="number" id="input_renda"><br>
-    Insira sua renda familiar: <input type="number" id="input_familia"><br>
-    <button onclick="calculo()">Terei beneficios</button>
-    <div id="divMensagem"></div>
+    Insira sua nota: <input type="number" id="input_nota"><br>
+    <button onclick="analisar()">Avaliar aluno...</button>
 </body>
 </html>
 <script>
-    function calculo(){
-        var rendaI = Number(input_renda.value);
-        var rendaF = Number(input_familia.value);
+    function analisar(){
+        var nota = Number(input_nota.value);
 
-        if (rendaI <= 2000 || rendaF <= 3000) {
-            divMensagem.innerHTML = `Você terá direito ao auxílio`
+        if (nota >= 0 && nota <= 10) {
+            alert('Nota válida')
         }
         else{
-            divMensagem.innerHTML = `Sem direito ao auxílio` 
+            alert('Onde já se viu nota menor que 0 e maior que 10?!')
         }
     }
 </script>

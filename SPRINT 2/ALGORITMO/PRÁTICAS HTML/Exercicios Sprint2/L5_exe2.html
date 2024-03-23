@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    Insira sua renda: <input type="text" id="input_renda"><br><br>
-    Insira renda total da sua familia: <input type="number" id="input_rendaTotal"><br><br>
-    <button onclick="calculo()">Verificar ajuda</button>
+    Solicite a sua renda familiar: <input type="number" id="input_renda"><br>
+    <button onclick="calculo()">Analisar renda</button>
     <div id="divMensagem"></div>
 </body>
+
 </html>
 <script>
     function calculo() {
         var renda = Number(input_renda.value);
-        var rendaFamilia = Number(input_rendaTotal.value);
 
-        if (renda <= 1050 && rendaFamilia <= 2100) {
-            divMensagem.innerHTML = `Você terá direito!`
-        }
-        else{
-            divMensagem.innerHTML = `Você NÃO terá direito`
+        if (renda <= 250) {
+            divMensagem.innerHTML = `Classe E`;
+        } else if (renda <= 900) {
+            divMensagem.innerHTML = `Classe D`;
+        } else if (renda <= 2500) {
+            divMensagem.innerHTML = `Classe C`;
+        } else if (renda <= 9500) {
+            divMensagem.innerHTML = `Classe B`;
+        } else if (renda > 9500) {
+            divMensagem.innerHTML = `Classe A`;
         }
     }
+
 </script>

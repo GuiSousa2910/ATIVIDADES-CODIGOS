@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    Insira seu nome:<input type="text" id="input_nome"><br>
-    Insira sua idade:<input type="text" id="input_idade"><br>
-    <button onclick="calculo()">Avaliar aluno</button>
-    <div id="divMensagem"></div>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IMC</title>
+    </head>
+    <body>
+        
+        Insira a sua altura:<input type="number" id="input_altura"><br>
+        Insira seu peso: <input type="number" id="input_peso"><br>
+        <button onclick="calculo()">Calcular IMC</button>
+
+        <div id="divMensagem"></div>
+    </body>
 </html>
 <script>
+
     function calculo() {
-        var nome = input_nome.value
-        var idade = input_idade.value
-        if (idade >= 18) {
-            divMensagem.innerHTML = `${nome}, vamos tirar a CNH?`
-        }else{
-            divMensagem.innerHTML = `${nome}, vai jogar Playstation!`
-        }
+        peso = Number(input_peso.value)
+        altura = Number(input_altura.value)
+
+        imc = peso / (altura * altura)
+        divMensagem.innerHTML = `Seu IMC: ${imc}`
     }
+
 </script>

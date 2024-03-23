@@ -1,29 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Bilhete Único</title>
-    </head>
-    <body>
-
-        Insira o preço da passagem na sua cidade:  <input type="number" id="input_valor" placeholder="Preço da passagem"><br>
-        Insira quantas viagens você faz no mês:  <input type="number" id="input_viagem" placeholder="Viagens no mês?"><br><br>
-
-        <button onclick="economia()">Ver economia</button>
-
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time</title>
+    <link rel="stylesheet" href="bdaodba.css">
+</head>
+<body>
+    <input placeholder="Time que torce:" id="time" type="text">
+    <input placeholder="Títulos:" id="titulos" type="number" >
+    <button onclick="quantidade()">
+        Amo meu time.
+    </button>
+    
+</body>
 </html>
 
 <script>
-
-    function economia() {
-        estudante = Number(input_valor.value) / 2
-        normal = input_valor.value * input_viagem.value
-        estudanteEco = estudante * input_viagem.value
-        economiaMes = normal - estudanteEco
-
-        alert('Você economizará R$' + economiaMes + ' por mês')
+    function quantidade(){
+        alert('O time ' + time.value + ' tem ' + titulos.value + ' títulos')
     }
-
 </script>
