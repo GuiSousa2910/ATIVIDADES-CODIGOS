@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira o nome da empresa: <input type="text" id="input_nomeE"><br>
+    Insira o valor da bolsa da empresa: <input type="number" id="input_bolsa"><br>
+    Insira o valor do VR: <input type="number" id="input_vr"><br>
+    Insira o tempo de deslocamento da empresa até a SPTech: <input type="number" id="input_dist"><br>
+    <button onclick="calculo()">É preferida?</button>
+    <div id="divMensagem"></div>
+</body>
+</html>
+<script>
+    function calculo() {
+        var nome = input_nomeE.value;
+        var bolsa = Number(input_bolsa.value);
+        var vr = Number(input_vr.value);
+        var dist = Number(input_dist.value);
+
+        if (bolsa >=1800 || vr >= 20 || dist <= 30) {
+            divMensagem.innerHTML = `A empresa ${nome} é uma de suas preferências`
+        }
+        else{
+            divMensagem.innerHTML = `A empresa ${nome} está fora da sua lista`
+        }
+    }
+</script>
