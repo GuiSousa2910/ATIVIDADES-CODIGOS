@@ -46,5 +46,4 @@ select * from musica join album
 	on idAlbum = idMusicaAlbum;
     
 select musica.titulo, album.nome from musica join album on idAlbum = idMusicaAlbum;
-
 select musica.titulo, musica.artista, musica.genero,album.nome from musica join album on idAlbum = idMusicaAlbum where album.tipo = 'Estudio';
