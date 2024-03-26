@@ -6,6 +6,30 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <label>
+        Pokemon:
+        <select id="select_pokemon">
+            <option value="#">Selecione um pokemon</option>
+            <option value="1">Charmander</option>
+            <option value="2">Bulbasaur</option>
+            <option value="3">Squirtle</option>
+        </select>
+    </label>
+    <button onclick="selecionar()">Selecionar</button>
 </body>
 </html>
+<script>
+    function selecionar() {
+        var pokemon = select_pokemon.value;
+
+        if (pokemon == '1') {
+            alert('Escolheu o correto!')
+        }
+        else if(pokemon == '2'){
+            alert('Escolheu o pior')
+        }
+        else if (pokemon == '3') {
+            alert('Vai nadar')
+        }
+    }
+</script>

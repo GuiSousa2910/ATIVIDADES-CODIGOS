@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label>
+        Informe a altura da pessoa encontrada: <br> <input type="text" id="input_altura"><br>
+        Informe a cor do cabelo: <br>
+        <select id="select_cor">
+            <option value="#">Selecione a cor do cabelo</option>
+            <option value="1">Preto</option>
+            <option value="2">Vermelho</option>
+            <option value="3">Amarelo</option>
+            <option value="4">Castanho</option>
+        </select><br><br>
+    </label>
+    <button onclick="match()">Deu match?</button>
+    <div id="divMensagem"></div>
+</body>
+
+</html>
+<script>
+    function match() {
+        var altura = Number(input_altura.value);
+        var cor = select_cor.value;
+
+        if (altura < 1.85) {
+            if (cor == '3' || cor == '4') {
+                divMensagem.innerHTML = `<img src="depositphotos_380564934-stock-illustration-smile-icon-happy-face-symbol.jpg">`;
+            }
+            else if (cor == '1' || cor == '2') {
+                divMensagem.innerHTML = `<img src="images.jpg">`;
+
+            }
+        }
+        else {
+            divMensagem.innerHTML = `<img src="images.jpg">`;
+        }
+    }
+</script>
