@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)file:///C:/Users/Marise%20Miranda/Downloads/Marises%20Machine.html -->
+<html lang="en">
+
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="card">
+        <h1>Calculadora Decimal</h1>
+
+        <br><br>
+
+        <h3>Insira o valor em Decimal<br>para conversão</h3>
+        <input class="input_principal" id="input_valor" type="text" placeholder="Digite o valor">
+
+        <br><br>
+
+        <h3>Converter para:</h3>
+
+
+        <input onclick="aparecer_octal()" type="checkbox"><b>Octal</b>
+        <br>
+        <div class="quadrado" id="convOctal"></div>
+
+        <br><br>
+
+        <input onclick="aparecer_hexa()" type="checkbox"><b>Hexadecimal</b>
+        <br>
+        <div class="quadrado" id="convHexa"></div>
+
+        <br><br>
+
+        <input onclick="aparecer_bin()" type="checkbox"><b>Binário</b>
+        <br>
+        <div class="quadrado" id="convBin"></div>
+
+        <br><br>
+
+        <button onclick="converter()">Converter</button>
+</div>
+        <script>
+
+                function converter() {
+
+                        var valor = Number(input_valor.value);
+
+                        var octal = valor.toString(8);
+
+                        var hexadecimal = valor.toString(16);
+
+                        var binaria = valor.toString(2);
+
+                        console.log(octal);
+                        console.log(hexadecimal);
+                        console.log(binaria);
+
+                        document.getElementById("convOctal").innerHTML = ` ${octal}`;
+                        document.getElementById("convHexa").innerHTML = ` ${hexadecimal}`;
+                        document.getElementById("convBin").innerHTML = ` ${binaria}`;
+
+
+                }
+
+                function aparecer_bin() {
+                        convBin.style.display = 'block';
+                }
+
+                function aparecer_hexa() {
+                        convHexa.style.display = 'block';
+                }
+
+                function aparecer_octal() {
+                        convOctal.style.display = 'block';
+                }
+                document.bgColor = "#00ffff";
+        </script>
+</body>
+
+</html>
