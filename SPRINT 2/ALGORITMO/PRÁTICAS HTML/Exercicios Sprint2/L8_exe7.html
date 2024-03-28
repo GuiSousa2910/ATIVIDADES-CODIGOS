@@ -41,42 +41,42 @@
                     divMensagem.innerHTML = '<br>Usúario BLOQUEADO! Procure seu gerente!';
                 }
             }
-
-            else if (contador > 0) {
-                if (nota >= 0 && nota < 6) {
-                    if (freq >= 75) {
-                        divMensagem.innerHTML = `Aluno ficou abaixo da média<br>Aluno aprovado por frequência`;
-                        contador = 3;
-                    }
-                    else {
-                        divMensagem.innerHTML = `Aluno ficou abaixo da média<br>Aluno reprovado por frequência`;
-                        contador = 3;
-
-                    }
+        }
+        else if (contador > 0) {
+            if (nota >= 0 && nota < 6) {
+                if (freq >= 75) {
+                    divMensagem.innerHTML = `Aluno ficou abaixo da média<br>Aluno aprovado por frequência`;
+                    contador = 3;
+                }
+                else {
+                    divMensagem.innerHTML = `Aluno ficou abaixo da média<br>Aluno reprovado por frequência`;
+                    contador = 3;
 
                 }
-                else if (nota >= 6 && nota <= 8) {
-                    if (freq >= 75) {
-                        divMensagem.innerHTML = `Aluno ficou na média<br>Aluno aprovado por frequência`;
-                        contador = 3;
-                    }
-                    else {
-                        divMensagem.innerHTML = `Aluno ficou na média<br>Aluno reprovado por frequência`;
-                        contador = 3;
-                    }
-                }
 
-                else if (nota > 8 && nota <= 10) {
-                    if (freq >= 75) {
-                        divMensagem.innerHTML = `Aluno acima da média<br>Aluno aprovado por frequência`;
-                        contador = 3;
-                    }
-                    else {
-                        divMensagem.innerHTML = `Aluno acima da média<br>Aluno reprovado por frequência`;
-                        contador = 3;
-                    }
+            }
+            else if (nota >= 6 && nota <= 8) {
+                if (freq >= 75) {
+                    divMensagem.innerHTML = `Aluno ficou na média<br>Aluno aprovado por frequência`;
+                    contador = 3;
+                }
+                else {
+                    divMensagem.innerHTML = `Aluno ficou na média<br>Aluno reprovado por frequência`;
+                    contador = 3;
+                }
+            }
+
+            else if (nota > 8 && nota <= 10) {
+                if (freq >= 75) {
+                    divMensagem.innerHTML = `Aluno acima da média<br>Aluno aprovado por frequência`;
+                    contador = 3;
+                }
+                else {
+                    divMensagem.innerHTML = `Aluno acima da média<br>Aluno reprovado por frequência`;
+                    contador = 3;
                 }
             }
         }
+
     }
 </script>

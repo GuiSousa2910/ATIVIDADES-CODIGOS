@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Opções:
+    <div>
+        <select id="select_opcoes" onchange="opcoesClick()">
+            <option value="#">Selecione uma das opções</option>
+            <option value="1">Cartão de Crédito</option>
+            <option value="2">Conta de luz</option>
+            <option value="3">Água</option>
+            <option value="4">Internet</option>
+            <option value="5">Comida</option>
+        </select>
+        <div id="divInput"></div>
+    </div><br>
+    Zonas:
+    <div>
+        <select id="select_zonas">
+            <option value="#">Selecione a zona em que você mora</option>
+            <option value="1">Zona norte</option>
+            <option value="2">Zona Sul</option>
+            <option value="3">Centro</option>
+            <option value="4">Zona Oeste</option>
+            <option value="5">Zona Leste</option>
+        </select>
+    </div>
+
+    <br>
+    <div id="divMensagem"></div><br>
+    <button onclick="aparece()">Veja Aqui Seus Gastos!</button>
+
+</body>
+
+</html>
+<script>
+
+    function opcoesClick() {
+        var opcoes = select_opcoes.value;
+
+        if (opcoes == '1') {
+            divInput.innerHTML = `<br>Sua compra foi feita via internet ou presencial: <br><input type="text" id="tipoCompra">`;
+            tipoDaCompra = document.getElementById('tipoCompra');
+        }
+        else if (opcoes == '2') {
+            divInput.innerHTML = `<br>Quantas horas sua luz fica ligada por dia: <br><input type="number" id="qntLuz">`;
+            qntLuz = document.getElementById('qntLuz');
+        }
+        else if (opcoes == '3') {
+            divInput.innerHTML = `<br>Por quantas horas sua água fica ligada por dia: <br><input type="number" id="qntAgua">`;
+            qntAgua = document.getElementById('qntAgua');
+        }
+        else if (opcoes == '4') {
+            divInput.innerHTML = `<br>Quantos MB tem a sua internet: <br><input type="number" id="qntMB">`;
+            qntMB = document.getElementById('qntMB');
+        }
+        else if (opcoes == '5') {
+            divInput.innerHTML = `<br>Quantos itens você comrpou na sua última compra: <br><input type="number" id="qntItens">`;
+            qntItens = document.getElementById('qntItens');
+        }
+    }
+
+    var tipoDaCompra = '';
+    var qntLuz = 0;
+    var qntAgua = 0;
+    var qntMB = 0;
+    var qntItens = 0;
+
+    function aparece() {
+        var opcoes = select_opcoes.value;
+        var zonas = select_zonas.value;
+        tipoDaCompra = tipoDaCompra.value;
+        qntLuz = qntLuz.value;
+        qntAgua = qntAgua.value;
+        qntMB = qntMB.value;
+        qntItens = qntItens.value;
+
+        if (opcoes == '1') {
+            if (tipoDaCompra == 'Internet' || tipoDaCompra == 'internet' || tipoDaCompra == 'Presencial' || tipoDaCompra == 'presencial') {
+                if (tipoDaCompra == 'Internet' || tipoDaCompra == 'internet') {
+                    var preco = 43.22 + 12;
+
+                    if (zonas == '1') {
+                        preco *= 1.23;
+                    }
+                    else if (zonas == '2') {
+                        preco *= 1.02;
+                    }
+                    else if (zonas == '3') {
+                        preco = preco;
+                    }
+                    else if (zonas == '4') {
+                        preco *= 1.32;
+                    }
+                    else if (zonas == '5') {
+                        preco *= 1.09;
+                    }
+                    divMensagem.innerHTML = `O seu gasto mensal com o Cartão de Crédito é de: ${preco}`;
+                }
+                else if (tipoDaCompra == 'Presencial' || tipoDaCompra == 'presencial') {
+                    var preco = 533.89;
+
+                    if (zonas == '1') {
+                        preco *= 1.23;
+                    }
+                    else if (zonas == '2') {
+                        preco *= 1.02;
+                    }
+                    else if (zonas == '3') {
+                        preco = preco;
+                    }
+                    else if (zonas == '4') {
+                        preco *= 1.32;
+                    }
+                    else if (zonas == '5') {
+                        preco *= 1.09;
+                    }
+                    divMensagem.innerHTML = `O seu gasto mensal com o Cartão de Crédito é de: ${preco}`;
+                }
+
+            } else {
+                divMensagem.innerHTML = `INFORMAÇÃO INVALIDA`;
+            }
+        }
+
+        else if (opcoes == '2') {
+            var precoLuz = 9;
+            precoLuz *= qntLuz;
+            precoLuz *= 30;
+
+            if (zonas == '1') {
+                precoLuz *= 1.23;
+            }
+            else if (zonas == '2') {
+                precoLuz *= 1.02;
+            }
+            else if (zonas == '3') {
+                precoLuz = precoLuz;
+            }
+            else if (zonas == '4') {
+                precoLuz *= 1.32;
+            }
+            else if (zonas == '5') {
+                precoLuz *= 1.09;
+            }
+            divMensagem.innerHTML = `O seu gasto mensal com o energia é de: ${precoLuz}`;
+        }
+
+        else if (opcoes == '3') {
+            var precoAgua = 5;
+            precoAgua *= qntAgua;
+            precoAgua *= 30;
+
+            if (zonas == '1') {
+                precoAgua *= 1.23;
+            }
+            else if (zonas == '2') {
+                precoAgua *= 1.02;
+            }
+            else if (zonas == '3') {
+                precoAgua = precoAgua;
+            }
+            else if (zonas == '4') {
+                precoAgua *= 1.32;
+            }
+            else if (zonas == '5') {
+                precoAgua *= 1.09;
+            }
+            divMensagem.innerHTML = `O seu gasto mensal com o água é de: ${precoAgua}`;
+        }
+
+        else if (opcoes == '4') {
+            var precoMB = (140 / 28);
+            precoMB *= qntMB;
+
+            if (zonas == '1') {
+                precoMB *= 1.23;
+            }
+            else if (zonas == '2') {
+                precoMB *= 1.02;
+            }
+            else if (zonas == '3') {
+                precoMB = precoMB;
+            }
+            else if (zonas == '4') {
+                precoMB *= 1.32;
+            }
+            else if (zonas == '5') {
+                precoMB *= 1.09;
+            }
+            divMensagem.innerHTML = `Seu plano de internet custa: ${precoMB}`;
+        }
+        
+        else if (opcoes == '5') {
+            var precoComida = 25.22 * qntItens;
+
+            if (zonas == '1') {
+                precoComida *= 1.23;
+            }
+            else if (zonas == '2') {
+                precoComida *= 1.02;
+            }
+            else if (zonas == '3') {
+                precoComida = precoComida;
+            }
+            else if (zonas == '4') {
+                precoComida *= 1.32;
+            }
+            else if (zonas == '5') {
+                precoComida *= 1.09;
+            }
+            divMensagem.innerHTML = `Na sua última compra você gastou: ${precoComida}`;
+        }
+
+    }
+</script>
