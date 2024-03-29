@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        Selecione o tipo da sua conta:
+        <select id="select_tipoConta">
+            <option value="#">Selecione sua conta</option>
+            <option value="1">Premium Black</option>
+            <option value="2">Premium</option>
+            <option value="3">Comum</option>
+        </select>
+    </div><br>
+
+    <div>
+        Selecione o tipo de transação:
+        <select id="select_tipoTransacao">
+            <option value="#">Selecione a transação</option>
+            <option value="1">Boleto</option>
+            <option value="2">Pix</option>
+            <option value="3">Transferência de crédito</option>
+            <option value="4">Transferência de BitCoin</option>
+        </select>
+    </div><br>
+
+    Digite o valor que tem na sua conta: <br> <input type="number" id="input_valorTenho"><br><br>
+
+    Digite o valor a ser transferido: <br> <input type="number" id="input_valorTransferido"><br><br>
+
+    Digite sua senha: <br><input type="text" id="input_senha"><br><br>
+
+    <button onclick="transferir()">Faça sua transferência!</button>
+
+    <div id="divMensagem"></div>
+</body>
+
+</html>
+<script>
+    var qntTransacoes = 0;
+
+    function transferir() {
+
+        var senha = input_senha.value;
+        var valorTransferido = Number(input_valorTransferido.value);
+        var tipoConta = select_tipoConta.value;
+        var tipoTransacao = select_tipoTransacao.value;
+        var valorTenho = Number(input_valorTenho.value);
+
+        if (tipoConta == '1' && senha == 'riqueza2000') {
+            if (tipoTransacao == '1') {
+                var voltaBanco = valorTransferido * 0.1;
+                valorTransferido = valorTransferido * 0.9;
+                valorTenho -= valorTransferido;
+                divMensagem.innerHTML = `Saldo atual: ${valorTenho}`;
+
+            }
+            else if (tipoTransacao == '2') {
+                valorTenho -= valorTransferido;
+                divMensagem.innerHTML = `Saldo atual: ${valorTenho}`;
+
+            }
+            else if (tipoTransacao == '3') {
+                var voltaBanco = valorTransferido * 0.35;
+                valorTransferido = valorTransferido * 0.65;
+                valorTenho -= valorTransferido;
+                divMensagem.innerHTML = `Saldo atual: ${valorTenho}`;
+
+            }
+            else if (tipoTransacao == '4') {
+                valorTransferido *= 0.8;
+                valorTenho += valorTransferido;
+                divMensagem.innerHTML = `Saldo atual: ${valorTenho}`;
+
+            }
+        }
+        else if (tipoConta == '2' && senha == 'meia riqueza') {
+            if (valorTransferido <= 7000) {
+
+                if (tipoTransacao == '1') {
+                    var voltaBanco = valorTransferido * 0.1;
+                    valorTransferido = valorTransferido * 0.9;
+                    valorTenho -= valorTransferido;
+                    divMensagem.innerHTML = `Saldo atual: ${valorTenho}`;
+
+                }
+                else if (tipoTransacao == '2') {
+                    valorTenho -= valorTransferido;
+                    divMensagem.innerHTML = `Saldo atual: ${valorTenho}`;
+
+                }
+                else if (tipoTransacao == '3') {
+                    var voltaBanco = valorTransferido * 0.35;
+                    valorTransferido = valorTransferido * 0.65;
+                    valorTenho -= valorTransferido;
+                    divMensagem.innerHTML = `Saldo atual: ${valorTenho}`;
+
+                }
+                else if (tipoTransacao == '4') {
+                    divMensagem.innerHTML = `OPERAÇÃO INVÁLIDA PARA O SEU TIPO DE CONTA!`;
+
+                }
+            }
+            else if (valorTransferido > 7000) {
+                divMensagem.innerHTML = 'VALOR INVÁLIDO PARA O SEU TIPO DE CONTA';
+            }
+        }
+        else if (tipoConta == '3' && senha == 'pobre coitado') {
+            if (valorTransferido <= 3000) {
+                if (qntTransacoes <= 10) {
+                    if (tipoTransacao == '1') {
+                        var voltaBanco = valorTransferido * 0.1;
+                        valorTransferido = valorTransferido * 0.9;
+                        valorTenho -= valorTransferido;
+                        divMensagem.innerHTML = `Saldo atual: ${valorTenho}`;
+
+                    }
+                    else if (tipoTransacao == '2') {
+                        valorTenho -= valorTransferido;
+                        divMensagem.innerHTML = `Saldo atual: ${valorTenho}`;
+
+                    }
+                    else if (tipoTransacao == '3') {
+                        divMensagem.innerHTML = `OPERAÇÃO INVÁLIDA PARA O SEU TIPO DE CONTA!`;
+
+                    }
+                    else if (tipoTransacao == '4') {
+                        divMensagem.innerHTML = `OPERAÇÃO INVÁLIDA PARA O SEU TIPO DE CONTA!`;
+
+                    }
+                }
+                if (qntTransacoes == 10) {
+                    divMensagem.innerHTML = 'VOCÊ NÃO PODE MAIS FAZER NENHUMA TRANSAÇÃO';
+                }
+            }
+            else if (valorTransferido > 3000) {
+                divMensagem.innerHTML = 'VALOR INVÁLIDO PARA O SEU TIPO DE CONTA';
+            }
+        }
+        if (valorTransferido > valorTenho) {
+            divMensagem.innerHTML = (`Não será possivel continuar com essa transação por falta de dinheiro.`);
+        }
+    }
+
+</script>
