@@ -32,18 +32,19 @@ insert into album values
 select * from musica;
 select * from album;
 
-ALTER TABLE musica ADD COLUMN idMusicaAlbum int;
-ALTER TABLE musica ADD constraint fkMusicaAlbum foreign key (idMusicaAlbum) references album(idAlbum);
+ALTER TABLE musica ADD COLUMN fkAlbum int;
+ALTER TABLE musica ADD constraint fkMusicaAlbum foreign key (fkAlbum) references album(idAlbum);
 
-UPDATE musica set idMusicaAlbum = 1 where idMusica = 1;
-UPDATE musica set idMusicaAlbum = 2 where idMusica = 2;
-UPDATE musica set idMusicaAlbum = 3 where idMusica = 3;
-UPDATE musica set idMusicaAlbum = 4 where idMusica = 4;
-UPDATE musica set idMusicaAlbum = 3 where idMusica = 5;
-UPDATE musica set idMusicaAlbum = 2 where idMusica = 6;
+UPDATE musica set fkAlbum = 1 where idMusica = 1;
+UPDATE musica set fkAlbum = 2 where idMusica = 2;
+UPDATE musica set fkAlbum = 3 where idMusica = 3;
+UPDATE musica set fkAlbum = 4 where idMusica = 4;
+UPDATE musica set fkAlbum = 3 where idMusica = 5;
+UPDATE musica set fkAlbum = 2 where idMusica = 6;
 
 select * from musica join album 
-	on idAlbum = idMusicaAlbum;
+	on idAlbum = fkAlbum;
     
-select musica.titulo, album.nome from musica join album on idAlbum = idMusicaAlbum;
-select musica.titulo, musica.artista, musica.genero,album.nome from musica join album on idAlbum = idMusicaAlbum where album.tipo = 'Estudio';
+select musica.titulo, album.nome from musica join album on idAlbum = fkAlbum;
+select musica.titulo, musica.artista, musica.genero,album.nome from musica 
+	join album on idAlbum = fkAlbum where album.tipo = 'Estudio';
