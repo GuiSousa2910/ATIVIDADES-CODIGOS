@@ -24,8 +24,11 @@ UPDATE pessoa SET fkPai = 3 where idPessoa = 1;
 select filho.nome as nomeFilho, 
 		pai.nome as nomePai,
 		mae.nome as nomeMae
-			from pessoa as filho join pessoa as pai on filho.fkPai = pai.idPessoa
-			join pessoa as mae on filho.fkMae = mae.idPessoa;
+			from pessoa as filho 
+				join pessoa as pai 
+					on filho.fkPai = pai.idPessoa
+				join pessoa as mae 
+					on filho.fkMae = mae.idPessoa;
             
 insert into pessoa (nome) values 
 ('Alfredo');
