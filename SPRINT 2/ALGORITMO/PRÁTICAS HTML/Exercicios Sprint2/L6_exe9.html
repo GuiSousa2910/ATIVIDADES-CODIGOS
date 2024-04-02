@@ -25,15 +25,15 @@
         var nome = input_nome.value;
         var altura = Number(input_altura.value);
 
-        if (alturaInicial >= 1 && alturaFinal > alturaInicial){
+        if (alturaInicial > 1 && alturaFinal > alturaInicial){
             divMensagem.innerHTML += `O candidato ${nome}, com altura de ${altura} metros, participará do processo de seleção de piloto`
 
-            if (altura < alturaInicial && altura > alturaFinal){
+            if (altura >= alturaInicial && altura <= alturaFinal){
                 divMensagem.innerHTML += `Infelizmente, o candidato ${nome}, com altura de ${altura} metros, não atende os requisitos da seleção`
             }
         }
         else{
-            divMensagem.innerHTML += `Intervalo da altura de seleção é inválida! A altura inicial deve ser maior que 1 e a altura final deve ser maior que a altura inicial.<br>`
+            alert('Intervalo da altura de seleção é inválida! A altura inicial deve ser maior que 1 e a altura final deve ser maior que a altura inicial')
         }
     }
 </script>
