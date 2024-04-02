@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Operações com Textos</h1>
+
+    <label>
+        Digite uma frase:
+        <br><input type="text" id="input_frase">
+    </label>
+
+    <button onclick="analisar()">Analisar</button>
+
+    <div id="divMensagem"></div>
+</body>
+
+</html>
+<script>
+    function analisar() {
+        var frase = input_frase.value;
+        var tamanho_frase = frase.length; // '.length' mostra o tamanho da frase
+        divMensagem.innerHTML = `Comprimento do texto: ${tamanho_frase}`;
+
+        if (tamanho_frase >= 8) {
+            divMensagem.innerHTML += `<br>- Possui 8 ou mais letras`;
+        }
+        else {
+            divMensagem.innerHTML += `<br>- Possui MENOS de 8 letras`;
+        }
+
+        var comeca_a = frase.startsWith('a');
+        divMensagem.innerHTML += `<br>- Começa com a letra a?: ${comeca_a}`;
+
+        var comeca_hash = frase.startsWith("#"); // 'startsWith()' mostra se começa ou não com uma frase ou letra especifica - True ou False
+        divMensagem.innerHTML += `<br>- Começa com # ?: ${comeca_hash}`;
+
+        var termina_PontoCom = frase.endsWith('.com'); // 'endsWith()' mostra se acaba ou não com uma frase ou letra especifica - True ou False
+        divMensagem.innerHTML += `<br>- Termina com .com?: ${termina_PontoCom}`;
+
+        var primeira_letra = frase[0]; // 0 para pegar a primeira letra, a contagem começa com 0
+        divMensagem.innerHTML += `<br>- Primeira letra: ${primeira_letra}`;
+
+        var terceira_letra = frase[2]; // 2 para pegar a terceira letra já que a contagem começa com 0
+        divMensagem.innerHTML += `<br>- Terceira letra: ${terceira_letra}`;
+            // if (terceira_letra == undefined) {
+            //     divMensagem.innerHTML += `<br>- Nao tem terceira letra`
+            // }else{
+            //     divMensagem.innerHTML += `<br>- Terceira letra: ${terceira_letra}`;
+            // }
+
+        var ultima_letra = frase[frase.length - 1]; // Para pegar a ultima letra da frase, coloque o tamanho dela - 1, assim torna dinamico
+        divMensagem.innerHTML += `<br>- Ultima letra: ${ultima_letra}`;
+
+        var indice_arroba = frase.indexOf('@'); // 'indexOf()' mostra a posição de uma letra especifica no texto
+        if (indice_arroba == -1) {
+            divMensagem.innerHTML += `<br>- Não possui @`
+        }
+        else{
+            divMensagem.innerHTML += `<br>- Indice do @ neste texto?: ${indice_arroba + 1}`
+        }
+
+        
+
+    }
+</script>
