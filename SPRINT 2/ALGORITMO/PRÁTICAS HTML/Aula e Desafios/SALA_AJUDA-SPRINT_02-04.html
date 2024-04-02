@@ -48,24 +48,41 @@
 
         var terceira_letra = frase[2]; // 2 para pegar a terceira letra já que a contagem começa com 0
         divMensagem.innerHTML += `<br>- Terceira letra: ${terceira_letra}`;
-            // if (terceira_letra == undefined) {
-            //     divMensagem.innerHTML += `<br>- Nao tem terceira letra`
-            // }else{
-            //     divMensagem.innerHTML += `<br>- Terceira letra: ${terceira_letra}`;
-            // }
+        // if (terceira_letra == undefined) {
+        //     divMensagem.innerHTML += `<br>- Nao tem terceira letra`
+        // }else{
+        //     divMensagem.innerHTML += `<br>- Terceira letra: ${terceira_letra}`;
+        // }
 
         var ultima_letra = frase[frase.length - 1]; // Para pegar a ultima letra da frase, coloque o tamanho dela - 1, assim torna dinamico
         divMensagem.innerHTML += `<br>- Ultima letra: ${ultima_letra}`;
 
         var indice_arroba = frase.indexOf('@'); // 'indexOf()' mostra a posição de uma letra especifica no texto
         if (indice_arroba == -1) {
-            divMensagem.innerHTML += `<br>- Não possui @`
+            divMensagem.innerHTML += `<br>- Não possui @`;
         }
-        else{
-            divMensagem.innerHTML += `<br>- Indice do @ neste texto?: ${indice_arroba + 1}`
+        else {
+            divMensagem.innerHTML += `<br>- Indice do @ neste texto?: ${indice_arroba + 1}`;
         }
 
-        
+        var indice_cifrao = frase.indexOf('$');
+        var indice_exclamacao = frase.indexOf('!');
+        var indice_hashtag = frase.indexOf('#');
+        var indice_arroba = frase.indexOf('@');
+        if (indice_arroba > -1 || indice_exclamacao > -1 || indice_cifrao > -1 || indice_hashtag > -1) {
+            divMensagem.innerHTML += `<br>- Possui um caracter especial nesta frase!`;
+        }
+        else {
+            divMensagem.innerHTML += `<br>- Não possui um caracter especial nesta frase!`; // bons para senhas
+        }
 
+        var frase_maiuscula = frase.toUpperCase(); // '.toUpperCase' para deixar toda a frase maiuscula
+        divMensagem.innerHTML += `<br>- Frase em maiusculo: ${frase_maiuscula}`;
+
+        var frase_minuscula = frase.toLowerCase(); // '.toLowerCase' para deixar toda a frase minuscula
+        divMensagem.innerHTML += `<br>- Frase em minusculo: ${frase_minuscula}`;
+
+        var frase_sem_espaco = frase.replaceAll(' ', ''); // '.replaceAll()' serve para substituir todos caracteres especificados por outro 
+        divMensagem.innerHTML += `<br>- A frase sem espaços: ${frase_sem_espaco}`;
     }
 </script>
