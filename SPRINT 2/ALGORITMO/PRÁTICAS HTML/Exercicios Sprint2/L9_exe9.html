@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Numero: <input type="text" id="input_numero"><br>
+    Frase: <input type="text" id="input_frase"><br>
+    <button onclick="mostrar()">Papagaio</button>
+</body>
+</html>
+<script>
+    var frase = '';
+    function mostrar() {
+        var numero = Number(input_numero.value);
+        var frase = input_frase.value;
+
+        for(contador = 1; contador <= numero; contador++){
+            contador * alert(frase)
+        }
+    }
+</script>

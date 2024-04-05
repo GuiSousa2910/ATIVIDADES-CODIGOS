@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Pessoa que ama:<input type="text" id="input_amor"> <br>
+    Quanto voce ama essa pessoa<input type="text" id="input_qnt"> <br>
+    <button onclick="amor()">Expressar amor</button>
+    <div id="divMensagem"></div>
+</body>
+</html>
+<script>
+    var frase = '';
+    function amor() {
+        var pessoa = input_amor.value;
+        var qntAmor = Number(input_qnt.value);
+
+        for(var contador = 0; contador <= qntAmor; contador++){
+            frase += `${contador}- ${pessoa}<br>`
+        }
+        divMensagem.innerHTML = frase
+    }
+</script>

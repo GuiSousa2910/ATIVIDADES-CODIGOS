@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input_frase">
+    <button onclick="mostrar()">Frase</button>
+    <div id="divMensagem"></div>
+</body>
+</html>
+<script>
+    frase = '';
+    function mostrar() {
+        var texto = input_frase.value;
+        for(var contador = 1; contador <= 7; contador++){
+            frase += `${contador}. ${texto}<br>`
+        }
+        divMensagem.innerHTML = frase
+    }
+</script>

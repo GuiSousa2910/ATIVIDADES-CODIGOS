@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="mostrar()">Diga algo sobre a matéria de Algoritmos</button>
+    <div id="divMensagem"></div>
+</body>
+</html>
+<script>
+    var frase = '';
+    function mostrar(params) {
+        for(var contador = 1; contador <= 7; contador++){
+            frase += `Eu gosto da materia de algoritmos<br>`
+        }
+        divMensagem.innerHTML = frase;
+    }
+</script>

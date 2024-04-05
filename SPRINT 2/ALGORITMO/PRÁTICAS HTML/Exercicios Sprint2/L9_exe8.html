@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira um numero: <input type="text" id="input_numero"><br>
+    <button onclick="calcular()">Viva o 7!</button>
+    <div id="divMensagem"></div>
+</body>
+</html>
+<script>
+    var frase = '';
+
+    function calcular() {
+        var numero = Number(input_numero.value);
+
+        for(contador = 0; contador <= numero; contador++){
+            if (contador % 7 == 0) {
+                frase += `${contador}<br>`
+            }
+        }
+        divMensagem.innerHTML = frase
+    }
+</script>
