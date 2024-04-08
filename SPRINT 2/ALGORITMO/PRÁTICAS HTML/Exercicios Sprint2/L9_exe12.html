@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira o valor da tabuada: <input type="number" id="input_tabuada"><br>
+
+    Insira até quando a tabuada va ser construida: <input type="number" id="input_final"><br>
+
+    <button onclick="calcular()">Ver tabuada</button>
+    <div id="divMensagem"></div>
+</body>
+</html>
+<script>
+    function calcular() {
+        var inicioTabu = Number(input_tabuada.value);
+        var fimTabu = Number(input_final.value);
+        var frase = '';
+
+        for(var contador = 1; contador <= fimTabu; contador++){
+            frase += `${inicioTabu} x ${contador} = ${inicioTabu * contador} <br>`
+        }
+        divMensagem.innerHTML = frase
+    }
+</script>
