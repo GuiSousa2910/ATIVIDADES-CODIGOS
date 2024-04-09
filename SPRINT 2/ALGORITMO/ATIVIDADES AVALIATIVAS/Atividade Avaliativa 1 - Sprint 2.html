@@ -26,18 +26,30 @@
         var divisao = conta % 10;
         var mensagem = '';
 
-        if (conta !== 0 && digito == divisao && (senha == 'manaus' || senha == 'recife' || senha == 'fortaleza')) {
+        if (conta !== 0 && digito == divisao) {
             if (digito >= 0 && digito <= 3) {
-                senha == 'manaus';
-                mensagem = 'Dados estão corretos!'
+                if(senha == 'manaus'){
+                    mensagem = 'Dados estão corretos!'
+                }
+                else{
+                    alert('Dados incorretos')
+                }
             }
             else if (digito >= 4 && digito <= 7) {
-                senha == 'recife';
-                mensagem = 'Dados estão corretos!'
+                if(senha == 'recife'){
+                    mensagem = 'Dados estão corretos!'
+                }
+                else{
+                    alert('Dados incorretos')
+                }
             }
             else if (digito > 7) {
-                senha == 'fortaleza';
-                mensagem = 'Dados estão corretos!'
+                if(senha == 'fortaleza'){
+                    mensagem = 'Dados estão corretos!'
+                }
+                else{
+                    alert('Dados incorretos')
+                }
             }
         }else{
             alert('Dados incorretos')

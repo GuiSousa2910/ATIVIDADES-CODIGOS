@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Simulação de Emprestimos e Investimentos
+    </title>
 </head>
+
 <body>
     <h1>Seja bem vindo ao Banco KNAB</h1><br><br>
     <h2>Simulação de Emprestimos e Investimentos</h2><br><br>
@@ -19,31 +22,81 @@
         </select>
         <select id="select_prazo">
             <option value="#">Selecione o Prazo</option>
-            <option value="1">Curto</option>
-            <option value="2">Médio</option>
-            <option value="3">Longo</option>
+            <option value="Curto">Curto</option>
+            <option value="Médio">Médio</option>
+            <option value="Longo">Longo</option>
         </select>
     </div><br><br>
     <button onclick="validar()">Mostrar o Resultado</button>
+    <button onclick="limpar()">Limpar tela</button>
     <div id="divMensagem"></div>
 </body>
+
 </html>
 <script>
+
+    var contaClique = 0;
+    var contador = 1;
+
+    function limpar() {
+        divMensagem.innerHTML = '';
+        contaClique = 0;
+        contador = 1;
+    }
+
     function validar() {
         var valor = Number(input_valor.value);
         var selectOperacao = select_tipoOperacao.value;
         var selectPrazo = select_prazo.value;
-        var frase = '';
-        var simular = 0
+        contaClique++;
 
-        if (selectPrazo == '1' || selectPrazo == '2') {
-            alert('Esta operação está condicionada ao seu perfil')
+        if (selectPrazo == 'Curto' || selectPrazo == 'Médio') {
+            alert('Esta operação está condicionada ao seu perfil');
         }
-        else if (selectOperacao == '1') {
-            for(var contador = 1; contador <= simular; simular ++){
-                frase += `Simulação ${contador} – Para o empréstimo de R$99999,99 no PPPPPP prazo será cobrado os juros de R$ 99999,99 ao ano `
-            } 
-            divMensagem.innerHTML = frase
+        if (selectOperacao == '1') {
+
+            if (selectPrazo == 'Curto') {
+                valor2 = valor * 1.24;
+                for (; contador <= contaClique; contador++) {
+                    divMensagem.innerHTML += `Simulação ${contador} – Para o empréstimo de R$${valor} no ${selectPrazo} prazo será cobrado os juros de R$ ${valor2} ao ano<br><br> `;
+                }
+            }
+            else if (selectPrazo == 'Médio') {
+                valor2 = valor * 1.16;
+                for (; contador <= contaClique; contador++) {
+                    divMensagem.innerHTML += `Simulação ${contador} – Para o empréstimo de R$${valor} no ${selectPrazo} prazo será cobrado os juros de R$ ${valor2} ao ano<br><br> `;
+                }
+            }
+            else if (selectPrazo == 'Longo') {
+                valor2 = valor * 1.10;
+                for (; contador <= contaClique; contador++) {
+                    divMensagem.innerHTML += `Simulação ${contador} – Para o empréstimo de R$${valor} no ${selectPrazo} prazo será cobrado os juros de R$ ${valor2} ao ano<br><br> `;
+                }
+            }
+
         }
+        if (selectOperacao == '2') {
+            if (selectPrazo == 'Curto') {
+                valor3 = valor * 1.05;
+                for (; contador <= contaClique; contador++) {
+                    divMensagem.innerHTML += `Simulação ${contador} – Investindo R$${valor} no ${selectPrazo} prazo o seu rendimento será de R$ ${valor3} ao ano<br><br> `;
+                }
+            }
+            else if (selectPrazo == 'Médio') {
+                valor3 = valor * 1.08;
+                for (; contador <= contaClique; contador++) {
+                    divMensagem.innerHTML += `Simulação ${contador} – Investindo R$${valor} no ${selectPrazo} prazo o seu rendimento será de R$ ${valor3} ao ano<br><br> `;
+                }
+            }
+            else if (selectPrazo == 'Longo') {
+                valor3 = valor * 1.12;
+                for (; contador <= contaClique; contador++) {
+                    divMensagem.innerHTML += `Simulação ${contador} – Investindo R$${valor} no ${selectPrazo} prazo o seu rendimento será de R$ ${valor3} ao ano<br><br> `;
+                }
+            }
+
+        }
+
     }
+
 </script>
