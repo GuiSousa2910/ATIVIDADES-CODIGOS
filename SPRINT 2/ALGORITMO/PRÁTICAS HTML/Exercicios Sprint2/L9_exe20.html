@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Quantos depósitos você fez no banco: <input type="text" id="input_deposito"><br>
+    Informe o valor de cada deposito: <input type="text" id="input_valor"><br>
+    <button onclick="calcular()">Acompanhar grana</button>
+    <div id="divMensagem"></div>
+</body>
+
+</html>
+<script>
+
+    function calcular() {
+        var qntDeposito = Number(input_deposito.value);
+        var valor = Number(input_valor.value);
+        frase = '';
+
+        for (var contador = 1; contador <= qntDeposito; contador++) {
+            var mult = contador * valor;
+
+            if ((contador % 3) == 0) {
+                mult *= 1.01;
+            }
+
+            frase += `${contador}º Mês: R$ ${mult}<br>`;
+        }
+        divMensagem.innerHTML = frase;
+    }
+</script>

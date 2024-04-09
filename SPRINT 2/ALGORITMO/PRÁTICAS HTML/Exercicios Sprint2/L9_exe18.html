@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Informe quantas xicaras de café cocm leite você já tomou na vida: <input type="text" id="input_cafeLeite"><br>
+    <button onclick="ver()">Ver a quantidade</button>
+    <div id="divMensagem"></div>
+</body>
+
+</html>
+<script>
+
+
+    function ver() {
+        var qntCafeLeite = Number(input_cafeLeite.value);
+        var coLeite = 0;
+        var coCafe = 0;
+        
+        for (var contador = 1; contador <= qntCafeLeite; contador++) {
+            coLeite++;
+            coCafe += 2;
+        }
+        divMensagem.innerHTML = `${coLeite} colheres com leite em pó e ${coCafe} colheres de café em pó`;
+    }
+</script>
