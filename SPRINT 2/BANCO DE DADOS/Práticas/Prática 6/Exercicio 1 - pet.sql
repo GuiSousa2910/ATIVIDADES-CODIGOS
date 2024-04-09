@@ -64,12 +64,17 @@ SELECT * FROM pet;
 drop table pet;
 drop table cliente;
 
--- -.-.-.-.-.-.-.-.-.-.--.-.--.-.-.-.-.--.-.-.-.-.-.-.--.-.-.-.-.-.-
+-- -.-.-.-.-.-.-.-.-.-.--.-.--.-.-.-.-.--.-.-.-.-.-.-.--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.--.-.--.-.-.-.-.--.-.-.-.-.-.-.--.-.-.-.-.-.-
 CREATE TABLE pessoa(
 idPessoa int primary key auto_increment,
 nome varchar(45),
 dtNasc date,
 profissao varchar(45));
+
+INSERT INTO pessoa VALUES
+(default, 'Vivian', '1999-10-09', 'Professora'),
+(default, 'Guilherme', '2005-10-29', 'Estudante'),
+(default, 'Ana', '2005-04-10', 'Estudante');
 
 CREATE TABLE gasto(
 idGasto int,
@@ -79,7 +84,33 @@ dataValidade date,
 valor decimal (10,2),
 descricao varchar(200));
 
--- -.-.-.-.-.-.-.-.-.-.--.-.--.-.-.-.-.--.-.-.-.-.-.-.--.-.-.-.-.-.-
+INSERT INTO gasto(idGasto, fkPessoa, dataValidade, valor, descricao) VALUES 
+(1, 1, '2025-10-09', 1000.00, 'Multa de transito'),
+(2, 1, '2026-10-12', 900.00, 'Cartão de crédito'),
+(1, 2, '2024-10-23', 700.00, 'Cartão de debito'),
+(1, 3, '2024-04-14', 99900.00, 'Pensao'),
+(2, 3, '2024-10-21', 60.00, 'Cartão de crédito');
+
+SELECT * FROM gasto;
+SELECT * FROM pessoa;
+
+SELECT nome from pessoa where profissao = 'Estudante';
+SELECT valor from gasto where valor > 2000.00;
+
+SELECT * FROM pessoa 
+	join gasto 
+		on idPessoa = fkPessoa;
+        
+SELECT * FROM pessoa 
+	join gasto
+		on idPessoa = fkPessoa
+			where nome = 'Guilherme';
+            
+UPDATE gasto SET valor = 10000.00 where valor = 60.00;
+
+DELETE FROM gasto where valor = 60;
+
+-- -.-.-.-.-.-.-.-.-.-.--.-.--.-.-.-.-.--.-.-.-.-.-.-.--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.--.-.--.-.-.-.-.--.-.-.-.-.-.-.--.-.-.-.-.-.-
 
 CREATE TABLE setor(
 idSetor int primary key auto_increment,
@@ -154,3 +185,31 @@ SELECT * FROM funcionarios
 		on fkFuncionario = idAcompanhante
 	join setor
 		on fkSetor = idSetor;
+-- -.-.-.-.-.-.-.-.-.-.--.-.--.-.-.-.-.--.-.-.-.-.-.-.--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.--.-.--.-.-.-.-.--.-.-.-.-.-.-.--.-.-.-.-.-.-
+
+CREATE TABLE treinador (
+    idTreinador int primary key auto_increment,
+    nome varchar(45),
+    telefone varchar(45),
+    email varchar(200),
+    fkTreinadorExp int,
+    constraint fkTreinadorNovatoTreinadorExp foreign key (fkTreinadorExp) references treinador(idTreinador)
+) auto_increment = 10;
+
+INSERT INTO treinador (nome, telefone, email, fkTreinadorExp) VALUES
+    ('Julio', '987654321', 'juliosouza@gmail.com', null),
+    ('Rebeca', '123456789', 'rebeca@gmail.com', 1),
+    ('Guilherme', '987656789', 'guilherme@gmail.com', 2),
+    ('Vivian', '123451234', 'vivan@gmail.com', 1),
+    ('Manuela', '432156789', 'manuela@gmail.com', 3),
+    ('Alexandre', '65342356789', 'alexandre@gmail.com', 5);
+
+
+CREATE TABLE nadador (
+idNadador int primary key auto_increment,
+nome varchar(45),
+estadoOrigem varchar(45),
+dtNasc date,
+fkTreinador int,
+constraint fkTreinadorNadador foreign key (fkTreinador) references treinador(idTreinador)
+) auto_increment = 100;

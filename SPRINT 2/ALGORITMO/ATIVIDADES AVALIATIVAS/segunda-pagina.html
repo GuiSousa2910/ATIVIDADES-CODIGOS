@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Seja bem vindo ao Banco KNAB</h1><br><br>
+    <h2>Simulação de Emprestimos e Investimentos</h2><br><br>
+    <h3>Entre com os dados de sua conta:</h3><br><br>
+    Valor da Operação: <input type="text" placeholder="Valor" id="input_valor"><br><br>
+
+    <div>
+        <select id="select_tipoOperacao">
+            <option value="#">Selecione a Operação</option>
+            <option value="1">Empréstimo</option>
+            <option value="2">Investimento</option>
+        </select>
+        <select id="select_prazo">
+            <option value="#">Selecione o Prazo</option>
+            <option value="1">Curto</option>
+            <option value="2">Médio</option>
+            <option value="3">Longo</option>
+        </select>
+    </div><br><br>
+    <button onclick="validar()">Mostrar o Resultado</button>
+    <div id="divMensagem"></div>
+</body>
+</html>
+<script>
+    function validar() {
+        var valor = Number(input_valor.value);
+        var selectOperacao = select_tipoOperacao.value;
+        var selectPrazo = select_prazo.value;
+        var frase = '';
+        var simular = 0
+
+        if (selectPrazo == '1' || selectPrazo == '2') {
+            alert('Esta operação está condicionada ao seu perfil')
+        }
+        else if (selectOperacao == '1') {
+            for(var contador = 1; contador <= simular; simular ++){
+                frase += `Simulação ${contador} – Para o empréstimo de R$99999,99 no PPPPPP prazo será cobrado os juros de R$ 99999,99 ao ano `
+            } 
+            divMensagem.innerHTML = frase
+        }
+    }
+</script>
