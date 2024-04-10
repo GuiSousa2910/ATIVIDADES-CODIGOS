@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Informe quantas 'Coca-Cola' você já bebeu em toda sua vida: <input type="text" id="input_coca"><br>
+    <button onclick="ver()">Ver a quantidade</button>
+    <div id="divMensagem"></div>
+</body>
+</html>
+<script>
+    function ver() {
+        var coca = Number(input_coca.value);
+        var frase = '';
+
+        for(var contador = 1; contador <= coca; contador++){
+            frase += '🥤'
+        }
+        divMensagem.innerHTML = frase
+    }
+</script>
