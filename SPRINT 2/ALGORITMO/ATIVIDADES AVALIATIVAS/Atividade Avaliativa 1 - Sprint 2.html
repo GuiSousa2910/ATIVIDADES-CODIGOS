@@ -8,54 +8,144 @@
 </head>
 
 <body>
-    <h1>Seja bem vindo ao Banco KNAB</h1><br><br>
-    <h2>Simulação de Emprestimos e Investimentos</h2><br><br>
-    <h3>Entre com os dados de sua conta:</h3><br>
-    <input type="text" placeholder="Conta" id="input_conta">
-    <input type="text" placeholder="Digito" id="input_digito">
-    <input type="text" placeholder="Senha" id="input_senha"><br><br>
-    <button onclick="verificar()">Simular</button>
+    <div id="div1">
+        <h1>Seja bem vindo ao Banco KNAB</h1><br><br>
+        <h2>Simulação de Emprestimos e Investimentos</h2><br><br>
+        <h3>Entre com os dados de sua conta:</h3><br>
+        <input type="text" placeholder="Conta" id="input_conta">
+        <input type="text" placeholder="Digito" id="input_digito">
+        <input type="text" placeholder="Senha" id="input_senha"><br><br>
+        <button onclick="verificar()">Simular</button>
+    </div>
+    <div id="div2"></div>
+
 </body>
 
 </html>
 <script>
+
     function verificar() {
         var conta = Number(input_conta.value);
         var digito = Number(input_digito.value);
         var senha = input_senha.value;
         var divisao = conta % 10;
-        var mensagem = '';
+        var frase = `<div id="div2">
+        <h1>Seja bem vindo ao Banco KNAB</h1><br><br>
+        <h2>Simulação de Emprestimos e Investimentos</h2><br><br>
+        <h3>Entre com os dados de sua conta:</h3><br><br>
+        Valor da Operação: <input type="text" placeholder="Valor" id="input_valor"><br><br>
+
+        <div>
+            <select id="select_tipoOperacao">
+                <option value="#">Selecione a Operação</option>
+                <option value="1">Empréstimo</option>
+                <option value="2">Investimento</option>
+            </select>
+            <select id="select_prazo">
+                <option value="#">Selecione o Prazo</option>
+                <option value="Curto">Curto</option>
+                <option value="Médio">Médio</option>
+                <option value="Longo">Longo</option>
+            </select>
+        </div><br><br>
+        <button onclick="validar()">Mostrar o Resultado</button>
+        <button onclick="limpar()">Limpar tela</button>
+        <div id="divMensagem"></div>
+    </div>`;
 
         if (conta !== 0 && digito == divisao) {
             if (digito >= 0 && digito <= 3) {
-                if(senha == 'manaus'){
-                    mensagem = 'Dados estão corretos!'
+                if (senha == 'manaus') {
+                    div1.innerHTML = ''; 
+                    div2.innerHTML = frase;
                 }
-                else{
-                    alert('Dados incorretos')
+                else {
+                    alert('Dados incorretos');
                 }
             }
             else if (digito >= 4 && digito <= 7) {
-                if(senha == 'recife'){
-                    mensagem = 'Dados estão corretos!'
+                if (senha == 'recife') {
+                    div1.innerHTML = '';
+                    div2.innerHTML = frase;
                 }
-                else{
-                    alert('Dados incorretos')
+                else {
+                    alert('Dados incorretos');
                 }
             }
             else if (digito > 7) {
-                if(senha == 'fortaleza'){
-                    mensagem = 'Dados estão corretos!'
+                if (senha == 'fortaleza') {
+                    div1.innerHTML = '';
+                    div2.innerHTML = frase;
                 }
-                else{
-                    alert('Dados incorretos')
+                else {
+                    alert('Dados incorretos');
                 }
             }
-        }else{
-            alert('Dados incorretos')
+        } else {
+            alert('Dados incorretos');
         }
-        if (mensagem == 'Dados estão corretos!') {
-            document.location.href = "segunda-pagina.html"
+    }
+    var contaClique = 0;
+    var contador = 1;
+
+    function limpar() {
+        divMensagem.innerHTML = '';
+        contaClique = 0;
+        contador = 1;
+    }
+
+    function validar() {
+        var valor = Number(input_valor.value);
+        var selectOperacao = select_tipoOperacao.value;
+        var selectPrazo = select_prazo.value;
+        contaClique++;
+
+        if (selectPrazo == 'Curto' || selectPrazo == 'Médio') {
+            alert('Esta operação está condicionada ao seu perfil');
         }
+        if (selectOperacao == '1') {
+
+            if (selectPrazo == 'Curto') {
+                valor2 = valor * 1.24;
+                for (; contador <= contaClique; contador++) {
+                    divMensagem.innerHTML += `Simulação ${contador} – Para o empréstimo de R$${valor} no ${selectPrazo} prazo será cobrado os juros de R$ ${valor2} ao ano<br><br> `;
+                }
+            }
+            else if (selectPrazo == 'Médio') {
+                valor2 = valor * 1.16;
+                for (; contador <= contaClique; contador++) {
+                    divMensagem.innerHTML += `Simulação ${contador} – Para o empréstimo de R$${valor} no ${selectPrazo} prazo será cobrado os juros de R$ ${valor2} ao ano<br><br> `;
+                }
+            }
+            else if (selectPrazo == 'Longo') {
+                valor2 = valor * 1.10;
+                for (; contador <= contaClique; contador++) {
+                    divMensagem.innerHTML += `Simulação ${contador} – Para o empréstimo de R$${valor} no ${selectPrazo} prazo será cobrado os juros de R$ ${valor2} ao ano<br><br> `;
+                }
+            }
+
+        }
+        if (selectOperacao == '2') {
+            if (selectPrazo == 'Curto') {
+                valor3 = valor * 1.05;
+                for (; contador <= contaClique; contador++) {
+                    divMensagem.innerHTML += `Simulação ${contador} – Investindo R$${valor} no ${selectPrazo} prazo o seu rendimento será de R$ ${valor3} ao ano<br><br> `;
+                }
+            }
+            else if (selectPrazo == 'Médio') {
+                valor3 = valor * 1.08;
+                for (; contador <= contaClique; contador++) {
+                    divMensagem.innerHTML += `Simulação ${contador} – Investindo R$${valor} no ${selectPrazo} prazo o seu rendimento será de R$ ${valor3} ao ano<br><br> `;
+                }
+            }
+            else if (selectPrazo == 'Longo') {
+                valor3 = valor * 1.12;
+                for (; contador <= contaClique; contador++) {
+                    divMensagem.innerHTML += `Simulação ${contador} – Investindo R$${valor} no ${selectPrazo} prazo o seu rendimento será de R$ ${valor3} ao ano<br><br> `;
+                }
+            }
+
+        }
+
     }
 </script>
