@@ -196,14 +196,19 @@ CREATE TABLE treinador (
     constraint fkTreinadorNovatoTreinadorExp foreign key (fkTreinadorExp) references treinador(idTreinador)
 ) auto_increment = 10;
 
-INSERT INTO treinador (nome, telefone, email, fkTreinadorExp) VALUES
-    ('Julio', '987654321', 'juliosouza@gmail.com', null),
-    ('Rebeca', '123456789', 'rebeca@gmail.com', 1),
-    ('Guilherme', '987656789', 'guilherme@gmail.com', 2),
-    ('Vivian', '123451234', 'vivan@gmail.com', 1),
-    ('Manuela', '432156789', 'manuela@gmail.com', 3),
-    ('Alexandre', '65342356789', 'alexandre@gmail.com', 5);
+INSERT INTO treinador(nome, telefone, email) VALUES
+    ('Julio', '987654321', 'juliosouza@gmail.com'),
+    ('Rebeca', '123456789', 'rebeca@gmail.com'),
+    ('Guilherme', '987656789', 'guilherme@gmail.com'),
+    ('Vivian', '123451234', 'vivan@gmail.com'),
+    ('Manuela', '432156789', 'manuela@gmail.com'),
+    ('Alexandre', '65342356789', 'alexandre@gmail.com');
 
+UPDATE treinador SET fkTreinadorExp = 10  where idTreinador = 11;
+UPDATE treinador SET fkTreinadorExp = 10  where idTreinador = 12;
+UPDATE treinador SET fkTreinadorExp = 12  where idTreinador = 13;
+UPDATE treinador SET fkTreinadorExp = 11  where idTreinador = 14;
+UPDATE treinador SET fkTreinadorExp = 14  where idTreinador = 15;
 
 CREATE TABLE nadador (
 idNadador int primary key auto_increment,
@@ -213,3 +218,47 @@ dtNasc date,
 fkTreinador int,
 constraint fkTreinadorNadador foreign key (fkTreinador) references treinador(idTreinador)
 ) auto_increment = 100;
+
+INSERT INTO nadador (nome, estadoOrigem, dtNasc, fkTreinador) VALUES
+('Ricardo', 'São Paulo', '2005-10-29', 10),
+('Guilherme', 'São Paulo', '2005-10-10', 12),
+('Laise', 'Rio de Janeiro', '2002-06-29', 11),
+('Pedro', 'Manaus', '2010-12-10', 13),
+('Filipe', 'São Paulo', '198--10-09', 12);
+
+select * from treinador;
+select * from nadador;
+
+SELECT * FROM treinador 
+	join nadador 
+		on idTreinador = fkTreinador;
+        
+SELECT * FROM treinador
+	join nadador
+		on idTreinador = fkTreinador
+			where treinador.nome = 'Rebeca';
+      
+SELECT * FROM treinador as Exp
+	join treinador as Nov
+		on Nov.fkTreinadorExp = Exp.idTreinador;
+        
+SELECT * FROM treinador as Exp
+	join treinador as Nov
+		on Nov.fkTreinadorExp = Exp.idTreinador
+			where Exp.nome = 'Rebeca';
+            
+SELECT * FROM treinador as Exp
+	join treinador as Nov
+		on Nov.fkTreinadorExp = Exp.idTreinador
+	join nadador
+		on Exp.idTreinador = nadador.fkTreinador;
+
+SELECT * FROM treinador as Exp
+	join treinador as Nov
+		on Nov.fkTreinadorExp = Exp.idTreinador
+	join nadador
+		on Exp.idTreinador = fkTreinador
+			where Nov.nome = 'Guilherme';
+
+
+
