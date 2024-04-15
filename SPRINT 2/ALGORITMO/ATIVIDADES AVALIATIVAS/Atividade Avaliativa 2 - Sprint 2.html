@@ -16,21 +16,22 @@
         <option value="horas">Horas</option>
         <option value="minuto">Minutos</option>
     </select><br>
-        Pular abertura?
-        <select id="select_abertura">
-            <option value="#">Selecione um opção</option>
-            <option value="Sim">Sim</option>
-            <option value="Nao">Não</option>
-        </select><br>
-        Pular encerramento?
-        <select id="select_encerramento">
-            <option value="#">Selecione um opção</option>
-            <option value="Sim">Sim</option>
-            <option value="Nao">Não</option>
-        </select><br>
+    Pular abertura?
+    <select id="select_abertura">
+        <option value="#">Selecione um opção</option>
+        <option value="Sim">Sim</option>
+        <option value="Nao">Não</option>
+    </select><br>
+    Pular encerramento?
+    <select id="select_encerramento">
+        <option value="#">Selecione um opção</option>
+        <option value="Sim">Sim</option>
+        <option value="Nao">Não</option>
+    </select><br>
 
-        <button onclick="assistir()">Assitir Episódios</button>
-        <div id="divMensagem"></div>
+    <button onclick="assistir()">Assitir Episódios</button>
+    <div id="divMensagem"></div>
+    <div id="divMensagem2"></div>
 </body>
 
 </html>
@@ -41,22 +42,25 @@
         var unidadeTempo = select_unidadeTempo.value;
         var abertura = select_abertura.value;
         var encerramento = select_encerramento.value;
+        var tempoTotalEpisodio = 24;
 
         if (episodio < 1 || episodio > 1100) {
             alert('O número do episódio é inválido');
         }
+        else if (episodio >= 1 && episodio <= 1100) {
+            if (unidadeTempo == 'horas') {
+                tempo *= 60;
+            }
+            else if (unidadeTempo == 'minuto') {
+                tempo = tempo;
+            }
 
-        if (unidadeTempo == 'horas') {
-            tempo = tempo;
-        }
-        else if (unidadeTempo == 'minuto') {
-            tempo /= 60;
-        }
+            for (var contador = 1; contador <= tempo; contador++) {
+                divMensagem.innerHTML += `<br> Episódio: ${episodio}`;
+                episodio++;
 
-        if (abertura == 'Sim') {
-            if (encerramento == 'Nao') {
-                for (var contador = 1; contador <= episodio; contador++) {
-                    divMensagem.innerHTML += `Episódio: ${episodio}`;
+                for(){
+                    
                 }
             }
         }
