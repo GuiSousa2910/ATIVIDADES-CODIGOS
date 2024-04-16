@@ -22,14 +22,16 @@
         var valor = Number(input_valor.value);
         frase = '';
 
+        var saldo = 0;
+
         for (var contador = 1; contador <= qntDeposito; contador++) {
-            var mult = contador * valor;
+            saldo += valor;
 
             if ((contador % 3) == 0) {
-                mult *= 1.01;
+                saldo *= 1.01;
             }
 
-            frase += `${contador}º Mês: R$ ${mult}<br>`;
+            frase += `${contador}º Mês: R$ ${saldo}<br>`;
         }
         divMensagem.innerHTML = frase;
     }
