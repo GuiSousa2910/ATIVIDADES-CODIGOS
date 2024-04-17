@@ -37,12 +37,14 @@
 </html>
 <script>
     function assistir() {
-        var episodio = input_episodio.value;
-        var tempo = input_tempo.value;
+        var episodio = Number(input_episodio.value);
+        var tempo = Number(input_tempo.value);
         var unidadeTempo = select_unidadeTempo.value;
         var pularAbertura = select_abertura.value;
         var pularEncerramento = select_encerramento.value;
         var tempoTotalEpisodio = 24;
+        divMensagem.innerHTML = '';
+        var totalDosEpisodios = 0;
 
         if (episodio < 1 || episodio > 1100) {
             alert('O número do episódio é inválido');
@@ -51,25 +53,65 @@
             if (unidadeTempo == 'horas') {
                 tempo *= 60;
             }
-            else if (unidadeTempo == 'minuto') {
-                tempo = tempo;
+            if (pularAbertura == 'sim' && pularEncerramento == 'sim') {
+                tempoTotalEpisodio = 20;
             }
+            else if (pularAbertura == 'sim' || pularEncerramento == 'sim') {
+                tempoTotalEpisodio = 22;
+            }
+            totalDosEpisodios = tempo / tempoTotalEpisodio;
 
             for (var contador = 1; contador <= tempo; contador++) {
-                divMensagem.innerHTML += `<br>Episódio: ${episodio}`;
+                divMensagem.innerHTML += `<br><br>Episódio: ${episodio}`;
                 episodio++;
+                totalDosEpisodios += contador;
 
                 for (var cont = 1; cont <= tempoTotalEpisodio; cont++) {
-                    if (pularAbertura == 'sim' && pularEncerramento == 'nao') {
-                        if (cont >= 1 && cont <= 22) {
-                            divMensagem.innerHTML += `<br>Minuto ${cont}: Assistindo o Episodio`
+                    if (tempo > 0) {
+                        if (pularAbertura == 'sim' && pularEncerramento == 'nao') {
+                            if (cont >= 1 && cont <= 20) {
+                                divMensagem.innerHTML += `<br>Minuto ${cont}: Assistindo o Episodio`;
+                                tempo--;
+                            }
+                            else if (cont > 20 && cont <= tempoTotalEpisodio) {
+                                divMensagem.innerHTML += `<br>Minuto ${cont}: Assistindo Encerramento`;
+                                tempo--;
+                            }
                         }
-                        else if (cont > 22 && cont < tempoTotalEpisodio) {
-                            divMensagem.innerHTML += `<br>Minuto ${cont}: Assistindo Encerramento`
+                        else if (pularAbertura == 'nao' && pularEncerramento == 'sim') {
+                            if (cont >= 1 && cont <= 2) {
+                                divMensagem.innerHTML += `<br>Minuto ${cont}: Assistindo a Abertura`;
+                                tempo--;
+                            }
+                            else if (cont > 2 && cont <= tempoTotalEpisodio) {
+                                divMensagem.innerHTML += `<br>Minuto ${cont}: Assistindo o Episodio`;
+                                tempo--;
+                            }
+                        }
+                        else if (pularAbertura == 'nao' && pularEncerramento == 'nao') {
+                            if (cont >= 1 && cont <= 2) {
+                                divMensagem.innerHTML += `<br>Minuto ${cont}: Assistindo a Abertura`;
+                                tempo--;
+                            }
+                            else if (cont > 2 && cont <= 22) {
+                                divMensagem.innerHTML += `<br>Minuto ${cont}: Assistindo o Episodio`;
+                                tempo--;
+                            }
+                            else if (cont > 22 && cont <= tempoTotalEpisodio) {
+                                divMensagem.innerHTML += `<br>Minuto ${cont}: Assistindo Encerramento`;
+                                tempo--;
+                            }
+                        }
+                        else if (pularAbertura == 'sim' && pularEncerramento == 'sim') {
+                            if (cont >= 1 && cont <= 20) {
+                                divMensagem.innerHTML += `<br>Minuto ${cont}: Assistindo o Episodio`;
+                                tempo--;
+                            }
                         }
                     }
                 }
             }
+            divMensagem.innerHTML += `<br><br>Fim do Episódio!<br>Foram assistidos: ${totalDosEpisodios - 1} episódios.`
         }
     }
 </script>
