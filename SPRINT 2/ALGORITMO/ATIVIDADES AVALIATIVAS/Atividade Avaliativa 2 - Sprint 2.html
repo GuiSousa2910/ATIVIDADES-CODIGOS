@@ -59,12 +59,12 @@
             else if (pularAbertura == 'sim' || pularEncerramento == 'sim') {
                 tempoTotalEpisodio = 22;
             }
-            totalDosEpisodios = tempo / tempoTotalEpisodio;
+
+            totalDosEpisodios = tempo / tempoTotalEpisodio
 
             for (var contador = 1; contador <= tempo; contador++) {
                 divMensagem.innerHTML += `<br><br>Episódio: ${episodio}`;
                 episodio++;
-                totalDosEpisodios += contador;
 
                 for (var cont = 1; cont <= tempoTotalEpisodio; cont++) {
                     if (tempo > 0) {
@@ -111,7 +111,7 @@
                     }
                 }
             }
-            divMensagem.innerHTML += `<br><br>Fim do Episódio!<br>Foram assistidos: ${totalDosEpisodios - 1} episódios.`
+            divMensagem.innerHTML += `<br><br>Fim do Episódio!<br>Foram assistidos: ${totalDosEpisodios} episódios.`
         }
     }
 </script>
