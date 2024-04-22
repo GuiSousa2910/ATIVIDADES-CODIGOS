@@ -1,27 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,  initial-scale=1.0">
-        <title>Document</title>
-    </head>
-    <body>
-        Insira sua altura: <input type="number" id="input_altura"><br>
-        <button onclick="calculo()">Analisar Estatura</button>
-        <div id="divMensagem"></div>
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Insira sua altura: <input type="number" id="input_altura"><br>
+    <button onclick="calculo()">Analisar Estatura</button>
+    <div id="divMensagem"></div>
+</body>
+
 </html>
 
-<script>
-    function calculo() {
-        var altura = Number(input_altura.value);
-
-        if (altura <= 165){
-            divMensagem.innerHTML = `Você pode ser piloto de corrida`
-        }else if(altura <= 180){
-            divMensagem.innerHTML= `Você pode ser piloto de futebol`
-        }else if(altura > 180){
-            divMensagem.innerHTML = `Você pode ser jogador de vôlei ou basquete`
-        }
-    }
-</script>
+<script src="js/L5_exe1.js"></script>
