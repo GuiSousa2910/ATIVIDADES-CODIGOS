@@ -17,34 +17,4 @@
         <div id="divMensagem"></div>
     </body>
 </html>
-<script>
-
-    var votoCanA = 0;
-    var votoCanB = 0;
-    var votoBrancos = 0;
-    var votoNulos = 0;
-
-    function resultadoEleicao() {
-        
-        
-        votoCanA = Number(votoA.value)
-        votoCanB = Number(votoB.value)
-        votoBrancos = Number(votoBranco.value)
-        votoNulos = Number(votoNulo.value)
-        votoInvalidos = votoBrancos + votoNulos
-        totalVotos = votoCanA + votoCanB + votoInvalidos
-
-        votoPorA = (votoCanA * 100) / totalVotos
-        votoPorB = (votoCanB * 100) / totalVotos
-        votoPorInv = (votoInvalidos * 100) / totalVotos
-
-        divMensagem.innerHTML = `<br>Total de votos: ${totalVotos}<br>
-
-Candidato A: ${votoPorA}% (${votoCanA} votos)<br>  
-
-Candidato B: ${votoPorB}% (${votoCanB} votos)<br>  
-
-Inválidos: ${votoPorInv}% (${votoInvalidos} votos)  `
-
-    }
-</script>
+<script src="/js/L3_exe10.js"></script>
