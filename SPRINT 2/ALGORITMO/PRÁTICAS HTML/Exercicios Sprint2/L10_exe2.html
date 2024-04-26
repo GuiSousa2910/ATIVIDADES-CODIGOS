@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Insira a quantidade de numeros que vão ser sorteados: <input type="number" id="input_qntNumeros">
+    <button onclick="verificar()">Clique aqui</button>
+    <div id="divMensagem"></div>
+</body>
+
+</html>
+<script>
+    function verificar() {
+        var qntNumero = input_qntNumeros.value;
+        var menorMetade = 0;
+        divMensagem.innerHTML = '';
+
+        for (var contador = 1; contador <= qntNumero; contador++) {
+            var numero = Math.random();
+            if (numero > 0.5) {
+                divMensagem.innerHTML += `<br>${numero} está na metade superior`;
+            }
+            else if (numero < 0.5) {
+                divMensagem.innerHTML += `<br>${numero} está na metade inferior`;
+                menorMetade++;
+            }
+        }
+        divMensagem.innerHTML += `<br><br>Quantidade de numeros menores que a metade: ${menorMetade}`;
+    }
+</script>
