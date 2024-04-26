@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Fruta: <input type="text" id="input_fruta"><br>
+    <button onclick="adicionar()">Cadastrar</button>
+    <button onclick="analisar()">Analisar</button>
+    <div id="divMensagem"></div>
+</body>
+
+</html>
+<script>
+    var listaFruta = [];
+    function adicionar() {
+        var fruta = input_fruta.value;
+
+        listaFruta.push(fruta);
+
+        divMensagem.innerHTML += `${listaFruta}<br>`;
+    }
+    
+    function analisar() {
+        var fruta = input_fruta.value;
+        var tamanhoLista = fruta.length;
+        var contadorFrutas = 0;
+        
+        for(var index = 0; index < tamanhoLista; index++){
+            var frutaAtual = listaFruta[index];
+            if (fruta == frutaAtual) {
+                contadorFrutas++
+            }
+            
+        }
+        divMensagem.innerHTML += `<br>A fruta ${fruta} existe ${contadorFrutas} vezes`;
+    }
+</script>
