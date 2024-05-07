@@ -6,10 +6,11 @@ function cadastrar() {
 
 function relembrar() {
     var numero = Number(input_numero.value);
+    divMensagem.innerHTML = '';
 
     if (numero > lista.length) {
-        divMensagem.innerHTML = '';
         divMensagem.innerHTML = `Você ainda não morou num ${numero}º bairro!`;
+    }else{
+        divMensagem.innerHTML += `${lista[numero]}`;
     }
-    divMensagem.innerHTML += `${lista[numero]}`;
 }

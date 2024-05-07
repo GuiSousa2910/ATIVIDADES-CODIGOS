@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Quantidade de Macarons a serem vendidos: <br><input type="text" id="input_macaronVendidos"><br><br>
+    Quantidade de Brigadeiro a serem vendidos: <br><input type="text" id="input_brigadeiroVendidos"><br><br>
+    Quantidade de Cupcakes a serem vendidos: <br><input type="text" id="input_cupcakeVendidos"><br><br>
+    Quantidade de Cheesecakes a serem vendidos: <br><input type="text" id="input_cheesecakesVendidos"><br><br>
+    Preço do Macaron: <br> <input type="text" id="input_macaronPreco"><br><br>
+    Preço do Brigadeiro: <br> <input type="text" id="input_brigadeiroPreco"><br><br>
+    Preço do Cupcakes: <br> <input type="text" id="input_cupcakesPreco"><br><br>
+    Preço do Cheesecakes: <br> <input type="text" id="input_cheesecakesPreco"><br><br>
+
+    <button onclick="verificar()">Verificar Vendas</button>
+    <div id="divMensagem"></div>
+    
+</body>
+
+</html>
+<script>
+    function verificar() {
+        var macaronVendidos = Number(input_macaronVendidos.value);
+        var brigadeiroVendidos = Number(input_brigadeiroVendidos.value);
+        var cupcakeVendidos = Number(input_cupcakeVendidos.value);
+        var cheesecakesVendidos = Number(input_cheesecakesVendidos.value);
+        var macaronPreco = Number(input_macaronPreco.value);
+        var brigadeiroPreco = Number(input_brigadeiroPreco.value);
+        var cupcakesPreco = Number(input_cupcakesPreco.value);
+        var cheesecakesPreco = Number(input_cheesecakesPreco.value);
+        divMensagem.innerHTML = '';
+        var quantidadeDeItensVendidos = macaronVendidos + brigadeiroVendidos + cupcakeVendidos + cheesecakesVendidos;
+        var contador = 1;
+        var precoTotal= 0;
+
+        if (macaronVendidos < 0 || brigadeiroVendidos < 0 ||
+            cupcakeVendidos < 0 || cheesecakesVendidos < 0 || macaronPreco < 0 || brigadeiroPreco < 0 ||
+            cupcakesPreco < 0 || cheesecakesPreco < 0) {
+            divMensagem.innerHTML = 'INSIRA INFORMAÇÕES VÁLIDAS';
+        }
+        else {
+            for (; contador <= macaronVendidos; contador++) {
+                divMensagem.innerHTML += `Venda ${contador} - <img src="https://img.freepik.com/free-vector/vector-hand-drawn-icon-sweet-macaroons-isolated-white-background_134830-1128.jpg?t=st=1714761238~exp=1714764838~hmac=986e5c2a8b73d2d0cadc4846431da4c4dc9447da6a3a84ebe22c9f1b5a791400&w=900" alt="" style = 'height: 100px' > - R$${macaronPreco}<br>`;
+                precoTotal += macaronPreco;
+            }
+            for(; contador <= macaronVendidos + brigadeiroVendidos; contador++){
+                divMensagem.innerHTML += `Venda ${contador} - <img src="https://cdn.sodiedoces.com.br/wp-content/uploads/2022/10/28145240/ao-leite_615x500px.png" alt="" style = 'height: 100px' > - R$${brigadeiroPreco}<br>`;
+                precoTotal += brigadeiroPreco;
+            }
+            for(; contador <= macaronVendidos + brigadeiroVendidos + cupcakeVendidos; contador++){
+                divMensagem.innerHTML += `Venda ${contador} - <img src="https://img.freepik.com/free-vector/muffin-cake_78370-538.jpg?t=st=1714761367~exp=1714764967~hmac=1a24cfa20d5bb059b00180342356be9c2cf899b660349f4002fe8024bb3ec9a6&w=740" alt="" style = 'height: 100px' > - R$${cupcakesPreco}<br>`;
+                precoTotal += cupcakesPreco;
+            }
+            for(; contador <= macaronVendidos + brigadeiroVendidos + cupcakeVendidos + cheesecakesVendidos; contador++){
+                divMensagem.innerHTML += `Venda ${contador} - <img src="https://img.freepik.com/free-vector/piece-strawberry-cake-with-cherry-top_1308-90499.jpg?t=st=1714761302~exp=1714764902~hmac=974a02294b7be24125f0960d0a1ed6ae1ce7b6ae3c6ffbffc2e4091cfcaa4f81&w=740" alt="" style = 'height: 100px' > - R$${cheesecakesPreco}<br>`;
+                precoTotal += cheesecakesPreco;
+            }
+            divMensagem.innerHTML += `<br> Com a quantidade de ${macaronVendidos} Macarons, ${brigadeiroVendidos} Brigadeiros, ${cupcakeVendidos} Cupcakes e ${cheesecakesVendidos} Cheesecakes, a venda totalizará R$${precoTotal}`
+        }
+    }
+</script>
