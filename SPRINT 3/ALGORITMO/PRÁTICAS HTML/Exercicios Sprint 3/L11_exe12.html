@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Nome do seus filhos: <input type="text" id="input_nome"><br>
+    <button onclick="cadastrar()">Cadastrar</button>
+    <button onclick="analisar()">Analisar Familia</button>
+    <div id="divMensagem"></div>
+</body>
+
+</html>
+<script>
+
+    var lista = [];
+
+    function cadastrar() {
+        var nome = input_nome.value;
+
+        if (lista.indexOf(nome) != -1) {
+            alert('Não pode cadastrar 2 filhos');
+        }
+        else if (lista.indexOf(nome) == -1) {
+            lista.push(nome);
+        }
+    }
+
+    function analisar() {
+        divMensagem.innerHTML = `
+        Você tem ${lista.length} filhos <br> 
+        Seu custo mensal será aproximadamente R$${lista.length * 3000} se colocá-los em escola particular ou R$${lista.length * 1500} se eles estudarem em escola pública`;
+    }
+</script>
