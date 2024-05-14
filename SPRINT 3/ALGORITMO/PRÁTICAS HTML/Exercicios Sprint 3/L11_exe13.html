@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select id="select_resultados">
+        <option value="#">Indique o resultado</option>
+        <option value="1">Vitoria</option>
+        <option value="2">Empate</option>
+        <option value="3">Derrota</option>
+    </select>
+    <button onclick="registrar()">Registrar jogo</button><br>
+    <input type="text" oninput="escrever()" id="input_jogo">
+    <div id="divMensagem"></div>
+</body>
+
+</html>
+<script>
+
+    var lista = [];
+    var contV = 0;
+    var contE = 0;
+    var contD = 0;
+    var soma = 0;
+    function registrar() {
+        var resultado = select_resultados.value;
+
+        if (resultado == '1') {
+            lista.push(3);
+            contV += 3;
+        }
+        else if (resultado == '2') {
+            lista.push(1);
+            contE += 1;
+        }
+        else if (resultado == '3') {
+            lista.push(0);
+            contD += 0;
+        }
+
+        soma += contV + contE + contD;
+
+        for (var i = 0; i < lista.length; i++) {
+            var element = lista[i];
+        }
+
+        var aproveitamento = contV / (contV + contE + contD * 100);;
+
+        divMensagem.innerHTML = `O time teve: ${contV} vitórias, ${contE} empates, ${contD} derrotas <br> Pontuação total: ${soma} pontos<br> Aproveitamento: ${aproveitamento * 100}%`;
+    }
+</script>

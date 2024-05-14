@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Insira os ônibus que você pegou essa semana: <input type="text" id="input_onibus">
+    <button onclick="gravar()">Gravar Busão</button><br><br>
+    Pesquisar linhas: <input type="text" id="input_linha">
+    <button onclick="pesquisar()">Pesquisar</button><br>
+    <div id="divMensagem"></div><br><br>
+</body>
+
+</html>
+<script>
+    lista = [];
+    function gravar() {
+        var onibus = input_onibus.value;
+        lista.push(onibus);
+        var tamanho = lista.length;
+        divMensagem.innerHTML = '';
+        for (var i = tamanho - 1; i >= 0; i--) {
+            divMensagem.innerHTML += `${lista[i]} <br>`;
+        }
+    }
+
+    function pesquisar() {
+        var linha = input_linha.value;
+        var cont = 0;
+
+        lista2 = [];
+        for (var i = 0; i < lista.length; i++) {
+            
+            if (lista[i] == linha) {
+                cont++;
+                lista2.push(i + 1);
+                divMensagem.innerHTML = `Você já pegou essa linha ${cont} vezes, nessa ordem: ${lista2}`;
+            }
+        }
+    }
+</script>
