@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Insira o nome de cada filme que você já viu na sua vida:
+    <br> <input type="text" id="input_filme"><br>
+    <button onclick="assistir()">Você já viu X filmes</button>
+    <button onclick="listar()">Listar Filmes</button>
+    <div id="divMensagem"></div><br><br>
+
+    De... <input type="text" id="inputDe"><br>
+    Ate... <input type="text" id="inputAte"><br>
+    <button onclick="filtrar()">Filtrar Filmes</button>
+    <div id="divMensagem2"></div>
+</body>
+
+</html>
+<script>
+    var lista = [];
+    function assistir() {
+        var filme = input_filme.value;
+        lista.push(filme);
+        divMensagem.innerHTML = '';
+
+        for (var i = 0; i < lista.length; i++) {
+            divMensagem.innerHTML += `Filme ${i + 1}: ${lista[i]}<br>`;
+        }
+    }
+
+    function listar() {
+        divMensagem.innerHTML = '';
+
+        for (var i = lista.length - 1; i >= 0; i--) {
+            divMensagem.innerHTML += `Filme ${i + 1}: ${lista[i]}<br>`;
+        }
+    }
+
+    function filtrar() {
+        var de = Number(inputDe.value);
+        var ate = Number(inputAte.value);
+        divMensagem2.innerHTML = '';
+        
+        for (var i = ate; i >= de; i--) {
+            divMensagem2.innerHTML += `Filme ${i}: ${lista[i - 1]}<br>`;
+        }
+    }
+</script>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Nome Produto: <input type="text" id="input_produto"><br>
+    Preço do Produto: <input type="text" id="input_preco"><br>
+    <button onclick="cadastrar()">Cadastrar</button>
+    <button onclick="atualizar()">Atualizar Estoque</button>
+    <div id="divMensagem"></div>
+    <div id="divMensagem2"></div>
+    <div id="divMensagem3"></div><br><br>
+    Valor: <select id="select_valores">
+        <option value="#">Selecione</option>
+        <option value="1">Preços acima de</option>
+        <option value="2">Preços abaixo de</option>
+    </select>
+    <input type="text" id="input_valor"><br>
+    <button onclick="filtrar()">Filtrar Produtos</button>
+    <div id="divMensagem4"></div>
+</body>
+
+</html>
+<script>
+    var listaNome = [];
+    var listaPreco = [];
+    function cadastrar() {
+        var nome = input_produto.value;
+        var preco = Number(input_preco.value);
+
+        if (preco >= 0 && nome.length >= 3) {
+            listaNome.push(nome);
+            listaPreco.push(preco);
+        }
+        else {
+            divMensagem.innerHTML = 'Errou';
+        }
+    }
+
+    function atualizar() {
+        var preco = 0;
+        for (var i = 0; i < listaNome.length; i++) {
+            preco += listaPreco[i];
+            divMensagem.innerHTML = `
+            Você tem ${listaNome.length} produtos cadastrados em estoque: <br><br>`;
+
+            divMensagem2.innerHTML += `
+            ${i + 1}. ${listaNome[i]} - R$${listaPreco[i]}<br>
+            `;
+
+            divMensagem3.innerHTML = `<br>Seu estoque vale ${preco}`;
+        }
+    }
+
+    function filtrar() {
+        var valor = input_valor.value;
+        var select = select_valores.value;
+
+        for (var i = 0; i < listaNome.length; i++) {
+            if (select == '1') {
+                if (listaPreco[i] > valor) {
+                    divMensagem4.innerHTML += `${i + 1}. ${listaNome[i]} - R$${listaPreco[i]}<br>`;
+                }
+                else {
+
+                }
+            }
+            if (select == '2') {
+                if (listaPreco[i] < valor) {
+                    divMensagem4.innerHTML += `${i + 1}. ${listaNome[i]} - R$${listaPreco[i]}<br>`;
+                }
+                else {
+
+                }
+            }
+        }
+    }
+</script>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Informe o nome das suas musicas favoritas: <br>
+    <input type="text" id="input_nomeMusica">
+    <button onclick="exibir()">Exibir</button>
+    <div id="divMensagem"></div><br><br>
+
+    De... <input type="text" id="de">
+    Até... <input type="text" id="ate"><br>
+    <button onclick="filtrar()">Filtrar</button>
+    <div id="divMensagem2"></div>
+</body>
+
+</html>
+<script>
+    var lista = [];
+    function exibir() {
+        var musica = input_nomeMusica.value;
+        lista.push(musica);
+        divMensagem.innerHTML = '';
+        
+        for(var i = 0; i < lista.length; i++){
+            divMensagem.innerHTML += `Musica ${i + 1}: ${lista[i]}<br>`
+        }
+    }
+    
+    function filtrar() {
+        var deopc = Number(de.value);
+        var ateopc = Number(ate.value);
+        divMensagem2.innerHTML = '';
+
+        for(var i = deopc; i <= ateopc; i++ ){
+            divMensagem2.innerHTML += `Musica ${i}: ${lista[i - 1]}<br>`
+        }
+    }
+</script>
