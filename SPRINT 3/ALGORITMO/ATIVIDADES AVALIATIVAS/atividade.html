@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="div1">
+        Ingrediente: <input type="text" id="input_ingrediente"><br>
+
+        Peso em gramas: <input type="text" id="input_pesoGramas"><br>
+
+        Preço por quilo: <input type="text" id="input_precoQuilo"><br>
+
+        <button onclick="adicionar()">Adicionar Ingrediente no Blend</button><br><br>
+
+        Nome do hamburguer: <input type="text" id="input_nomeHamb"><br>
+
+        <button onclick="preparar()">Preparar Blend e Registrar</button><br><br>
+
+        <button onclick="montar()">Montar cardapio</button>
+
+        <div id="divMensagem"></div>
+    </div>
+    <div id="div2" style="display: none;">
+
+        Tipo Hamburguer <input type="text" id="input_tipoHamburguer"> <br>
+
+        Quantidade de Hamburguer <input type="text" id="input_quantidadeHam"> <br>
+
+        Tipo de queijo <select name="" id="select_tipoQueijo">
+            <option value="#">Selecione o tipo de queijo</option>
+            <option value="1">Sem queijo</option>
+            <option value="2">Mussarela</option>
+            <option value="3">Prato</option>
+            <option value="4">Cheddar</option>
+        </select> <br>
+
+        Cebola <select name="" id="select_cebola">
+            <option value="#">Selecione Sim ou Não</option>
+            <option value="1">Sim</option>
+            <option value="2">Não</option>
+        </select> <br>
+
+        Alface <select name="" id="select_alface">
+            <option value="#">Selecione Sim ou Não</option>
+            <option value="1">Sim</option>
+            <option value="2">Nao</option>
+        </select> <br>
+
+        Tomate <select name="" id="select_tomate">
+            <option value="#">Selecione Sim ou Não</option>
+            <option value="1">Sim</option>
+            <option value="2">Nao</option>
+        </select> <br><br>
+
+        <button onclick="cardapio()">Adicionar Lanche no cardapio</button>
+
+        <div id="divMensagem2"></div>
+
+
+    </div>
+</body>
+
+</html>
+<script>
+
+    var listaIngredienteBlend = [];
+    var listaPeso = [];
+    var listaPreco = [];
+    var listaBlend = [];
+    var listaPesoT = [];
+    var listaPrecoT = [];
+
+    function adicionar() {
+        var ingrediente = input_ingrediente.value;
+        var pesoGramas = Number(input_pesoGramas.value);
+        var precoQuilo = Number(input_precoQuilo.value);
+        divMensagem.innerHTML = ``;
+
+        if (ingrediente == '' || (pesoGramas == '' || pesoGramas == 0) || (precoQuilo == '' || precoQuilo == 0)) {
+            divMensagem.innerHTML = `<br><span style="color: red; font-weight: bolder;">Preencha todos os campos para prosseguir</span>`;
+        }
+        else {
+            var ingredienteExiste = false;
+            for (var i = 0; i <= listaIngredienteBlend.length; i++) {
+                if (listaIngredienteBlend[i] == ingrediente) {
+                    ingredienteExiste = true;
+                    break;
+                }
+            }
+            if (ingredienteExiste == true) {
+                divMensagem.innerHTML = `<br><span style="color: red; font-weight: bolder;">O ingrediente "${ingrediente}" já foi adicionado na mistura!</span>`;
+            }
+            else {
+                divMensagem.innerHTML = `<br><span style="color: green; font-weight: bolder;">Adicionados ${pesoGramas} gramas de "${ingrediente}" no blend de hamburguer!</span>`;
+                listaIngredienteBlend.push(ingrediente);
+                listaPeso.push(pesoGramas);
+                listaPreco.push(precoQuilo);
+            }
+        }
+    }
+
+    function preparar() {
+        var nomeHamb = input_nomeHamb.value;
+        divMensagem.innerHTML = ``;
+        var peso = 0;
+        var preco = 0;
+        if (listaIngredienteBlend.length <= 1) {
+            divMensagem.innerHTML = `<br><span style="color: red; font-weight: bolder;">Adicione ao menos 2 ingredientes para montar o blend!</span>`;
+        }
+        else {
+            if (nomeHamb == '') {
+                divMensagem.innerHTML = `<br><span style="color: red; font-weight: bolder;">Informe o nome do hamburguer!</span>`;
+            }
+            else {
+
+                divMensagem.innerHTML += `<br><b>PREPARANDO NOVO HAMBURGUER</b><br>`;
+                for (var i = 0; i < listaIngredienteBlend.length; i++) {
+                    var total = listaPeso[i] * listaPreco[i];
+                    divMensagem.innerHTML += `${i + 1} – Ingrediente: <b>${listaIngredienteBlend[i]}</b> – Peso: <b>${listaPeso[i]}</b> - Preço KG: <b>${listaPreco[i]}</b> - Preço Final: <b>${total}</b><br>`;
+                    peso += listaPeso[i];
+                    preco += total;
+                }
+
+                divMensagem.innerHTML += `<br><br><b>INFORMAÇÕES DO HAMBURGUER CRIADO </b><br>
+                    Nome: <b>${nomeHamb} </b><br>
+                    Peso total: <b>${peso}</b><br>
+                    Preço total: <b>${preco}</b> `;
+                listaBlend.push(nomeHamb);
+                listaPesoT.push(peso);
+                listaPrecoT.push(preco);
+            }
+        }
+    }
+
+    function montar() {
+        if (listaBlend.length == 0) {
+            divMensagem.innerHTML = `<br><span style="color: red; font-weight: bolder;">Adicione ao menos um novo blend de hamburguer!</span>`;
+        }
+        else {
+            div1.style.display = 'none';
+            div2.style.display = 'block';
+        }
+    }
+
+    function cardapio() {
+        var hamburguer = input_tipoHamburguer.value;
+        var quantidade = Number(input_quantidadeHam.value);
+        var tipoQueijo = select_tipoQueijo.value;
+        var cebola = select_cebola.value;
+        var alface = select_alface.value;
+        var tomate = select_tomate.value;
+        var adicionalQueijo = 0;
+        var adicionalCebola = 0;
+        var adicionalAlface = 0;
+        var adicionalTomate = 0;
+        var valor = 0;
+        var pesoTotal = 0;
+
+        divMensagem2.innerHTML = ``;
+
+        if (listaBlend.indexOf(hamburguer) == -1) {
+            divMensagem2.innerHTML = `O nome do hamburguer precisar ser o mesmo cadastrado anteriormente`;
+        } else if (hamburguer == "" || quantidade == "" || tipoQueijo == '#' || cebola == '#' || alface == '#' || tomate == '#') {
+            divMensagem2.innerHTML = `Preencha todos os campos!!`;
+        } else {
+
+            if (tipoQueijo == '2') {
+                adicionalQueijo = 2;
+            } else if (tipoQueijo == '3') {
+                adicionalQueijo = 2.5;
+            } else if (tipoQueijo == '4') {
+                adicionalQueijo = 3;
+            } else if (tipoQueijo == '1') {
+                adicionalQueijo = 0;
+            }
+
+            if (cebola == '1') {
+                adicionalCebola = 1.5;
+            }
+
+            if (alface == '1') {
+                adicionalAlface = 1.75;
+            }
+
+            if (tomate == '1') {
+                adicionalTomate = 2;
+            }
+
+            for (var i = 0; i < listaPrecoT.length; i++) {
+                var listandoPreco = listaPrecoT[i];
+                valor += listandoPreco;
+            }
+
+            for (var i = 0; i < listaPesoT.length; i++) {
+                var listandoPeso = listaPesoT[i];
+                pesoTotal += listandoPeso;
+            }
+
+            var precoFinal = (valor * quantidade) + adicionalQueijo + adicionalCebola + adicionalAlface + adicionalTomate;
+
+            divMensagem2.innerHTML = `
+            Tipo Hamburguer: ${hamburguer} (${pesoTotal}g/R$${valor})<br>
+            Quantidade de Hamburgueres: ${quantidade}<br>
+            Queijo: <b>${tipoQueijo}</b><br>
+            Cebola: <b>${cebola}</b><br>
+            Alface: <b>${alface}</b><br>
+            Tomate: <b>${tomate}</b><br><br>
+            Preço final do Lanche: R$<b>${precoFinal}</b>`;
+        }
+    }
+</script>
