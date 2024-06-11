@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="exibir()">Exibir Endereço</button>
+    <div id="divMensagem"></div>
+</body>
+
+</html>
+<script>
+    var lista = [];
+    function exibir() {
+        var pessoa = {
+            nome: 'Fulano ' + lista.length,
+            endereco: {
+                bairro: 'Vila Formosa',
+                rua: 'Haddock Lobo',
+                numero: 12,
+                estado: 'SP',
+                cidade: 'São Paulo',
+                cep: '01414-010'
+            }
+        };
+
+        lista.push(pessoa);
+        divMensagem.innerHTML = '';
+
+        for (let i = 0; i < lista.length; i++) {
+            const pessoaAtual = lista[i];
+
+            divMensagem.innerHTML += `Pessoa ${i}: ${pessoaAtual.nome}<br><br>
+            Endereço:
+                ${pessoaAtual.endereco.rua} |
+                ${pessoaAtual.endereco.numero} |
+                ${pessoaAtual.endereco.bairro} |
+                ${pessoaAtual.endereco.estado} |
+                ${pessoaAtual.endereco.cidade} |
+                ${pessoaAtual.endereco.cep} 
+                <br><br>
+            `;
+        }
+
+        console.log(pessoa);
+        divMensagem.innerHTML += JSON.stringify(pessoa); //JSON.stringify() tranforma o json em um texto
+    }
+</script>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Nome: <input type="text" id="input_nome">
+    Sobrenome: <input type="text" id="input_sobrenome">
+    Idade: <input type="text" id="input_idade">
+    <button onclick="cadastrar()">Cadastrar</button>
+    <div id="divMensagem"></div>
+</body>
+
+</html>
+<script>
+    var lista = []
+    function cadastrar() {
+        var nome = input_nome.value;
+        var sobrenome = input_sobrenome.value;
+        var idade = input_idade.value;
+
+        var usuario = {
+/*Esse lado é o nome da 'variavel', esta nome mas poderia ser qualquer coisa*/nome: nome/*Esse lado é a variavel chamada acima*/,
+            sobrenome: sobrenome,
+            idade: idade,
+            // nome,
+            // sobrenome,
+            // idade => desse jeito tambem funcionaria, ele ve se existe a variavel e implementa ela mesma, igual acima
+        }
+
+        usuario.propriedaAExcluir = true // assim esta criando uma variavel no json
+        usuario.nome = true // assim esta reescrevendo uma variavel do json
+
+        delete usuario.nome // assim voce deleta uma variavel, uma informação do json
+
+        console.log(usuario)
+        lista.push(usuario)
+    }
+</script>
