@@ -7,5 +7,6 @@ public class PrimeiraClasse {
         Double altura = 1.81;
 
         System.out.println("Olá " + nome + ", sua idade é: " + idade + " e uma altura de " + altura + " metros");
+
     }
 }
