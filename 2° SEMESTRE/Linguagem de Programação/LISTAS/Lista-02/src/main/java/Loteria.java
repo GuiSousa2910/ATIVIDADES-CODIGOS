@@ -10,9 +10,10 @@ public class Loteria {
             tentativas++;
             numeroSorteado = ThreadLocalRandom.current().nextInt(0, 11);
         }
+
             if (tentativas <= 3){
                 System.out.println("Você é MUITO sortudo");
-            } else if (tentativas >= 4 || tentativas <= 10) {
+            } else if (tentativas >= 4 && tentativas <= 10) {
                 System.out.println("Você é sortudo");
             } else {
                 System.out.println("É melhor você parar de apostar e ir trabalhar");
