@@ -1,3 +1,5 @@
+package bilheteunico;
+
 public class BilheteUnico {
 
     String nomeTitular;
