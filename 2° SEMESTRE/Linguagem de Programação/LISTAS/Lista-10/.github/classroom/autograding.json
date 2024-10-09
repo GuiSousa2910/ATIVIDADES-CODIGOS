@@ -1,0 +1,174 @@
+{
+  "tests": [
+    {
+      "name": "Produto - Atributos",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=\\ProdutoTest\\$AtributosTest",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Produto - Métodos",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=\\ProdutoTest\\$MetodosTest",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Produto - Encapsulamento",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=\\ProdutoTest\\$EncapsulamentoTest",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Produto - calcularImposto",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=\\ProdutoTest\\$CalcularImpostoTest",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Produto - disponivelParaCompra",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=\\ProdutoTest\\$DisponivelParaCompraTest",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Produto - comprar",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=\\ProdutoTest\\$ComprarTest",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Produto - aumentarEstoque",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=\\ProdutoTest\\$AumentarEstoqueTest",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Alimento - Atributos",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=\\AlimentoTest\\$AtributosTest",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Alimento - Métodos",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=\\AlimentoTest\\$MetodosTest",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Alimento - Encapsulamento",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=\\AlimentoTest\\$EncapsulamentoTest",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Alimento - calcularImposto",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=\\AlimentoTest\\$CalcularImpostoTest",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Alimento - disponivelParaCompra",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=\\AlimentoTest\\$DisponivelParaCompraTest",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Eletronico - Atributos",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=\\EletronicoTest\\$AtributosTest",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Eletronico - Métodos",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=\\EletronicoTest\\$MetodosTest",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Eletronico - Encapsulamento",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=\\EletronicoTest\\$EncapsulamentoTest",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Eletronico - calcularImposto",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=\\EletronicoTest\\$CalcularImpostoTest",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Eletronico - disponivelParaCompra",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=\\EletronicoTest\\$DisponivelParaCompraTest",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    }
+  ]
+}
