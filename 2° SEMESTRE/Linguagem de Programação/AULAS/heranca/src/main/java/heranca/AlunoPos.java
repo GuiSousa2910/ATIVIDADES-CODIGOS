@@ -1,3 +1,5 @@
+package heranca;
+
 public class AlunoPos extends Aluno {
     private Double notaTCC;
     private Double notaArtigo;
@@ -32,4 +34,17 @@ public class AlunoPos extends Aluno {
         return media;
     }
 
+    @Override
+    public String toString() {
+        return """
+                RA: %s
+                Nome: %s
+                Nota Entrega: %.2f
+                Nota Prática: %.2f
+                Quantidade de Faltas: %d
+                Nota TCC: %.2f
+                Nota Artigo: %.2f
+                """.formatted(ra, nome, notaEntrega, notaPratica, qntFaltas, notaTCC, notaArtigo);
+
+    }
 }

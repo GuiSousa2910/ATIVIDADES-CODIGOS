@@ -1,3 +1,5 @@
+package heranca;
+
 public class Aluno {
     protected String nome;
     protected String ra;
