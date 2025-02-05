@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Escreva o sabor da pizza que deseja
+    <input type="text" id="sabor"></input><br>
+
+    Escreva o valor da pizza
+    <input type="text" id="valor"></input><br>
+
+    Quantidade de amigos que vão comer
+    <input type="number" id="quantidade"></input><br>
+
+    <button onclick="calcular()">Ver valor por amigo</button>
+
+    <div id="mensagem"></div>
+    
+</body>
+</html>
+<script>
+    function calcular(){
+        var sabor = document.getElementById("sabor").value;
+        var valor = document.getElementById("valor").value;
+        var quantidade = document.getElementById("quantidade").value;
+
+        var valorPorAmigo = valor / quantidade;
+
+        mensagem.innerHTML = "Cada amigo vai colaborar com R$" + valorPorAmigo + " para comer a pizza de " + sabor;
+    }
+</script>

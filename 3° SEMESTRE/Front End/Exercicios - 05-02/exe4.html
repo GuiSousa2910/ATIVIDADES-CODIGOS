@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual o numero da tabuada:
+    <input type="number" id="numero"></input><br>
+
+    Até que numero voce deseja a tabuada:
+    <input type="number" id="ate"></input><br>
+
+    <button onclick="tabuada()">Ver Tabuada</button>
+
+    <div id="mensagem"></div>
+</body>
+</html>
+
+<script>
+    function tabuada(){
+        var numero = document.getElementById("numero").value;
+        var ate = document.getElementById("ate").value;
+
+        for (var i = 1; i <= ate; i++){
+            mensagem.innerHTML += numero + " x " + i + " = " + numero * i + "<br>";
+        }
+    }
+
+    </script>

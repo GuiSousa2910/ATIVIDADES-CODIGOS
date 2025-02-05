@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Informe a musica:
+    <input type="text" id="musica"></input><br>
+
+    <button onclick="cadastrar()">Cadastrar</button>
+    <button onclick="exibir()">Exibir</button>
+
+    <div id="mensagem"></div><br>
+
+    <input type="text" placeholder="vai de" id="de"></input>
+    <input type="text" placeholder="até" id="ate"></input>
+    <button onclick="filtrar()">filtrar</button>
+
+    <div id="filtrados"></div>
+</body> 
+</html>
+
+<script>
+    var lista = [];
+
+    function cadastrar() {
+        var musica = document.getElementById("musica").value;
+
+        lista.push(musica);
+    }
+
+    function exibir() {
+        var mensagem = document.getElementById("mensagem");
+        mensagem.innerHTML = "";
+
+        for (var i = 0; i < lista.length; i++) {
+            mensagem.innerHTML += lista[i] + "<br>";
+        }
+    }
+
+    function filtrar() {
+        var de = document.getElementById("de").value;
+        var ate = document.getElementById("ate").value;
+
+        var filtrados = document.getElementById("filtrados");
+
+        for (var i = de; i <= ate; i++) {
+            filtrados.innerHTML += lista[i] + "<br>";
+        }
+    }
+function filtrar() {
+    var de = parseInt(document.getElementById("de").value) - 1;
+    var ate = parseInt(document.getElementById("ate").value) - 1;
+
+    var filtrados = document.getElementById("filtrados");
+    filtrados.innerHTML = "";
+
+    for (var i = de; i <= ate; i++) {
+            filtrados.innerHTML += lista[i] + "<br>";
+    }
+}
+</script>

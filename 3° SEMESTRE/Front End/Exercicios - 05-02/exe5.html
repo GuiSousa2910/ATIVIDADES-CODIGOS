@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Informe nome de filmes que voce gosta:
+    <input type="text" id="nomes"></input><br>
+
+    <button onclick="cadastrar()">Cadastrar</button>
+
+    <div id="mensagem"></div>
+</body>
+
+</html>
+
+<script>
+
+var lista = [];
+
+    function cadastrar() {
+        var nomes = document.getElementById("nomes").value;
+
+        lista.push(nomes);
+
+        var mensagem = document.getElementById("mensagem");
+        mensagem.innerHTML = "";
+
+        for (var i = 0; i < lista.length; i++) {
+            if (i % 2 == 0) {
+            mensagem.innerHTML += `<span style="color: blue;">${lista[i]}</span><br>`;
+            } else {
+            mensagem.innerHTML += `<span style="color: red;">${lista[i]}</span><br>`;
+            }
+        }
+    }
+
+</script>
