@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<label for="limite">Informe o limite:</label>
+<input type="number" id="limite"><br>
+
+<label for="divisor">Informe o divisor:</label>
+<input type="number" id="divisor"><br>
+
+<button onclick="somarMultiplos()">Somar Números</button>
+<p id="msg"></p>
+
+<script>
+function somarMultiplos() {
+    var limite = parseInt(document.getElementById("limite").value);
+    var divisor = parseInt(document.getElementById("divisor").value);
+    var msg = document.getElementById("msg");
+
+    if(isNaN(limite) || limite <= 0) {
+        msg.innerHTML = "Informe um número positivo para o limite.";
+    }
+
+    if(isNaN(divisor) || divisor < 1 || divisor > limite) {
+        msg.innerHTML = "Informe um divisor entre 1 e o limite.";
+    }
+
+    var soma = 0;
+    var multiplos = [];
+    for (var i = 1; i <= limite; i++) {
+        if(i % divisor === 0) {
+            soma += i;
+            multiplos.push(i);
+        }
+    }
+    
+    msg.innerHTML = "Números múltiplos: " + multiplos.join(", ") + "<br>Soma dos Múltiplos: " + soma;
+}
+</script>

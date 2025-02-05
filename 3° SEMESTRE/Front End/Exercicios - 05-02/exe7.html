@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
 <button id="btnNota" onclick="g1()">Gerar uma nota de aluno entre 3 e 10</button>
 <p id="notaDisplay"></p>
@@ -26,12 +29,12 @@
         nota = Math.random() * (10 - 3) + 3;
         document.getElementById("notaDisplay").innerText = nota.toFixed(1);
     }
-        
-    function g2(){
+
+    function g2() {
         freq = Math.random() * (100 - 50) + 50;
         document.getElementById("freqDisplay").innerText = freq.toFixed(1) + "%";
     }
-        
+
     function ver() {
         const status = (nota >= 6 && freq >= 75) ? "aprovado" : "reprovado";
         document.getElementById("result").innerText =
