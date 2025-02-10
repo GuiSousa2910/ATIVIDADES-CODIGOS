@@ -16,6 +16,4 @@ public class FrasesController {
         return "Olá %s".formatted(nome);
     }
 
-
-
 }
