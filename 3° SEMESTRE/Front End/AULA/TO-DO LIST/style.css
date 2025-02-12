@@ -1,0 +1,119 @@
+:root {
+    --primary-color: #007bff;
+    --bg-white: #fff;
+    --bg-gray: #d0cece;
+    --border-gray: #ccc;
+    --secundary-color: #005ec2;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-gray);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 40%;
+    height: 80%;
+    background-color: var(--bg-white);
+    padding: 16px;
+
+    #task-form {
+        display: flex;
+        gap: 10px;
+
+        input {
+            flex: 1;
+            border: var(--border-gray) 1px solid;
+            padding: 8px;
+        }
+
+        button {
+            border: none;
+            padding: 8px 10px;
+            color: var(--bg-white);
+            cursor: pointer;
+            width: 6%;
+            font-size: large;
+            background-color: var(--primary-color);
+        }
+    }
+
+    .task-list {
+        list-style: none;
+
+        .task-item {
+            margin-top: 16px;
+            padding: 16px;
+            display: flex;
+            border: var(--border-gray) 1px solid;
+
+
+            input {
+                width: 5%;
+                cursor: pointer;
+            }
+
+            span {
+                flex: 1;
+                padding: 8px;
+            }
+
+            button {
+                width: 10%;
+                background-color: var(--bg-white);
+                border: none;
+                cursor: pointer;
+                font-size: medium;
+            }
+
+        }
+
+    }
+
+    .task-footer {
+        padding: 16px;
+        background-color: var(--bg-gray);
+        display: flex;
+        justify-content: space-between;
+
+        button {
+            border: none;
+            padding: 8px 10px;
+            color: var(--bg-white);
+            cursor: pointer;
+            background-color: var(--primary-color);
+        }
+
+        .progress-container{
+            width: 50%;
+            background-color: black;
+            border-radius: 25px;
+
+            .progress-bar{
+                background-color: greenyellow;
+                width: 100px;
+                height: 100%;
+                border-radius: 25px;
+            }
+        }
+
+
+
+    }
+
+}
+
+button:hover {
+    background-color: var(--secundary-color) !important;
+}

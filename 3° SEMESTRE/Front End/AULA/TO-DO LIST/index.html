@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO LIST</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            <h1>Lista de Tarefas</h1>
+        </header>
+        
+        <section>
+            <form id="task-form">
+                <input id="task-input" placeholder="Digite a descrição da tarefa" type="text">
+                <button type="submit"> + </button>
+            </form>
+        </section>
+
+        <section>
+            <ul class="task-list">
+                <li class="task-item">
+                    <input type="checkbox">
+                    <span>Estudar PHP</span>
+                    <button>✏️</button>
+                    <button>🗑️</button>
+                </li>
+
+                <li class="task-item">
+                    <input type="checkbox">
+                    <span>Estudar PHP</span>
+                    <button>✏️</button>
+                    <button>🗑️</button>
+                </li>
+            </ul>
+        </section>
+
+        <footer class="task-footer">
+            <div class="progress-container">
+                <div class="progress-bar">
+
+                </div>
+            </div>
+            <button>Ocultar concluidos</button>
+        </footer>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
