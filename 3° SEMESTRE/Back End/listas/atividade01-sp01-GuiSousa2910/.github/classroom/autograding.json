@@ -1,0 +1,124 @@
+{
+    "tests": [
+        {
+            "name": "Exercício 1 - Caso 1",
+            "setup": "",
+            "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.sprint1_nota1.ex1.ExercicioFacilControllerTests#quandoPalavraForPalindromo_entaoRetornaTrue",
+            "input": "",
+            "output": "",
+            "comparison": "exact",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "Exercício 1 - Caso 2",
+            "setup": "",
+            "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.sprint1_nota1.ex1.ExercicioFacilControllerTests#quandoPalavraNaoForPalindromo_entaoRetornaFalse",
+            "input": "",
+            "output": "",
+            "comparison": "exact",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "Exercício 1 - Caso 3",
+            "setup": "",
+            "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.sprint1_nota1.ex1.ExercicioFacilControllerTests#quandoPalavraForPalindromoComMaiusculas_entaoRetornaTrue",
+            "input": "",
+            "output": "",
+            "comparison": "exact",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "Exercício 1 - Caso 4",
+            "setup": "",
+            "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.sprint1_nota1.ex1.ExercicioFacilControllerTests#quandoPalavraForReviver_entaoRetornaTrue",
+            "input": "",
+            "output": "",
+            "comparison": "exact",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "Exercício 2 - Caso 1",
+            "setup": "",
+            "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.sprint1_nota1.ex2.ExercicioMedioControllerTests#quandoNumeroForPrimo_entaoRetornaTrue",
+            "input": "",
+            "output": "",
+            "comparison": "exact",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "Exercício 2 - Caso 2",
+            "setup": "",
+            "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.sprint1_nota1.ex2.ExercicioMedioControllerTests#quandoNumeroNaoForPrimo_entaoRetornaFalse",
+            "input": "",
+            "output": "",
+            "comparison": "exact",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "Exercício 2 - Caso 3",
+            "setup": "",
+            "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.sprint1_nota1.ex2.ExercicioMedioControllerTests#quandoNumeroForMenorOuIgualAUm_entaoRetornaFalse",
+            "input": "",
+            "output": "",
+            "comparison": "exact",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "Exercício 3 - Caso 1",
+            "setup": "",
+            "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.sprint1_nota1.ex3.ExercicioDificilControllerTest#quandoNForPositivo_entaoRetornaValorECorrespondenteSoma",
+            "input": "",
+            "output": "",
+            "comparison": "exact",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "Exercício 3 - Caso 2",
+            "setup": "",
+            "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.sprint1_nota1.ex3.ExercicioDificilControllerTest#quandoNForZero_entaoRetornaZeroParaTermoESoma",
+            "input": "",
+            "output": "",
+            "comparison": "exact",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "Exercício 3 - Caso 3",
+            "setup": "",
+            "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.sprint1_nota1.ex3.ExercicioDificilControllerTest#quandoNForUm_entaoRetornaUmParaTermoESoma",
+            "input": "",
+            "output": "",
+            "comparison": "exact",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "Exercício 3 - Caso 4",
+            "setup": "",
+            "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.sprint1_nota1.ex3.ExercicioDificilControllerTest#quandoNForPositivoGrande_entaoRetornaValorECorrespondenteSoma",
+            "input": "",
+            "output": "",
+            "comparison": "exact",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "Exercício 3 - Caso 5",
+            "setup": "",
+            "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.sprint1_nota1.ex3.ExercicioDificilControllerTest#quandoNForNegativo_entaoRetornaZeroParaTermoESoma",
+            "input": "",
+            "output": "",
+            "comparison": "exact",
+            "timeout": 10,
+            "points": 1
+        }
+    ]
+}
