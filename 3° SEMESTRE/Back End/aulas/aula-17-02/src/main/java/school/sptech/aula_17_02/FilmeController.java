@@ -41,7 +41,7 @@ public class FilmeController {
         return filmeParaAtualizar;
     }
 
-    @GetMapping ("/deletar/{indice}")
+    @DeleteMapping ("{indice}")
     public String deletar(@PathVariable int index){
         filmes.remove(index);
 
