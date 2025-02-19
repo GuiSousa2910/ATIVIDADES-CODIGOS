@@ -1,7 +1,7 @@
 :root {
     --primary-color: #007bff;
     --bg-white: #fff;
-    --bg-gray: #d0cece;
+    --bg-gray: #f4f4f4;
     --border-gray: #ccc;
     --secundary-color: #005ec2;
 }
@@ -24,9 +24,12 @@ body {
 
 .container {
     width: 40%;
-    height: 80%;
+    max-height: 80%;
     background-color: var(--bg-white);
     padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 
     #task-form {
         display: flex;
@@ -51,6 +54,8 @@ body {
 
     .task-list {
         list-style: none;
+        max-height: 50vh;
+        overflow-y: auto;
 
         .task-item {
             margin-top: 16px;
@@ -95,12 +100,12 @@ body {
             background-color: var(--primary-color);
         }
 
-        .progress-container{
+        .progress-container {
             width: 50%;
             background-color: black;
             border-radius: 25px;
 
-            .progress-bar{
+            .progress-bar {
                 background-color: greenyellow;
                 width: 100px;
                 height: 100%;
