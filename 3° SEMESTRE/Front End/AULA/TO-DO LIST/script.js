@@ -14,15 +14,16 @@ taskForm.addEventListener('submit', (event) => {
     addTask(listItem);
 });
 
-const addTask = (listItem) => {
+const addTask = (listItem, task) => {
 
-    const taskDercription = taskInput.value;
+    const taskDercription = task ? task.text : taskInput.value;
     listItem.classList.add('task-item');
 
     const taskSpan = document.createElement('span');
     taskSpan.textContent = taskDercription;
 
     const taskFormInput = document.createElement('input');
+    taskFormInput.checked = task && task.done;
     taskFormInput.type = 'checkbox';
     taskFormInput.addEventListener('click', (event) => {
         if (taskFormInput.checked) {
@@ -65,7 +66,7 @@ const addTask = (listItem) => {
     listItem.appendChild(taskSpan);
     listItem.appendChild(taskEditButton);
     listItem.appendChild(taskDeletButton);
-    
+
     taskList.appendChild(listItem);
     changeProgressBar();
 };
@@ -94,7 +95,7 @@ hideButton.addEventListener('click', (event) => {
 
 const changeProgressBar = () => {
     const taskLength = taskList.children.length;
-  
+
     if (taskLength === 0) {
         progressBar.style.width = `0%`;
         progressText.textContent = `0/0 concluidos (0.0%)`;
@@ -118,10 +119,24 @@ const saveTasks = () => {
         const newJson = {
             text: spanText,
             done: isCheckbox
-        }
+        };
 
         return newJson;
     });
 
     localStorage.setItem('tasks', JSON.stringify(tasks));
-}
+};
+
+const getTasks = () => {
+    const tasks = JSON.parse(localStorage.getItem('tasks') || "[]");
+
+    tasks.forEach((task) => {
+        const listItem = document.createElement('li');
+        addTask(listItem, task);
+
+    });
+};
+
+window.addEventListener('load', () => {
+    getTasks();
+});
