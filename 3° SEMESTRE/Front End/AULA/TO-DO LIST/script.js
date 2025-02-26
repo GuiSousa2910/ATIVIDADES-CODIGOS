@@ -3,15 +3,20 @@ const taskInput = document.getElementById('task-input');
 const taskList = document.querySelector('.task-list');
 const hideButton = document.querySelector('#hideButton');
 const showButton = document.querySelector('#showButton');
+const progressBar = document.querySelector('.progress-bar');
+const progressText = document.querySelector('.progress-text');
 
 let lista = [];
 
 taskForm.addEventListener('submit', (event) => {
     event.preventDefault();
+    const listItem = document.createElement('li');
+    addTask(listItem);
+});
+
+const addTask = (listItem) => {
 
     const taskDercription = taskInput.value;
-
-    const listItem = document.createElement('li');
     listItem.classList.add('task-item');
 
     const taskSpan = document.createElement('span');
@@ -30,82 +35,93 @@ taskForm.addEventListener('submit', (event) => {
     const taskEditButton = document.createElement('button');
     taskEditButton.textContent = '✏️';
     taskEditButton.addEventListener('click', (event) => {
-        const novaTarefa = prompt(`Digite a nova descrição da tarefa "${taskDercription}"`);
+        const novaTarefa = prompt(`Digite a nova descrição da tarefa "${taskSpan.textContent}"`, taskSpan.textContent);
+        if (novaTarefa === null) {
+            return;
+        }
         const tarefaFormatada = novaTarefa.trim();
 
         if (tarefaFormatada != '') {
             taskSpan.textContent = tarefaFormatada;
+            changeProgressBar();
         }
-
     });
 
     const taskDeletButton = document.createElement('button');
     taskDeletButton.textContent = '🗑️';
     taskDeletButton.addEventListener('click', (event) => {
-        const confirmacao = confirm(`Deseja realmente excluir a tarefa "${taskDercription}"`);
-        if (!confirmacao) {
-            return;
+        const confirmacao = confirm(`Deseja realmente excluir a tarefa "${taskSpan.textContent}"`, taskSpan.textContent);
+        if (confirmacao) {
+            listItem.remove();
         }
-        listItem.remove();
+        changeProgressBar();
+    });
+
+    taskFormInput.addEventListener('change', () => {
+        changeProgressBar();
     });
 
     listItem.appendChild(taskFormInput);
     listItem.appendChild(taskSpan);
     listItem.appendChild(taskEditButton);
     listItem.appendChild(taskDeletButton);
-
+    
     taskList.appendChild(listItem);
-
-});
+    changeProgressBar();
+};
 
 hideButton.addEventListener('click', (event) => {
     const vetorDeLis = Array.from(taskList.children);
 
-    vetorDeLis.forEach((li) => {
-        const input = li.querySelector('input');
-        if (input.checked) {
-            li.style.display = 'none';
-            showButton.style.display = 'flex';
-            hideButton.style.display = 'none';
-        }else{
+    if (hideButton.dataset.action === "hide") {
+        vetorDeLis.forEach((li) => {
+            const input = li.querySelector('input');
+            if (input.checked) {
+                li.style.display = 'none';
+            }
+        });
+        hideButton.dataset.action = "show";
+        hideButton.textContent = 'Mostrar tarefas';
+
+    } else {
+        vetorDeLis.forEach((li) => {
             li.style.display = 'flex';
+        });
+        hideButton.dataset.action = "hide";
+        hideButton.textContent = 'Ocultar concluidos';
+    }
+});
+
+const changeProgressBar = () => {
+    const taskLength = taskList.children.length;
+  
+    if (taskLength === 0) {
+        progressBar.style.width = `0%`;
+        progressText.textContent = `0/0 concluidos (0.0%)`;
+        return;
+    }
+
+    const doneArray = [...taskList.children].filter((li) => li.querySelector('input').checked);
+    const doneLength = doneArray.length;
+    const percentual = (doneLength / taskLength) * 100;
+
+    progressBar.style.width = `${percentual}%`;
+    progressText.textContent = `${doneLength}/${taskLength} concluidos (${percentual.toFixed(1)}%)`;
+
+    saveTasks();
+};
+
+const saveTasks = () => {
+    const tasks = [...taskList.children].map((li) => {
+        const isCheckbox = li.querySelector('input').checked;
+        const spanText = li.querySelector('span').textContent;
+        const newJson = {
+            text: spanText,
+            done: isCheckbox
         }
-    })
-})
 
-showButton.addEventListener('click', (event) => {
-    const vetorDeLis = Array.from(taskList.children);
+        return newJson;
+    });
 
-    vetorDeLis.forEach((li) => {
-        li.style.display = 'flex';
-        showButton.style.display = 'none';
-        hideButton.style.display = 'flex';
-    })
-})   
-
-
-// Eu tava fazendo assim antes e nao deu certo
-
-// function ocultar() {
-//     for (let i = 0; i < lista.length; i++) {
-//         lista[i].style.display = 'none';
-//     }
-
-//     if (lista.length != 0) {
-//         const botao = document.getElementById('botaoO');
-//         botao.style.display = 'none';
-//         const botaoM = document.getElementById('botaoM');
-//         botaoM.style.display = 'flex';
-//     }
-// }
-
-// function mostrar() {
-//     for (let i = 0; i < lista.length; i++) {
-//         lista[i].style.display = 'flex';
-//     }
-
-//     const botao = document.getElementById('botaoO');
-//     botao.style.display = 'flex';
-//     const botaoM = document.getElementById('botaoM');
-//     botaoM.style.display = 'none';
-// }
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+}
