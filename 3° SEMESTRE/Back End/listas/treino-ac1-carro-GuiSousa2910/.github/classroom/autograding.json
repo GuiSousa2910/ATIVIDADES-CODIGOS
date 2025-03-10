@@ -1,0 +1,164 @@
+{
+  "tests": [
+    {
+      "name": "[1] - Quando houver 4 carros, então deve retornar status 200",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ex_carro.ListarCarroTest#listarCarros",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 20,
+      "points": 1
+    },
+    {
+      "name": "[2] - Quando não houver carros, então deve retornar status 204",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ex_carro.ListarCarroTest#listarCarrosVazio",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 20,
+      "points": 1
+    },
+    {
+      "name": "[3] - Quando houver 24 carros, então deve retornar status 200",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ex_carro.ListarCarroTest#listarCarros24",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 20,
+      "points": 1
+    },
+    {
+      "name": "[1] - Quando o carro existir, então deve retornar status 204",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ex_carro.DeleteCarroTest#deletarCarro",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 20,
+      "points": 1
+    },
+    {
+      "name": "[2] - Quando o carro não existir, então deve retornar status 404",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ex_carro.DeleteCarroTest#deletarCarroNaoExistente",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 20,
+      "points": 1
+    },
+    {
+      "name": "[1] - Quando o carro for cadastrado com sucesso, então deve retornar status 201 e id do carro",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ex_carro.CadastrarCarroTest#cadastrarCarro",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 20,
+      "points": 1
+    },
+    {
+      "name": "[2] - Caso o id seja informado, então deve ser ignorado e gerado um novo id",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ex_carro.CadastrarCarroTest#cadastrarCarroComId",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 20,
+      "points": 1
+    },
+    {
+      "name": "[1] - Quando o carro existir, então deve retornar status 200",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ex_carro.BuscarCarroPorIdTest#buscarCarro",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 20,
+      "points": 1
+    },
+    {
+      "name": "[2] - Quando o carro não existir, então deve retornar status 404",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ex_carro.BuscarCarroPorIdTest#buscarCarroNaoExistente",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 20,
+      "points": 1
+    },
+    {
+      "name": "[1] - Quando busca por marca, então deve retornar status 200",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ex_carro.BuscaPorMarcaTest#buscarPorMarca",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 20,
+      "points": 1
+    },
+    {
+      "name": "[2] - Quando o carro por marca não existir, então deve retornar status 204",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ex_carro.BuscaPorMarcaTest#buscarPorMarcaNaoExistente",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 20,
+      "points": 1
+    },
+    {
+      "name": "[3] - Quando a marca for parcial, então deve retornar status 200 com resultados aproximados",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ex_carro.BuscaPorMarcaTest#buscarPorMarcaNaoCapitalizado",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 20,
+      "points": 1
+    },
+    {
+      "name": "[4] - Quando a marca estiver com maiúsculas e minúsculas, então deve retornar status 200 com resultados aproximados",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ex_carro.BuscaPorMarcaTest#buscarPorMarcaCapitalizado",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 20,
+      "points": 1
+    },
+    {
+      "name": "[1] - Quando o carro existir, então deve retornar status 200",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ex_carro.AtualizarCarroTest#atualizarCarro",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 20,
+      "points": 1
+    },
+    {
+      "name": "[2] - Quando o carro não existir, então deve retornar status 404",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ex_carro.AtualizarCarroTest#atualizarCarroNaoExistente",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 20,
+      "points": 1
+    },
+    {
+      "name": "[3] - Quando o id do carro for enviado diferente do id da URL, então deve considerar o id da URL",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ex_carro.AtualizarCarroTest#atualizarCarroComIdDiferente",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 20,
+      "points": 1
+    }
+  ]
+}
