@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
-const Formulario = () => {
+const Formulario = (props) => {
 
     const [disabled, setDisabled] = useState(false);
-    const [buttonName, setButtonName] = useState("Desabilitar formularios");
+    const [buttonName, setButtonName] = useState("Desabilitar formularios");    
+
+    useEffect(()=> {
+        setDisabled(props.desabilitarTodos)
+    }, [props.desabilitarTodos])
 
     const desabilitarInput = () => {
         if (disabled) {

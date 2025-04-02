@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import "./App.css";
 import Card from "./Card";
 import Gerenciamento from "./Gerenciamento";  
+import Pokemon from "./Pokemon";  
 
 function App() {
 
@@ -21,7 +22,8 @@ function App() {
       {/* </button> */}
       {/* <p>{contador}</p> */} 
 
-      <Gerenciamento />
+      {/* <Gerenciamento /> */}
+      <Pokemon />
     </>
   );
 }
