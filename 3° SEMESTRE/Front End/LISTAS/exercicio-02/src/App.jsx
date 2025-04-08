@@ -14,8 +14,8 @@ function App() {
       {/* <Contador /> */}
       {/* <Calculadora /> */}
       {/* <DiarioInterativo /> */}
-      <ListaTelefonica />
-      {/* <ExibirPersonagem /> */}
+      {/* <ListaTelefonica /> */}
+      <ExibirPersonagem />
     </>
   )
 }
