@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        fetch("http://localhost:8080/pets/1/imagens/1")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                return response.blob();
+            })
+            .then(blob => {
+                const imgURL = URL.createObjectURL(blob);
+                const img = document.createElement("img");
+                img.src = imgURL;
+                img.alt = "Imagem do Pet";
+                document.body.appendChild(img);
+            })
+            .catch(error => console.error("Fetch error:", error));
+
+        fetch("http://localhost:8080/pets/1/imagens/0")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                return response.blob();
+            })
+            .then(blob => {
+                const imgURL = URL.createObjectURL(blob);
+                const img = document.createElement("img");
+                img.src = imgURL;
+                img.alt = "Imagem do Pet";
+                document.body.appendChild(img);
+            })
+            .catch(error => console.error("Fetch error:", error));
+    </script>
+</body>
+
+</html>

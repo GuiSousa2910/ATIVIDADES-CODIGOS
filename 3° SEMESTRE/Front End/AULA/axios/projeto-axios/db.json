@@ -1,0 +1,10 @@
+{
+  "usuarios": [
+    {
+      "id": "e97f",
+      "nome": "Lucas",
+      "idade": 23,
+      "profissao": "Desenvolvedor"
+    }
+  ]
+}
