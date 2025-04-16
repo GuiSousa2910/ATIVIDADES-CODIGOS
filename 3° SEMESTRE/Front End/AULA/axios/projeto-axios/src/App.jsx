@@ -1,6 +1,7 @@
-import {useEffect} from 'react';
+import { useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
+import { Card } from './Card';
 import { api } from './provider/apiInstance';
 
 function App() {
@@ -45,10 +46,12 @@ function App() {
 
   return (
     <>
-      <button onClick={adicionarUsers}>ADICIONAR</button>
+      {/* <button onClick={adicionarUsers}>ADICIONAR</button>
       <button onClick={buscarUsers}>BUSCAR</button>
       <button onClick={atualizarUsers}>ATUALIZAR</button>
-      <button onClick={deletarUsers}>DELETAR</button>
+      <button onClick={deletarUsers}>DELETAR</button> */}
+
+      <Card />
     </>
   );
 }
