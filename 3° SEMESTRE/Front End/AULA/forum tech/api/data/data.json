@@ -1,0 +1,254 @@
+{
+  "postagens": [
+    {
+      "titulo": "sdsds",
+      "conteudo": "Teste",
+      "usuarioId": "a6069aa3-e869-4af0-a2a0-49fbe5b73082",
+      "criadoEm": "2025-05-04T00:00:32.487Z",
+      "id": "83958272-3e45-4870-92ff-8285f36705bd",
+      "createdAt": "2025-05-04T00:00:32.487Z"
+    },
+    {
+      "titulo": "sdsds",
+      "conteudo": "Teste",
+      "usuarioId": "a6069aa3-e869-4af0-a2a0-49fbe5b73082",
+      "criadoEm": "2025-05-04T00:03:30.088Z",
+      "id": "3e1d58a9-28b7-4da8-b2e5-70df05dd530c",
+      "createdAt": "2025-05-04T00:03:30.088Z"
+    },
+    {
+      "titulo": "sdsds",
+      "conteudo": "Teste",
+      "usuarioId": "a6069aa3-e869-4af0-a2a0-49fbe5b73082",
+      "criadoEm": "2025-05-04T00:36:45.570Z",
+      "id": "869affce-73e4-454c-987c-4076ddd5f36d",
+      "createdAt": "2025-05-04T00:36:45.571Z"
+    },
+    {
+      "titulo": "sdsds",
+      "conteudo": "Teste",
+      "usuarioId": "a6069aa3-e869-4af0-a2a0-49fbe5b73082",
+      "criadoEm": "2025-05-04T00:37:01.750Z",
+      "id": "eb62b202-2419-419d-82ec-53e247be63f1",
+      "createdAt": "2025-05-04T00:37:01.750Z"
+    },
+    {
+      "titulo": "",
+      "conteudo": "",
+      "usuarioId": "a6069aa3-e869-4af0-a2a0-49fbe5b73082",
+      "criadoEm": "2025-05-04T01:31:22.067Z",
+      "id": "21fd2c37-f956-432f-9e64-979888b44a5f",
+      "createdAt": "2025-05-04T01:31:22.067Z"
+    },
+    {
+      "titulo": "",
+      "conteudo": "",
+      "usuarioId": "a6069aa3-e869-4af0-a2a0-49fbe5b73082",
+      "criadoEm": "2025-05-05T15:27:50.698Z",
+      "id": "a1a09fa2-3f00-456e-8cde-7d5d52c70192",
+      "createdAt": "2025-05-05T15:27:50.698Z"
+    },
+    {
+      "titulo": "Teste",
+      "usuarioId": "a6069aa3-e869-4af0-a2a0-49fbe5b73082",
+      "criadoEm": "2025-05-05T15:37:17.739Z",
+      "id": "2cb1a45e-e351-4e6d-a779-3181312f0a64",
+      "createdAt": "2025-05-05T15:37:17.739Z",
+      "atualizadoEm": "2025-05-05T16:54:24.328Z",
+      "conteudo": "Teste Teste"
+    },
+    {
+      "titulo": "Teste",
+      "conteudo": "Teste teste teste",
+      "usuarioId": "a6069aa3-e869-4af0-a2a0-49fbe5b73082",
+      "criadoEm": "2025-05-05T16:54:36.954Z",
+      "id": "c1318e56-a015-4fdf-80c5-e304b54f636e",
+      "createdAt": "2025-05-05T16:54:36.954Z"
+    },
+    {
+      "titulo": "Teste",
+      "conteudo": "Teste teste teste",
+      "usuarioId": "a6069aa3-e869-4af0-a2a0-49fbe5b73082",
+      "criadoEm": "2025-05-05T16:54:38.817Z",
+      "id": "d58d857f-10af-4720-b98e-c915781b8e05",
+      "createdAt": "2025-05-05T16:54:38.818Z"
+    },
+    {
+      "titulo": "Teste",
+      "conteudo": "Teste teste teste",
+      "usuarioId": "a6069aa3-e869-4af0-a2a0-49fbe5b73082",
+      "criadoEm": "2025-05-05T16:54:39.793Z",
+      "id": "4807321e-6efa-47c3-a3c4-990b8a360e3c",
+      "createdAt": "2025-05-05T16:54:39.793Z"
+    },
+    {
+      "titulo": "Teste",
+      "conteudo": "Teste teste teste",
+      "usuarioId": "a6069aa3-e869-4af0-a2a0-49fbe5b73082",
+      "criadoEm": "2025-05-05T16:54:40.780Z",
+      "id": "395d0297-795a-42af-88c5-3e7c9e5c5bd1",
+      "createdAt": "2025-05-05T16:54:40.780Z"
+    },
+    {
+      "titulo": "Teste",
+      "conteudo": "Teste teste teste",
+      "usuarioId": "a6069aa3-e869-4af0-a2a0-49fbe5b73082",
+      "criadoEm": "2025-05-05T16:54:41.573Z",
+      "id": "4501eb06-13f1-4a50-ad58-5a452db521f1",
+      "createdAt": "2025-05-05T16:54:41.573Z"
+    },
+    {
+      "titulo": "Teste",
+      "conteudo": "Teste teste teste",
+      "usuarioId": "a6069aa3-e869-4af0-a2a0-49fbe5b73082",
+      "criadoEm": "2025-05-05T16:54:42.469Z",
+      "id": "a3afe7b3-3128-4b8a-89f2-0d29461ed2cd",
+      "createdAt": "2025-05-05T16:54:42.469Z"
+    },
+    {
+      "titulo": "Teste",
+      "conteudo": "Teste teste teste",
+      "usuarioId": "a6069aa3-e869-4af0-a2a0-49fbe5b73082",
+      "criadoEm": "2025-05-05T16:54:43.180Z",
+      "id": "ac06cab5-bcbd-454d-bab2-8255a35cddef",
+      "createdAt": "2025-05-05T16:54:43.181Z"
+    },
+    {
+      "titulo": "Teste",
+      "conteudo": "Teste teste teste",
+      "usuarioId": "a6069aa3-e869-4af0-a2a0-49fbe5b73082",
+      "criadoEm": "2025-05-07T20:21:37.174Z",
+      "id": "0beca3c3-9dc5-481f-a461-9d3602dbac8d",
+      "createdAt": "2025-05-07T20:21:37.174Z"
+    },
+    {
+      "titulo": "Teste",
+      "conteudo": "Teste sdsds sdsd",
+      "usuarioId": "a6069aa3-e869-4af0-a2a0-49fbe5b73082",
+      "criadoEm": "2025-05-07T20:31:15.197Z",
+      "id": "e3b4e5d7-52c0-4523-87f8-b37988b145a2",
+      "createdAt": "2025-05-07T20:31:15.197Z",
+      "atualizadoEm": "2025-05-07T20:32:35.032Z"
+    },
+    {
+      "titulo": "Teste",
+      "conteudo": "Teste teste teste",
+      "usuarioId": "a6069aa3-e869-4af0-a2a0-49fbe5b73082",
+      "criadoEm": "2025-05-07T20:33:56.561Z",
+      "id": "31367854-fa7b-4448-af94-8343cfafb0c1",
+      "createdAt": "2025-05-07T20:33:56.561Z"
+    }
+  ],
+  "comentarios": [
+    {
+      "id": "81b8e871-70c5-4e5a-aa29-2266335792d1",
+      "descricao": "Teste Teste sdksldk sdlskdl skdslk sdksldkl sdksldks skdlskd sdksld",
+      "usuarioId": "a6069aa3-e869-4af0-a2a0-49fbe5b73082",
+      "idPostagem": "3e1d58a9-28b7-4da8-b2e5-70df05dd530c"
+    },
+    {
+      "id": "14432d70-7012-4bd3-8755-a15ddea3dc6f",
+      "descricao": "Teste Teste sdksldk sdlskdl skdslk sdksldkl sdksldks skdlskd sdksld",
+      "usuarioId": "a6069aa3-e869-4af0-a2a0-49fbe5b73082",
+      "idPostagem": "869affce-73e4-454c-987c-4076ddd5f36d"
+    },
+    {
+      "id": "912ceae2-6041-4635-9f18-bb1285e958c8",
+      "descricao": "Teste Teste sdksldk sdlskdl skdslk sdksldkl sdksldks skdlskd sdksld",
+      "usuarioId": "a6069aa3-e869-4af0-a2a0-49fbe5b73082",
+      "idPostagem": "eb62b202-2419-419d-82ec-53e247be63f1"
+    },
+    {
+      "id": "7dc61c19-6fe0-4b3a-840d-5169e031d654",
+      "descricao": "sdsdsd",
+      "usuarioId": "a6069aa3-e869-4af0-a2a0-49fbe5b73082",
+      "idPostagem": "2cb1a45e-e351-4e6d-a779-3181312f0a64"
+    },
+    {
+      "id": "ce9665c2-1154-4ce5-b54f-2c6ef35f8580",
+      "descricao": "xxcxcxc",
+      "usuarioId": "a6069aa3-e869-4af0-a2a0-49fbe5b73082",
+      "idPostagem": "ac06cab5-bcbd-454d-bab2-8255a35cddef"
+    },
+    {
+      "id": "44146015-c531-4c5a-a0f2-137ed59c7bb0",
+      "descricao": "xxcxcxc",
+      "usuarioId": "a6069aa3-e869-4af0-a2a0-49fbe5b73082",
+      "idPostagem": "ac06cab5-bcbd-454d-bab2-8255a35cddef"
+    },
+    {
+      "id": "024635a8-5728-4695-862a-7097412dcc4c",
+      "descricao": "xxcxcxc",
+      "usuarioId": "a6069aa3-e869-4af0-a2a0-49fbe5b73082",
+      "idPostagem": "ac06cab5-bcbd-454d-bab2-8255a35cddef"
+    },
+    {
+      "id": "ea712983-aa56-46d5-a386-80bf43c0c708",
+      "descricao": "xxcxcxc",
+      "usuarioId": "a6069aa3-e869-4af0-a2a0-49fbe5b73082",
+      "idPostagem": "ac06cab5-bcbd-454d-bab2-8255a35cddef"
+    },
+    {
+      "id": "b1a906d2-f3c8-4734-bd5e-120c77373433",
+      "descricao": "xxcxcxc",
+      "usuarioId": "a6069aa3-e869-4af0-a2a0-49fbe5b73082",
+      "idPostagem": "ac06cab5-bcbd-454d-bab2-8255a35cddef"
+    },
+    {
+      "id": "bc486c6f-4cac-4500-96ab-a2232f6a8600",
+      "descricao": "xxcxcxc",
+      "usuarioId": "a6069aa3-e869-4af0-a2a0-49fbe5b73082",
+      "idPostagem": "ac06cab5-bcbd-454d-bab2-8255a35cddef"
+    },
+    {
+      "id": "b49e12b4-b582-4939-932a-b573452da929",
+      "descricao": "xxcxcxc",
+      "usuarioId": "a6069aa3-e869-4af0-a2a0-49fbe5b73082",
+      "idPostagem": "0beca3c3-9dc5-481f-a461-9d3602dbac8d"
+    },
+    {
+      "id": "8675fb6c-7b16-4a47-a57c-c0ce36fd1a1a",
+      "descricao": "xxcxcxc",
+      "usuarioId": "a6069aa3-e869-4af0-a2a0-49fbe5b73082",
+      "idPostagem": "0beca3c3-9dc5-481f-a461-9d3602dbac8d"
+    }
+  ],
+  "usuarios": [
+    {
+      "nome": "dev dos devs",
+      "email": "dev@email.com",
+      "senha": "$2b$10$EHKe77x6hcmRoStN3jUoxuHeuT3UXV7OsqdKEQt9mpPTsHjcKXyL6",
+      "id": "a6069aa3-e869-4af0-a2a0-49fbe5b73082"
+    },
+    {
+      "nome": "Pedro",
+      "email": "t-pedro.silva@matrixenergia.com",
+      "senha": "$2b$10$5emhso9Y9W8G4foJ6JenMu6VIFieKyjz8CTiUSqfCVY3RufT0JiT2",
+      "id": "3d654a4f-74ac-4e21-8589-1420a90d8160"
+    },
+    {
+      "nome": "Pedro",
+      "email": "pedro.rsilva@sptech.schook",
+      "senha": "$2b$10$n4UlALsl/BA1tyS1Gl6NvOI35QTJfOrKmT6pYNwv6Id7K2subELgC",
+      "id": "b01e52ed-c294-49c2-b141-ec2f0cb8183c"
+    },
+    {
+      "nome": "Guilherme",
+      "email": "gui@gmail.com",
+      "senha": "$2b$10$YcdizJifli7WpnMWEKNeRuLAYc4.XQUuCSXjgnuaxnx5CmvCA37Fm",
+      "id": "459ac119-1bf5-426b-a7cd-7cfc3aeb52ec"
+    },
+    {
+      "nome": "Guilherme",
+      "email": "guisousa@gmail.com",
+      "senha": "$2b$10$IvY0VPplzDk6T4L4aFZrUuMy7hygmKJRzEmikj.j.NjO4INYqJ/ey",
+      "id": "a81a50c8-5cbf-42bc-93e4-554e5fc10518"
+    },
+    {
+      "nome": "oi",
+      "email": "oi@gmail.com",
+      "senha": "$2b$10$c4FxhWc.HYZekNvDaJNEOe3W5GhTmWD8Ic3O.C7fhs/yqjjCVhAM6",
+      "id": "2b8b9375-aaac-48db-9951-41b0a5a8fb67"
+    }
+  ]
+}
