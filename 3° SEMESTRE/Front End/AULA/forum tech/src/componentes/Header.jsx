@@ -15,7 +15,7 @@ export const Header = () => (
     </div>
 
     <div className="flex gap-x-4 justify-center items-center">
-      {sessionStorage.nome && <h2>Olá, Pedro!</h2>}
+      {sessionStorage.nome && <h2>Olá, {sessionStorage.nome}!</h2>}
       {!sessionStorage.nome && (
         <>
           <Button variant="ghost" redirect={ROUTERS.LOGIN}>
