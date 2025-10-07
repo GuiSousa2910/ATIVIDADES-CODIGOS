@@ -1,4 +1,8 @@
 package school.sptech.exemplo_paginacao.entity.musica;
 
-public interface MusicaRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+import school.sptech.exemplo_paginacao.entity.album.Album;
+
+public interface MusicaRepository extends JpaRepository<Musica, Long> {
+
 }

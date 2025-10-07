@@ -1,0 +1,294 @@
+{
+  "tests": [
+    {
+      "name": "ListaAcessoTest - get_retornaElemento",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=github.britooo.ListaAcessoTest#get_retornaElemento",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "ListaAcessoTest - get_aceitaNullArmazenado",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=github.britooo.ListaAcessoTest#get_aceitaNullArmazenado",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "ListaAcessoTest - get_invalido_lancaExcecao",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=github.britooo.ListaAcessoTest#get_invalido_lancaExcecao",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "ListaAcessoTest - size_refleteNumElements",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=github.britooo.ListaAcessoTest#size_refleteNumElements",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "ListaAcessoTest - isEmpty_funciona",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=github.britooo.ListaAcessoTest#isEmpty_funciona",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "ListaConsultaTest - contains_funciona",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=github.britooo.ListaConsultaTest#contains_funciona",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "ListaConsultaTest - indexOf_primeiraOcorrencia",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=github.britooo.ListaConsultaTest#indexOf_primeiraOcorrencia",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "ListaConsultaTest - indexOf_nullFunciona",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=github.britooo.ListaConsultaTest#indexOf_nullFunciona",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "ListaConsultaTest - lastIndexOf_ultimaOcorrencia",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=github.britooo.ListaConsultaTest#lastIndexOf_ultimaOcorrencia",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "ListaConsultaTest - lastIndexOf_nullFunciona",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=github.britooo.ListaConsultaTest#lastIndexOf_nullFunciona",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "ListaInsercaoAtualizacaoTest - add_insereNoFinal_quandoHaEspaco",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=github.britooo.ListaInsercaoAtualizacaoTest#add_insereNoFinal_quandoHaEspaco",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "ListaInsercaoAtualizacaoTest - add_fazResizeCapacidadeDobraEPreservaOrdem",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=github.britooo.ListaInsercaoAtualizacaoTest#add_fazResizeCapacidadeDobraEPreservaOrdem",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "ListaInsercaoAtualizacaoTest - add_aceitaNull",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=github.britooo.ListaInsercaoAtualizacaoTest#add_aceitaNull",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "ListaInsercaoAtualizacaoTest - addIndex_insereNoMeio_deslocaParaDireita",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=github.britooo.ListaInsercaoAtualizacaoTest#addIndex_insereNoMeio_deslocaParaDireita",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "ListaInsercaoAtualizacaoTest - addIndex_insereNoFim_quandoIndexIgualTamanho",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=github.britooo.ListaInsercaoAtualizacaoTest#addIndex_insereNoFim_quandoIndexIgualTamanho",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "ListaInsercaoAtualizacaoTest - addIndex_invalido_lancaExcecao",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=github.britooo.ListaInsercaoAtualizacaoTest#addIndex_invalido_lancaExcecao",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "ListaInsercaoAtualizacaoTest - addAll_insereTodos_quandoOrigemNaoVazia",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=github.britooo.ListaInsercaoAtualizacaoTest#addAll_insereTodos_quandoOrigemNaoVazia",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "ListaInsercaoAtualizacaoTest - addAll_origemVazia_retornaFalse",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=github.britooo.ListaInsercaoAtualizacaoTest#addAll_origemVazia_retornaFalse",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "ListaInsercaoAtualizacaoTest - addAll_variosResizes_mantemOrdem",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=github.britooo.ListaInsercaoAtualizacaoTest#addAll_variosResizes_mantemOrdem",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "ListaInsercaoAtualizacaoTest - set_substituiERetornaAntigo",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=github.britooo.ListaInsercaoAtualizacaoTest#set_substituiERetornaAntigo",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "ListaInsercaoAtualizacaoTest - set_aceitaNull",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=github.britooo.ListaInsercaoAtualizacaoTest#set_aceitaNull",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "ListaInsercaoAtualizacaoTest - set_invalido_lancaExcecao",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=github.britooo.ListaInsercaoAtualizacaoTest#set_invalido_lancaExcecao",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "ListaRemocaoTest - removeIndex_removeDoMeio",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=github.britooo.ListaRemocaoTest#removeIndex_removeDoMeio",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "ListaRemocaoTest - removeIndex_removeDoFim",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=github.britooo.ListaRemocaoTest#removeIndex_removeDoFim",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "ListaRemocaoTest - removeIndex_invalido_lancaExcecao",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=github.britooo.ListaRemocaoTest#removeIndex_invalido_lancaExcecao",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "ListaRemocaoTest - removeElement_removePrimeiraOcorrencia",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=github.britooo.ListaRemocaoTest#removeElement_removePrimeiraOcorrencia",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "ListaRemocaoTest - removeElement_inexistente_false",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=github.britooo.ListaRemocaoTest#removeElement_inexistente_false",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "ListaRemocaoTest - removeElement_aceitaNull",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=github.britooo.ListaRemocaoTest#removeElement_aceitaNull",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "ListaRemocaoTest - clear_zeraSize_mantemCapacidade",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=github.britooo.ListaRemocaoTest#clear_zeraSize_mantemCapacidade",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    }
+  ]
+}
