@@ -1,0 +1,384 @@
+{
+  "tests": [
+    {
+      "name": "ValidadorTest.CasosVálidos - Deve validar expressão vazia",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ValidadorTest$CasosValidos#deveValidarExpressaoVazia",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 12,
+      "points": 1
+    },
+    {
+      "name": "ValidadorTest.CasosVálidos - Deve validar parênteses simples",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ValidadorTest$CasosValidos#deveValidarParentesesSimples",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 12,
+      "points": 1
+    },
+    {
+      "name": "ValidadorTest.CasosVálidos - Deve validar colchetes simples",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ValidadorTest$CasosValidos#deveValidarColchetesSimples",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 12,
+      "points": 1
+    },
+    {
+      "name": "ValidadorTest.CasosVálidos - Deve validar chaves simples",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ValidadorTest$CasosValidos#deveValidarChavesSimples",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 12,
+      "points": 1
+    },
+    {
+      "name": "ValidadorTest.CasosVálidos - Deve validar múltiplos pares sequenciais",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ValidadorTest$CasosValidos#deveValidarMultiplosPares",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 12,
+      "points": 1
+    },
+    {
+      "name": "ValidadorTest.CasosVálidos - Deve validar aninhamento correto",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ValidadorTest$CasosValidos#deveValidarAninhamento",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 12,
+      "points": 1
+    },
+    {
+      "name": "ValidadorTest.CasosVálidos - Deve validar aninhamento profundo (três casos no mesmo teste)",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ValidadorTest$CasosValidos#deveValidarAninhamentoProfundo",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 14,
+      "points": 1
+    },
+    {
+      "name": "ValidadorTest.CasosVálidos - Deve validar expressão matemática simples '(a + b)'",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ValidadorTest$CasosValidos#deveValidarExpressaoMatematica",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 12,
+      "points": 1
+    },
+    {
+      "name": "ValidadorTest.CasosVálidos - Deve validar expressão matemática complexa '(a + b) * [c - {d / e}]'",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ValidadorTest$CasosValidos#deveValidarExpressaoCompleta",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 14,
+      "points": 1
+    },
+    {
+      "name": "ValidadorTest.CasosVálidos - Deve validar múltiplos níveis misturados (3 asserts no mesmo teste)",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ValidadorTest$CasosValidos#deveValidarMultiplosNiveisMisturados",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 14,
+      "points": 1
+    },
+    {
+      "name": "ValidadorTest.CasosVálidos - Deve ignorar caracteres não-bracket (2 asserts no mesmo teste)",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ValidadorTest$CasosValidos#deveIgnorarCaracteresComuns",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 14,
+      "points": 1
+    },
+    {
+      "name": "ValidadorTest.CasosVálidos - Deve validar expressão com espaços (2 asserts no mesmo teste)",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ValidadorTest$CasosValidos#deveValidarComEspacos",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 14,
+      "points": 1
+    },
+    {
+      "name": "ValidadorTest.Casos Inválidos (Ordem) - Deve rejeitar ordem errada simples (3 asserts no mesmo teste)",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ValidadorTest$CasosInvalidosOrdem#deveRejeitarOrdemErrada",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 14,
+      "points": 1
+    },
+    {
+      "name": "ValidadorTest.Casos Inválidos (Ordem) - Deve rejeitar fechamento antes de abertura (3 asserts no mesmo teste)",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ValidadorTest$CasosInvalidosOrdem#deveRejeitarFechamentoAntes",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 14,
+      "points": 1
+    },
+    {
+      "name": "ValidadorTest.Casos Inválidos (Ordem) - Deve rejeitar cruzamento de brackets (3 asserts no mesmo teste)",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ValidadorTest$CasosInvalidosOrdem#deveRejeitarCruzamento",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 14,
+      "points": 1
+    },
+    {
+      "name": "ValidadorTest.Casos Inválidos (Ordem) - Deve rejeitar ordem incorreta em expressão '(a + b] * c'",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ValidadorTest$CasosInvalidosOrdem#deveRejeitarOrdemIncorretaEmExpressao",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 12,
+      "points": 1
+    },
+    {
+      "name": "ValidadorTest.Casos Inválidos (Desbalanceamento) - Deve rejeitar apenas abertura (3 asserts no mesmo teste)",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ValidadorTest$CasosInvalidosDesbalanceamento#deveRejeitarApenasAbertura",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 13,
+      "points": 1
+    },
+    {
+      "name": "ValidadorTest.Casos Inválidos (Desbalanceamento) - Deve rejeitar apenas fechamento (3 asserts no mesmo teste)",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ValidadorTest$CasosInvalidosDesbalanceamento#deveRejeitarApenasFechamento",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 13,
+      "points": 1
+    },
+    {
+      "name": "ValidadorTest.Casos Inválidos (Desbalanceamento) - Deve rejeitar mais aberturas que fechamentos (3 asserts no mesmo teste)",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ValidadorTest$CasosInvalidosDesbalanceamento#deveRejeitarMaisAberturas",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 13,
+      "points": 1
+    },
+    {
+      "name": "ValidadorTest.Casos Inválidos (Desbalanceamento) - Deve rejeitar mais fechamentos que aberturas (3 asserts no mesmo teste)",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ValidadorTest$CasosInvalidosDesbalanceamento#deveRejeitarMaisFechamentos",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 13,
+      "points": 1
+    },
+    {
+      "name": "ValidadorTest.Casos Inválidos (Desbalanceamento) - Deve rejeitar múltiplas aberturas não fechadas '((([[[{{{'",
+      "setup": "",
+      "run": "mvn test -DargLine=\\\"-Dfile.encoding=UTF-8\\\" -Dtest=school.sptech.ValidadorTest$CasosInvalidosDesbalanceamento#deveRejeitarMultiplasAberturasNaoFechadas",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 12,
+      "points": 1
+    },
+    {
+      "name": "ValidadorTest.Casos Inválidos (Desbalanceamento) - Deve rejeitar múltiplos fechamentos sem abertura '}}}]]])'",
+      "setup": "",
+      "run": "mvn test -DargLine=\\\"-Dfile.encoding=UTF-8\\\" -Dtest=school.sptech.ValidadorTest$CasosInvalidosDesbalanceamento#deveRejeitarMultiplosFechamentosSemAbertura",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 12,
+      "points": 1
+    },
+    {
+      "name": "ValidadorTest.Casos Especiais - Deve validar string com apenas letras",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ValidadorTest$CasosEspeciais#deveValidarApenasLetras",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 12,
+      "points": 1
+    },
+    {
+      "name": "ValidadorTest.Casos Especiais - Deve validar string com apenas números",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ValidadorTest$CasosEspeciais#deveValidarApenasNumeros",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 12,
+      "points": 1
+    },
+    {
+      "name": "ValidadorTest.Casos Especiais - Deve validar expressão de código real",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ValidadorTest$CasosEspeciais#deveValidarCodigoReal",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 13,
+      "points": 1
+    },
+    {
+      "name": "ValidadorTest.Casos Especiais - Deve rejeitar código com erro (faltando ')')",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ValidadorTest$CasosEspeciais#deveRejeitarCodigoComErro",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 13,
+      "points": 1
+    },
+    {
+      "name": "ValidadorTest.Casos Especiais - Deve validar JSON válido simplificado",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ValidadorTest$CasosEspeciais#deveValidarJSONSimplificado",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 13,
+      "points": 1
+    },
+    {
+      "name": "ValidadorTest.Casos Especiais - Deve rejeitar JSON inválido (colchete/fecha faltando)",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ValidadorTest$CasosEspeciais#deveRejeitarJSONInvalido",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 13,
+      "points": 1
+    },
+    {
+      "name": "ValidadorTest.Casos Especiais - Deve validar um único par no meio de texto 'texto (importante) mais texto'",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ValidadorTest$CasosEspeciais#deveValidarParNoMeioDeTexto",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 12,
+      "points": 1
+    },
+    {
+      "name": "ValidadorTest.Casos Especiais - Deve validar alternância de tipos '()[]{}()[]{}'",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ValidadorTest$CasosEspeciais#deveValidarAlternancia",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 12,
+      "points": 1
+    },
+    {
+      "name": "ValidadorTest.Casos Extremos - Deve validar expressão muito longa válida (100 '(' seguidos de 100 ')')",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ValidadorTest$CasosExtremos#deveValidarExpressaoLonga",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 20,
+      "points": 1
+    },
+    {
+      "name": "ValidadorTest.Casos Extremos - Deve rejeitar expressão longa com um erro no final (faltou ')')",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ValidadorTest$CasosExtremos#deveRejeitarExpressaoLongaComErro",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 20,
+      "points": 1
+    },
+    {
+      "name": "ValidadorTest.Casos Extremos - Deve validar padrão complexo válido '({[()]})[{()}]({[]})'",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ValidadorTest$CasosExtremos#deveValidarPadraoComplexo",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 15,
+      "points": 1
+    },
+    {
+      "name": "ValidadorTest.Casos Extremos - Deve rejeitar erro sutil no meio '({[()]})[{(})]({[]})'",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ValidadorTest$CasosExtremos#deveRejeitarErroSutil",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 15,
+      "points": 1
+    },
+    {
+      "name": "ValidadorTest.Testes de Robustez - Deve lidar com caracteres especiais em volta dos brackets",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ValidadorTest$TestesRobustez#deveLidarComCaracteresEspeciais",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 13,
+      "points": 1
+    },
+    {
+      "name": "ValidadorTest.Testes de Robustez - Deve validar com quebras de linha dentro de brackets",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ValidadorTest$TestesRobustez#deveValidarComQuebrasDeLinha",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 13,
+      "points": 1
+    },
+    {
+      "name": "ValidadorTest.Testes de Robustez - Deve validar com tabs dentro de brackets",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ValidadorTest$TestesRobustez#deveValidarComTabs",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 13,
+      "points": 1
+    },
+    {
+      "name": "ValidadorTest.Testes de Robustez - Deve validar expressão matemática completa e mista",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=school.sptech.ValidadorTest$TestesRobustez#deveValidarExpressaoMatematicaCompleta",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 15,
+      "points": 1
+    }
+  ]
+}

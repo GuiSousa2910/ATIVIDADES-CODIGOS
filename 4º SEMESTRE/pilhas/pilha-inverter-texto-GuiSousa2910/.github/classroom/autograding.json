@@ -1,0 +1,74 @@
+{
+  "tests": [
+    {
+      "name": "InverterTextoStackTest - Quando receber 'Java' deve retornar 'avaJ'",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=github.britooo.InverterTextoStackTest#deveInverterPalavraSimples",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "InverterTextoStackTest - Quando receber números '12345' deve retornar '54321'",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=github.britooo.InverterTextoStackTest#deveInverterNumeros",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "InverterTextoStackTest - Quando receber 'olá mundo' deve retornar 'odnum álo'",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=github.britooo.InverterTextoStackTest#deveInverterFraseComEspacos",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "InverterTextoStackTest - Quando receber 'abc#@!' deve retornar '!@#cba'",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=github.britooo.InverterTextoStackTest#deveInverterTextoComCaracteresEspeciais",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "InverterTextoStackTest - Quando receber string vazia deve retornar string vazia",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=github.britooo.InverterTextoStackTest#deveRetornarVazioParaStringVazia",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "InverterTextoStackTest - Quando receber apenas um caractere deve retornar o mesmo caractere",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=github.britooo.InverterTextoStackTest#deveRetornarMesmoCaractereSeUmSo",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "InverterTextoStackTest - Quando receber apenas espaços deve manter os espaços invertidos",
+      "setup": "",
+      "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=github.britooo.InverterTextoStackTest#deveManterEspacosSeSomenteEspacos",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    }
+  ]
+}
