@@ -1,0 +1,284 @@
+{
+    "tests": [
+        {
+            "name": "EasyTest - testFatorialZero",
+            "setup": "",
+            "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=EasyTest#testFatorialZero",
+            "input": "",
+            "output": "",
+            "comparison": "exact",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "EasyTest - testFatorialUm",
+            "setup": "",
+            "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=EasyTest#testFatorialUm",
+            "input": "",
+            "output": "",
+            "comparison": "exact",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "EasyTest - testFatorialCinco",
+            "setup": "",
+            "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=EasyTest#testFatorialCinco",
+            "input": "",
+            "output": "",
+            "comparison": "exact",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "EasyTest - testFatorialSete",
+            "setup": "",
+            "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=EasyTest#testFatorialSete",
+            "input": "",
+            "output": "",
+            "comparison": "exact",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "EasyTest - testFatorialDez",
+            "setup": "",
+            "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=EasyTest#testFatorialDez",
+            "input": "",
+            "output": "",
+            "comparison": "exact",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "EasyTest - testSomaCasoBase",
+            "setup": "",
+            "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=EasyTest#testSomaCasoBase",
+            "input": "",
+            "output": "",
+            "comparison": "exact",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "EasyTest - testSomaCinco",
+            "setup": "",
+            "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=EasyTest#testSomaCinco",
+            "input": "",
+            "output": "",
+            "comparison": "exact",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "EasyTest - testSomaDez",
+            "setup": "",
+            "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=EasyTest#testSomaDez",
+            "input": "",
+            "output": "",
+            "comparison": "exact",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "EasyTest - testSomaZero",
+            "setup": "",
+            "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=EasyTest#testSomaZero",
+            "input": "",
+            "output": "",
+            "comparison": "exact",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "EasyTest - testContagemTres",
+            "setup": "",
+            "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=EasyTest#testContagemTres",
+            "input": "",
+            "output": "",
+            "comparison": "exact",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "EasyTest - testContagemCinco",
+            "setup": "",
+            "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=EasyTest#testContagemCinco",
+            "input": "",
+            "output": "",
+            "comparison": "exact",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "EasyTest - testContagemZero",
+            "setup": "",
+            "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=EasyTest#testContagemZero",
+            "input": "",
+            "output": "",
+            "comparison": "exact",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "MediumTest - testCountOccurrencesBasico",
+            "setup": "",
+            "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=MediumTest#testCountOccurrencesBasico",
+            "input": "",
+            "output": "",
+            "comparison": "exact",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "MediumTest - testCountOccurrencesComR",
+            "setup": "",
+            "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=MediumTest#testCountOccurrencesComR",
+            "input": "",
+            "output": "",
+            "comparison": "exact",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "MediumTest - testCountOccurrencesMultiplo",
+            "setup": "",
+            "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=MediumTest#testCountOccurrencesMultiplo",
+            "input": "",
+            "output": "",
+            "comparison": "exact",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "MediumTest - testCountOccurrencesZero",
+            "setup": "",
+            "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=MediumTest#testCountOccurrencesZero",
+            "input": "",
+            "output": "",
+            "comparison": "exact",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "MediumTest - testCountOccurrencesVazia",
+            "setup": "",
+            "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=MediumTest#testCountOccurrencesVazia",
+            "input": "",
+            "output": "",
+            "comparison": "exact",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "HardTest - testFibonacciZero",
+            "setup": "",
+            "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=HardTest#testFibonacciZero",
+            "input": "",
+            "output": "",
+            "comparison": "exact",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "HardTest - testFibonacciUm",
+            "setup": "",
+            "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=HardTest#testFibonacciUm",
+            "input": "",
+            "output": "",
+            "comparison": "exact",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "HardTest - testFibonacciDois",
+            "setup": "",
+            "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=HardTest#testFibonacciDois",
+            "input": "",
+            "output": "",
+            "comparison": "exact",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "HardTest - testFibonacciCinco",
+            "setup": "",
+            "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=HardTest#testFibonacciCinco",
+            "input": "",
+            "output": "",
+            "comparison": "exact",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "HardTest - testFibonacciSete",
+            "setup": "",
+            "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=HardTest#testFibonacciSete",
+            "input": "",
+            "output": "",
+            "comparison": "exact",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "HardTest - testFibonacciDez",
+            "setup": "",
+            "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=HardTest#testFibonacciDez",
+            "input": "",
+            "output": "",
+            "comparison": "exact",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "HardTest - testSumDigits123",
+            "setup": "",
+            "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=HardTest#testSumDigits123",
+            "input": "",
+            "output": "",
+            "comparison": "exact",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "HardTest - testSumDigits405",
+            "setup": "",
+            "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=HardTest#testSumDigits405",
+            "input": "",
+            "output": "",
+            "comparison": "exact",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "HardTest - testSumDigitsZero",
+            "setup": "",
+            "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=HardTest#testSumDigitsZero",
+            "input": "",
+            "output": "",
+            "comparison": "exact",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "HardTest - testSumDigits9999",
+            "setup": "",
+            "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=HardTest#testSumDigits9999",
+            "input": "",
+            "output": "",
+            "comparison": "exact",
+            "timeout": 10,
+            "points": 1
+        },
+        {
+            "name": "HardTest - testSumDigitsUnico",
+            "setup": "",
+            "run": "mvn test -DargLine=\"-Dfile.encoding=UTF-8\" -Dtest=HardTest#testSumDigitsUnico",
+            "input": "",
+            "output": "",
+            "comparison": "exact",
+            "timeout": 10,
+            "points": 1
+        }
+    ]
+}
