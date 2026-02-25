@@ -1,0 +1,25 @@
+import { View, Pressable, Text } from "react-native"
+import { useRouter } from "expo-router";
+
+export default function Perfil(){
+    const router = useRouter()
+    return(
+        <View style={{
+            backgroundColor: "yellow", 
+            flex: 1, 
+            alignItems: "center",
+            justifyContent: "center"
+            }}>
+            <Text style={{color: "black", fontWeight: "bold"}}>Página Perfil</Text>
+            <Pressable
+                style={{
+                    paddingVertical: 5,
+                    paddingHorizontal: 10,
+                    backgroundColor: "red"
+                }}
+                onPress={() => {router.back()}}
+                ><Text style={{color: "black", fontWeight: "bold"}}>Ir para a home</Text>
+            </Pressable>
+        </View>
+    )
+}
