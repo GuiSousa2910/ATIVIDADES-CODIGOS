@@ -1,0 +1,34 @@
+{
+  "tarefas": [
+    {
+      "id": 1,
+      "name": "Planejar projeto",
+      "concluido": true,
+      "descricao": "Definir escopo, objetivos e cronograma do projeto."
+    },
+    {
+      "id": 2,
+      "name": "Levantar requisitos",
+      "concluido": false,
+      "descricao": "Coletar e documentar os requisitos funcionais e não funcionais."
+    },
+    {
+      "id": 3,
+      "name": "Modelar banco de dados",
+      "concluido": false,
+      "descricao": "Criar modelo entidade-relacionamento e estrutura das tabelas."
+    },
+    {
+      "id": 4,
+      "name": "Configurar ambiente",
+      "concluido": false,
+      "descricao": "Preparar ambiente de desenvolvimento e integração contínua."
+    },
+    {
+      "id": 5,
+      "name": "Implementar API",
+      "concluido": false,
+      "descricao": "Desenvolver endpoints REST e configurar integração com banco de dados."
+    }
+  ]
+}

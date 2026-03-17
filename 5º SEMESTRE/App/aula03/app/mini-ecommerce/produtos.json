@@ -1,0 +1,29 @@
+{
+    "produtos": [
+        {
+            "id": 1,
+            "nome": "Fone de Ouvido Bluetooth",
+            "preco": 89.99,
+            "descricao": "Fone wireless com cancelamento de ruído e bateria de 30h"
+        },
+        {
+            "id": 2,
+            "nome": "Carregador Rápido USB-C",
+            "preco": 45.90,
+            "descricao": "Carregador 65W com suporte a múltiplos dispositivos"
+        },
+        {
+            "id": 3,
+            "nome": "Mochila para Notebook",
+            "preco": 120.00,
+            "descricao": "Mochila com compartimentos múltiplos e proteção anti-roubo"
+        },
+        {
+            "id": 4,
+            "nome": "Webcam Full HD",
+            "preco": 199.99,
+            "descricao": "Câmera 1080p com autofoco e microfone integrado"
+        }
+       
+    ]
+}
