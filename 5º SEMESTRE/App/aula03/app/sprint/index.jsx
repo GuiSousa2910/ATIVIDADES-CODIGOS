@@ -5,17 +5,30 @@ import TaskCard from './_components/TaskCard'
 import { useRouter } from 'expo-router'
 
 export default function Sprint() {
-  // Dica: este estado começa com os dados do JSON.
-  // Pense em como atualizar apenas uma tarefa por vez, sem perder as outras.
+  const router = useRouter()
   const [tarefas, setTarefas] = useState(dados.tarefas)
 
 
   function concluirTarefa(id) {
-    // Dica: Use o id recebido para decidir qual tarefa precisa mudar o campo de conclusão.
+    setTarefas(valorAtual => valorAtual.map(tarefa => {
+      if (tarefa.id === id) {
+        return {
+          ...tarefa,
+          concluido: !tarefa.concluido,
+        }
+      }
+
+      return tarefa
+    }))
   }
 
   function redirecionar(){
-    // Use essa quantidade na rota de destino para montar o resumo na outra tela.
+    router.push({
+      pathname: '/sprint/resumo',
+      params: {
+        tarefas: JSON.stringify(tarefas),
+      },
+    })
   }
 
   return (

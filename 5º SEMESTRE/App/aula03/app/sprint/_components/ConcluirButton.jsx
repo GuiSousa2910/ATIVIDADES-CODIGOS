@@ -1,9 +1,9 @@
 import { TouchableOpacity, Text, StyleSheet } from 'react-native'
 
-export function ConcluirButton({ onPress }) {
+export function ConcluirButton({ onPress, label }) {
   return (
     <TouchableOpacity style={styles.button} onPress={onPress}>
-      <Text style={styles.buttonText}>Concluir Tarefa</Text>
+      <Text style={styles.buttonText}>{label}</Text>
     </TouchableOpacity>
   )
 }

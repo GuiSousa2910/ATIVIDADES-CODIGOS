@@ -4,7 +4,7 @@ import {ConcluirButton} from './ConcluirButton'
 
 export default function TaskCard({ tarefa, onConcluir }) {
   return (
-    <View style={styles.card}>
+    <View style={[styles.card, tarefa.concluido ? styles.cardDone : styles.cardPending]}>
       <View style={styles.header}>
         <Text style={styles.title}>{tarefa.name}</Text>
         <StatusBadge concluido={tarefa.concluido} />
@@ -12,9 +12,10 @@ export default function TaskCard({ tarefa, onConcluir }) {
 
       <Text style={styles.description}>{tarefa.descricao}</Text>
 
-      {!tarefa.concluido && (
-        <ConcluirButton onPress={() => onConcluir(tarefa.id)} />
-      )}
+      <ConcluirButton
+        label={tarefa.concluido ? 'Desmarcar Tarefa' : 'Concluir Tarefa'}
+        onPress={() => onConcluir(tarefa.id)}
+      />
     </View>
   )
 }
@@ -29,6 +30,14 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 4,
     elevation: 3
+  },
+  cardDone: {
+    borderWidth: 1,
+    borderColor: '#16a34a',
+  },
+  cardPending: {
+    borderWidth: 1,
+    borderColor: '#f59e0b',
   },
   header: {
     flexDirection: 'row',

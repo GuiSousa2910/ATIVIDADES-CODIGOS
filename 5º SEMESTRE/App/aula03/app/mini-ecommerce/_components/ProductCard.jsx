@@ -1,12 +1,10 @@
 import { Pressable, StyleSheet, Text, View } from "react-native";
 
-// Dica: o "element" aqui deve representar um produto completo
-// (ex.: { id, nome, preco, descricao, ... })
 export function ProductCard({ element, onRedirect }) {
   return (
     <View style={styles.card}>
-      {/* Dica: aqui você pode exibir um resumo do produto (nome e talvez o preço) */}
       <Text style={styles.nome}>{element.nome}</Text>
+      <Text style={styles.preco}>R$ {element.preco.toFixed(2)}</Text>
       <Pressable style={styles.button} onPress={onRedirect}>
         <Text style={styles.buttonText}>Ver mais</Text>
       </Pressable>
@@ -29,8 +27,14 @@ const styles = StyleSheet.create({
   nome: {
     fontSize: 18,
     fontWeight: '600',
-    marginBottom: 12,
+    marginBottom: 4,
     color: '#333',
+  },
+  preco: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: '#16A34A',
+    marginBottom: 12,
   },
   button: {
     backgroundColor: '#007AFF',

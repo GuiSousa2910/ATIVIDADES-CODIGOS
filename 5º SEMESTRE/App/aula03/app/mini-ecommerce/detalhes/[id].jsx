@@ -1,20 +1,28 @@
 import { View, Text, StyleSheet } from 'react-native';
-// Dica: esta tela deve receber informações do produto selecionado
-// (por id na rota e/ou por params) e exibir os detalhes completos.
+import { useLocalSearchParams } from 'expo-router'
+import dadosProdutos from '../produtos.json'
 
 export default function Detalhes() {
-    // Com o id em mãos, você pode localizar o produto no JSON e tratar o caso em que não for encontrado.
+    const { id } = useLocalSearchParams()
+    const produto = dadosProdutos.produtos.find(item => item.id === Number(id))
+
+    if (!produto) {
+        return (
+            <View style={styles.container}>
+                <Text style={styles.erro}>Produto nao encontrado.</Text>
+            </View>
+        )
+    }
 
     return (
         <View style={styles.container}>
             <View style={styles.conteudo}>
-                {/* Dica: substitua os textos fixos pelos dados reais do produto */}
-                <Text style={styles.titulo}>Nome do produto</Text>
+                <Text style={styles.titulo}>{produto.nome}</Text>
 
-                <Text style={styles.preco}>Preco do produto</Text>
+                <Text style={styles.preco}>R$ {produto.preco.toFixed(2)}</Text>
 
                 <Text style={styles.label}>Descrição</Text>
-                <Text style={styles.descricao}>Descrição do produto</Text>
+                <Text style={styles.descricao}>{produto.descricao}</Text>
             </View>
         </View>
     );

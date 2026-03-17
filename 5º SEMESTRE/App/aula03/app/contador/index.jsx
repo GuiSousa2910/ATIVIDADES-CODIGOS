@@ -1,19 +1,44 @@
+import { useEffect, useState } from 'react'
 import { View, Text, Pressable, StyleSheet } from 'react-native'
+import { useRouter } from 'expo-router'
 
 export default function Contadora() {
-    // Dica: Use o useEffect para sortear os numeros logo após a tela aparecer
-    // Dica: Use o useEffect para observar quando o contadora foi igual o numero sorteado
+    const [numeroSorteado, setNumeroSorteado] = useState(0)
+    const [contador, setContador] = useState(0)
+    const [cliques, setCliques] = useState(0)
+    const router = useRouter()
+
+    useEffect(() => {
+        const sorteado = Math.floor(Math.random() * 10) + 1
+        setNumeroSorteado(sorteado)
+    }, [])
+
+    useEffect(() => {
+        if (contador !== 0 && contador === numeroSorteado) {
+            router.push({
+                pathname: '/contador/resultado',
+                params: {
+                    numeroSorteado: String(numeroSorteado),
+                    cliques: String(cliques),
+                },
+            })
+        }
+    }, [contador, numeroSorteado, cliques, router])
+
+    function incrementar() {
+        setContador(valorAtual => valorAtual + 1)
+        setCliques(valorAtual => valorAtual + 1)
+    }
     
     return (
         <View style={styles.container}>
             <View style={styles.card}>
                 <Text style={styles.label}>Contador</Text>
-                {/* Dica: este valor deve vir de um estado que começa em 0 */}
-                <Text style={styles.contador}>0</Text>
+                <Text style={styles.contador}>{contador}</Text>
 
                 <Pressable
                     style={styles.button}
-                    // Dica: ao pressionar, incremente o contador e atualize o número de cliques
+                    onPress={incrementar}
                 >
                     <Text style={styles.buttonText}>Contar</Text>
                 </Pressable>
