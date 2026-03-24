@@ -15,7 +15,6 @@ export default function Home() {
             <Pressable onPress={() => router.push('/usuarios/criar')}>
                 <Text>Criar Usuário</Text>
             </Pressable>
-
         </View>
     );
 }

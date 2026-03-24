@@ -19,8 +19,15 @@ export default function Listar() {
 
     return (
         <View style={styles.container}>
-            <Text>Lista de Usuarios</Text>
-            <StatusBar style="auto" />
+            {users.map((usuario) => (
+                (<View key={usuario.id} style={styles.card}>
+                    <Text>Nome: {usuario.nome}</Text>
+                    <Text>Email: {usuario.email}</Text>
+                    <Text>Cargo: {usuario.tipo}</Text>
+                    <Text>Ativo: {usuario.ativo ? 'Sim' : 'Não'}</Text>
+                </View>)
+            ))}
+
         </View>
     );
 }
@@ -31,5 +38,11 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
-},
+    },
+    card: {
+        backgroundColor: '#baffff',
+        padding: 10,
+        marginBottom: 10,
+        borderRadius: 5,
+    }
 });
