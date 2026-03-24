@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "nome": "JP",
+      "email": "jp@gmail.com",
+      "tipo": "admin",
+      "ativo": true
+    },
+    {
+      "id": 2,
+      "nome": "Pedro",
+      "email": "pedro@gmail.com",
+      "tipo": "comum",
+      "ativo": true
+    }
+  ]
+}
