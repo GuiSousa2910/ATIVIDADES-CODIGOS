@@ -11,8 +11,10 @@
     "api": "npx json-server --watch db.json --port 8080"
   },
   "dependencies": {
+    "@react-native-picker/picker": "2.11.4",
     "axios": "^1.13.6",
     "expo": "~55.0.8",
+    "expo-checkbox": "~55.0.3",
     "expo-router": "~55.0.7",
     "expo-status-bar": "~55.0.4",
     "react": "19.2.4",
